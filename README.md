@@ -1,5 +1,7 @@
 ##WDI6 GA SYDNEY 2014
 
+Hello people!
+
 First time setup instructions:
 
 1. please fork this repository
