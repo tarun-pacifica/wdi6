@@ -154,13 +154,92 @@ def adopt_an_animal_process
 
 	case user_selection_animal
 		when "1"
+			puts "          ,.                 ., "
+puts "         ,: ':.    .,.    .:' :, "
+puts "         ,',   '.:'   ':.'   ,', "
+puts "         : '.  '         '  .' : "
+puts "         '.' .,:,.   .,:,. '.' "
+puts "          ,:    V '. .' V    :, "
+puts "         ,:        / '        :, "
+puts "          ,:       =:=       :, "
+puts "           ,: ,     :     , :, "
+puts "            :' ',.,' ',.,:' ': "
+puts "           :'      ':WW::'   '. "
+puts "          .:'       '::::'   ': "
+puts "        .:'             '.     ',. "
+puts "       ,:'               ''     '. "
+puts "       .:'               .',    ': "
+puts "      .:'               .'.,     : "
+puts "      .:                .,''     : "
+puts "    .,::'.           .,','     ::::. "
+puts "  .:'     ',.       ,:,       ,WWWWW, "
+puts "  :'        :       :W:'     :WWWWWWW,       .,.  "
+puts "  :         ',      WWW      WWWWWWWWW        '::,  "
+puts "  '.         ',     WWW     :WWWWWWWWW         '::, "
+puts "   '.         :     WWW     :WWWWWWWW'       	::: "
+puts "    '.       ,:     WWW     :WWWWWWW'        .::: "
+puts "     .,'   ''::     :W:     :WWWWW.  .,::::'' " 
+puts "  ,'        ''','',',','','''WWWWW::::'' "
+puts "   ':,,,,,,,':  :  : : :  :  :WWWW''' "
 			list_the_animal_of_species_unadopted("cat")
 		when "2" 								# Dogs
+puts "               ____ "
+puts "            ,-'-,  `---._"
+puts "     _______(0} `, , ` , )"
+puts "     V           ; ` , ` (                            ,'~~~~~~`,   "
+puts "     `.____,- '  (,  `  , )                          :`,-'""`. '  "
+puts "       `-------._);  ,  ` `,                         ;:      )``:  "
+puts "              )  ) ; ` ,,  :                          ``      : ';  "
+puts "             (  (`;:  ; ` ;:\                                 ;;;,  "
+puts "             (:  )``;:;;)`'`'`- -.    _____     ____       _,-';;`  "
+puts "             :`  )`;)`)`'   :    ''~~~     ~~~~~    ~~~`--',.;;;'  "
+puts "              (          `  ,  '', '''''',  ''  ''   ''` '',,  ;``  "
+puts "               ( ;         ,   `                ;      `; ;  "
+puts "               (; ; ;      `                   ,`       ` :  "
+puts "                (; /            ;   ;          ` ;     ; :  "
+puts "                ;(_; ;  :   ; ; `; ;` ; ; ,,,'''';}     `;  "
+puts "                : `; `; `  :  `  `,,;,''''   );;`);     ;  "
+puts "                ;' :;   ; : ``'`'           (;` :( ; ,  ;  "
+puts "                |, `;; ,``                  `)`; `(; `  `;  "
+puts "                ;  ;;  ``:                   `).:` ;,   `.  "
+puts "             ,-'   ;`;;:;`                   ;;'`;;  `)   )  "
+puts "              ~~~,-`;`;,                             '   ;   "
 			list_the_animal_of_species_unadopted("dog")	
 		when "3" 								# Birds
-			list_the_animal_of_species_unadopted("bird")	
+puts "           .--. "
+puts "          /  6_6 "
+puts "          \\  (__\\ "
+puts "         //   \\\ "
+puts "        ((     )) "
+puts "  =======""===""=============== "
+puts "           ||| "
+puts "           ||| "
+puts "           '|' "	
+			list_the_animal_of_species_unadopted("bird")
+
 		when "4" 								# Rabbits
+puts "              , "
+puts "             /|      __  "
+puts "            / |   ,-~ /  "
+puts "           Y :|  //  / "
+puts "           | jj /( .^ "
+puts "           >-''-''-v'' "
+puts "          /       Y "
+puts "         jo  o    | "
+puts "        ( ~T~     j "
+puts "         >._-' _./ "
+puts "        /   ''~''| "
+puts "       Y     _,  | "
+puts "      /| ;-''~ _  l "
+puts "     / l/ ,-''~    \\ "
+puts "     \\ //\\ /      .- \\ "
+puts "      Y        /    Y  "  
+puts "      l       I     ! "
+puts "      ]\\      _\\    /\\ "
+puts "     ('' ~----( ~   Y.  ) "
+puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 			list_the_animal_of_species_unadopted("rabbit")	
+
 		when "5" 								# All the animals
 			$animals.each do |x|
 				puts x
@@ -244,12 +323,95 @@ def changing_animal_details
 	unless user_selection_animal == "q"  		# User chooses animals they want to see.
 		case user_selection_animal
 		when "1"
+			puts "          ,.                 ., "
+puts "         ,: ':.    .,.    .:' :, "
+puts "         ,',   '.:'   ':.'   ,', "
+puts "         : '.  '         '  .' : "
+puts "         '.' .,:,.   .,:,. '.' "
+puts "          ,:    V '. .' V    :, "
+puts "         ,:        / '        :, "
+puts "          ,:       =:=       :, "
+puts "           ,: ,     :     , :, "
+puts "            :' ',.,' ',.,:' ': "
+puts "           :'      ':WW::'   '. "
+puts "          .:'       '::::'   ': "
+puts "        .:'             '.     ',. "
+puts "       ,:'               ''     '. "
+puts "       .:'               .',    ': "
+puts "      .:'               .'.,     : "
+puts "      .:                .,''     : "
+puts "    .,::'.           .,','     ::::. "
+puts "  .:'     ',.       ,:,       ,WWWWW, "
+puts "  :'        :       :W:'     :WWWWWWW,       .,.  "
+puts "  :         ',      WWW      WWWWWWWWW        '::,  "
+puts "  '.         ',     WWW     :WWWWWWWWW         '::, "
+puts "   '.         :     WWW     :WWWWWWWW'       	::: "
+puts "    '.       ,:     WWW     :WWWWWWW'        .::: "
+puts "     .,'   ''::     :W:     :WWWWW.  .,::::'' " 
+puts "  ,'        ''','',',','','''WWWWW::::'' "
+puts "   ':,,,,,,,':  :  : : :  :  :WWWW''' "
+
 			list_the_animal_of_species("cat")	
 		when "2" 								# Dogs
+puts "               ____ "
+puts "            ,-'-,  `---._"
+puts "     _______(0} `, , ` , )"
+puts "     V           ; ` , ` (                            ,'~~~~~~`,   "
+puts "     `.____,- '  (,  `  , )                          :`,-'""`. '  "
+puts "       `-------._);  ,  ` `,                         ;:      )``:  "
+puts "              )  ) ; ` ,,  :                          ``      : ';  "
+puts "             (  (`;:  ; ` ;:\                                 ;;;,  "
+puts "             (:  )``;:;;)`'`'`- -.    _____     ____       _,-';;`  "
+puts "             :`  )`;)`)`'   :    ''~~~     ~~~~~    ~~~`--',.;;;'  "
+puts "              (          `  ,  '', '''''',  ''  ''   ''` '',,  ;``  "
+puts "               ( ;         ,   `                ;      `; ;  "
+puts "               (; ; ;      `                   ,`       ` :  "
+puts "                (; /            ;   ;          ` ;     ; :  "
+puts "                ;(_; ;  :   ; ; `; ;` ; ; ,,,'''';}     `;  "
+puts "                : `; `; `  :  `  `,,;,''''   );;`);     ;  "
+puts "                ;' :;   ; : ``'`'           (;` :( ; ,  ;  "
+puts "                |, `;; ,``                  `)`; `(; `  `;  "
+puts "                ;  ;;  ``:                   `).:` ;,   `.  "
+puts "             ,-'   ;`;;:;`                   ;;'`;;  `)   )  "
+puts "              ~~~,-`;`;,                             '   ;   "
+
 			list_the_animal_of_species("dog")	
 		when "3" 								# Birds
+puts "           .--. "
+puts "          /  6_6 "
+puts "          \\  (__\\ "
+puts "         //   \\\ "
+puts "        ((     )) "
+puts "  =======""===""=============== "
+puts "           ||| "
+puts "           ||| "
+puts "           '|' "
+
+
 			list_the_animal_of_species("bird")	
 		when "4" 								# Rabbits
+
+puts "              , "
+puts "             /|      __  "
+puts "            / |   ,-~ /  "
+puts "           Y :|  //  / "
+puts "           | jj /( .^ "
+puts "           >-''-''-v'' "
+puts "          /       Y "
+puts "         jo  o    | "
+puts "        ( ~T~     j "
+puts "         >._-' _./ "
+puts "        /   ''~''| "
+puts "       Y     _,  | "
+puts "      /| ;-''~ _  l "
+puts "     / l/ ,-''~    \\ "
+puts "     \\ //\\ /      .- \\ "
+puts "      Y        /    Y  "  
+puts "      l       I     ! "
+puts "      ]\\      _\\    /\\ "
+puts "     ('' ~----( ~   Y.  ) "
+puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
+
 			list_the_animal_of_species("rabbit")	
 		when "5" 								# All the animals
 			$animals.each do |x|
@@ -335,12 +497,96 @@ until user_selection_menu == 'q'
 		unless user_selection_animal == "q"  		# User chooses animals they want to see.
 			case user_selection_animal
 			when "1"
-				list_the_animal_of_species_unadopted("cat")	
-			when "2" 								# Dogs
-				list_the_animal_of_species_unadopted("dog")	
-			when "3" 								# Birds
-				list_the_animal_of_species_unadopted("bird")	
-			when "4" 								# Rabbits
+
+			puts "          ,.                 ., "
+puts "         ,: ':.    .,.    .:' :, "
+puts "         ,',   '.:'   ':.'   ,', "
+puts "         : '.  '         '  .' : "
+puts "         '.' .,:,.   .,:,. '.' "
+puts "          ,:    V '. .' V    :, "
+puts "         ,:        / '        :, "
+puts "          ,:       =:=       :, "
+puts "           ,: ,     :     , :, "
+puts "            :' ',.,' ',.,:' ': "
+puts "           :'      ':WW::'   '. "
+puts "          .:'       '::::'   ': "
+puts "        .:'             '.     ',. "
+puts "       ,:'               ''     '. "
+puts "       .:'               .',    ': "
+puts "      .:'               .'.,     : "
+puts "      .:                .,''     : "
+puts "    .,::'.           .,','     ::::. "
+puts "  .:'     ',.       ,:,       ,WWWWW, "
+puts "  :'        :       :W:'     :WWWWWWW,       .,.  "
+puts "  :         ',      WWW      WWWWWWWWW        '::,  "
+puts "  '.         ',     WWW     :WWWWWWWWW         '::, "
+puts "   '.         :     WWW     :WWWWWWWW'       	::: "
+puts "    '.       ,:     WWW     :WWWWWWW'        .::: "
+puts "     .,'   ''::     :W:     :WWWWW.  .,::::'' " 
+puts "  ,'        ''','',',','','''WWWWW::::'' "
+puts "   ':,,,,,,,':  :  : : :  :  :WWWW''' "
+
+			list_the_animal_of_species_unadopted("cat")	
+		when "2" 								# Dogs
+puts "               ____ "
+puts "            ,-'-,  `---._"
+puts "     _______(0} `, , ` , )"
+puts "     V           ; ` , ` (                            ,'~~~~~~`,   "
+puts "     `.____,- '  (,  `  , )                          :`,-'""`. '  "
+puts "       `-------._);  ,  ` `,                         ;:      )``:  "
+puts "              )  ) ; ` ,,  :                          ``      : ';  "
+puts "             (  (`;:  ; ` ;:\                                 ;;;,  "
+puts "             (:  )``;:;;)`'`'`- -.    _____     ____       _,-';;`  "
+puts "             :`  )`;)`)`'   :    ''~~~     ~~~~~    ~~~`--',.;;;'  "
+puts "              (          `  ,  '', '''''',  ''  ''   ''` '',,  ;``  "
+puts "               ( ;         ,   `                ;      `; ;  "
+puts "               (; ; ;      `                   ,`       ` :  "
+puts "                (; /            ;   ;          ` ;     ; :  "
+puts "                ;(_; ;  :   ; ; `; ;` ; ; ,,,'''';}     `;  "
+puts "                : `; `; `  :  `  `,,;,''''   );;`);     ;  "
+puts "                ;' :;   ; : ``'`'           (;` :( ; ,  ;  "
+puts "                |, `;; ,``                  `)`; `(; `  `;  "
+puts "                ;  ;;  ``:                   `).:` ;,   `.  "
+puts "             ,-'   ;`;;:;`                   ;;'`;;  `)   )  "
+puts "              ~~~,-`;`;,                             '   ;   "
+
+			list_the_animal_of_species_unadopted("dog")	
+		when "3" 								# Birds
+puts "           .--. "
+puts "          /  6_6 "
+puts "          \\  (__\\ "
+puts "         //   \\\ "
+puts "        ((     )) "
+puts "  =======""===""=============== "
+puts "           ||| "
+puts "           ||| "
+puts "           '|' "
+
+
+			list_the_animal_of_species_unadopted("bird")	
+		when "4" 								# Rabbits
+
+puts "              , "
+puts "             /|      __  "
+puts "            / |   ,-~ /  "
+puts "           Y :|  //  / "
+puts "           | jj /( .^ "
+puts "           >-''-''-v'' "
+puts "          /       Y "
+puts "         jo  o    | "
+puts "        ( ~T~     j "
+puts "         >._-' _./ "
+puts "        /   ''~''| "
+puts "       Y     _,  | "
+puts "      /| ;-''~ _  l "
+puts "     / l/ ,-''~    \\ "
+puts "     \\ //\\ /      .- \\ "
+puts "      Y        /    Y  "  
+puts "      l       I     ! "
+puts "      ]\\      _\\    /\\ "
+puts "     ('' ~----( ~   Y.  ) "
+puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
+
 				list_the_animal_of_species_unadopted("rabbit")	
 			when "5" 								# All the animals
 				$animals.each do |x|
@@ -477,4 +723,28 @@ until user_selection_menu == 'q'
 
 end
  
+system("clear")
 puts "Woof woof! You just quit the system! Please come back and visit us soon!"
+
+puts "                       ,ood8888booo, "
+puts "                    ,oda8a888a888888bo,  "
+puts "                 ,od88888888aa888aa88a8bo,  "
+puts "               ,da8888aaaa88a888aaaa8a8a88b,  "
+puts "              ,oa888aaaa8aa8888aaa8aa8a8a88o,  "
+puts "             ,88888aaaaaa8aa8888a8aa8aa888a88, "
+puts "             8888a88aaaaaa8a88aa8888888a888888 "
+puts "             888aaaa88aa8aaaa8888; ;8888a88888 "
+puts "             Y888a888a888a8888;'   ;888888a88Y "
+puts "              Y8a8aa8a888a88'      ,8aaa8888Y "
+puts "               Y8a8aa8aa8888;     ;8a8aaa88Y "
+puts "                `Y88aa8888;'      ;8aaa88Y' "
+puts "        ,,;;;;;;;;'''''''         ;8888Y' "
+puts "     ,,;                         ,888P "
+puts "   ,;  ,;,                      ;"" "
+puts "  ;       ;          ,    ,    ,; "
+puts " ;  ;,    ;     ,;;;;;   ;,,,  ; "
+puts ";  ; ;  ,' ;  ,;      ;  ;   ;  ; "
+puts "; ;  ; ;  ;  '        ; ,'    ;  ; "
+puts "`;'  ; ;  '; ;,       ; ;      ; ', "
+puts "     ;  ;,  ;,;       ;  ;,     ;;; "
+puts "      ;,,;             ;,,; "

@@ -18,7 +18,7 @@ class Animal
 	end
 
 	def to_s
-		"#{name.upcase} is a #{age}-year-old #{gender.downcase} #{species.downcase}. It has #{ toys } toy(s). They are owned by #{owner.upcase}."
+		"#{name.upcase} is a #{age}-year-old #{gender.downcase} #{species.downcase}. It has #{ toys } toy(s). It is owned by #{owner.upcase}."
 	end
 
 end
