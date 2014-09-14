@@ -86,6 +86,19 @@ def any_key
 	gets.chomp 
 end 
 
+def get_selection(msg)
+	display_title
+	puts msg
+	get_choice
+end 
+
+def display_msg(msg)
+	display_title
+	puts msg
+	any_key	
+end
+
+
 system('clear')
 list_animals 
 puts	
@@ -109,30 +122,17 @@ def menu
 		user_choice = get_choice
 
 		case user_choice
-		when "1" # NEW CLIENT
-			display_title
-			puts "Please enter your name"
-			user_name = get_choice
-
-			display_title
-			puts "Please enter your age"
-			user_age = get_choice
-
-			display_title
-			puts "How many children do you have?"
-			user_children = get_choice.to_i
+		when "1" # NEW CLIENT		
+			user_name = get_selection("Please enter your name")
+			user_age = get_selection("Please enter your age")
+			user_children = get_selection("How many children do you have?").to_i
 
 			$clients << Client.new(user_name, user_age, user_children)
 
-			display_title
-			puts "Success! #{user_name} has been added to the system"
-			any_key
+			display_msg("Success! #{user_name} has been added to the system")
 
 		when "2" # EXISTING CLIENT 
-			display_title
-			puts "Please enter your name to log-in"
-			user_name = get_choice
-
+			user_name = get_selection("Please enter your name to log-in")
 			user_client = $clients.index { |x| x.name.downcase == user_name }
 			
 			unless user_client.nil?
@@ -148,36 +148,21 @@ def menu
 
 				case user_choice
 				when "0" # VIEW INFORMATION 
-					display_title
-					puts $clients[user_client]
-					any_key
+					display_msg($clients[user_client])
 
 				when "1" # UPDATE INFORMATION 
-					display_title
-					puts "Please enter your name"
-					user_name = get_choice
-
-					display_title
-					puts "Please enter your age"
-					user_age = get_choice
-
-					display_title 
-					puts "How many children do you have? "
-					user_children = get_choice
+					user_name = get_selection("Please enter your name")
+					user_age = get_selection("Please enter your age")
+					user_children = get_selection("How many children do you have?")
 
 					$clients[user_client].name = user_name
 					$clients[user_client].age = user_age.to_i
 					$clients[user_client].children = user_children.to_i 
 
-					display_title
-					puts "Success! You've updated your details"
-					puts
-					$clients[user_client]
-					any_key
+					display_msg("Success! You've updated your details")
+
 				when "2" # VIEW PETS
-					display_title
-					list_animals(user_client)
-					any_key
+					display_msg(list_animals(user_client))
 				when "3" # PUT UP PET FOR ADOPTION 
 					display_title
 					puts "Please select one of your pets to put up for adoption"
@@ -188,13 +173,9 @@ def menu
 					unless $clients[user_client].pets[user_choice.to_i].nil?
 						$sheltered << $clients[user_client].pets[user_choice.to_i]
 						$clients[user_client].pets.delete_at(user_choice.to_i)
-						display_title
-						puts "Success! Your pet has been put up for adoption"
-						any_key
+						display_msg("Success! Your pet has been put up for adoption")
 					else 
-						display_title
-						puts "That pet does not exist"
-						any_key
+						display_msg("That pet does not exist")
 					end
 				when "4" # ADOPT A PET
 					display_title
@@ -206,26 +187,17 @@ def menu
 					unless $sheltered[user_choice.to_i].nil?
 						$clients[user_client].pets << $sheltered[user_choice.to_i]
 						$sheltered.delete_at(user_choice.to_i)
-
-						display_title
-						puts "Success! You've adopted a pet!"
-						any_key
+						display_msg "Success! You've adopted a pet!"
 					else
-						display_title
-						puts "That animal does not exist"
-						any_key
+						display_msg "That animal does not exist"
 					end 
 				end 
 
 			else
-				display_title
-				puts "That username does not exist"
-				any_key
+				display_msg "That username does not exist"
 			end  
 		else
-			display_title
-			puts "That menu item does not exist"
-			any_key
+			display_msg "That menu item does not exist"
 		end 
 
 	when "2" # SHELTER MENU
@@ -239,44 +211,20 @@ def menu
 
 		case user_choice
 		when "1" # List all animals
-			display_title
-			list_animals
-			any_key
-
+			display_msg list_animals
 		when "2" # List all sheltered animals
-			display_title
-			list_shelter_animals
-			any_key
+			display_msg list_shelter_animals
 		when "3" # List all clients
-			display_title
-			list_clients
-			any_key
-
+			display_msg list_clients
 		when "4" # Create animal for adoption 
-			display_title
-			puts "Please enter animal name"
-			ani_name = get_choice
-
-			display_title
-			puts "Please enter animal age"
-			ani_age = get_choice
-
-			display_title
-			puts "Please enter animal gender"
-			ani_gender = get_choice
-
-			display_title
-			puts "Please enter animal species"
-			ani_species = get_choice
+			ani_name = get_selection "Please enter animal name"
+			ani_age = get_selection "Please enter animal age"
+			ani_gender = get_selection "Please enter animal gender"
+			ani_species = get_selection "Please enter animal species"
 
 			$animals << Animal.new(ani_name, ani_age, ani_gender, ani_species)
 			$sheltered << $animals.last 
-
-			display_title
-			puts "Success! #{$sheltered.last.name} has been added to the adoption list"
-			any_key
-
-
+			display_msg "Success! #{$sheltered.last.name} has been added to the adoption list"
 		when "5"  # Put Down Animal
 			display_title
 			puts "Please select which animal in the shelter you have to put down"
@@ -287,13 +235,10 @@ def menu
 			$animals.delete($sheltered[user_choice.to_i])
 			$sheltered.delete_at(user_choice.to_i)
 
-			display_title
-			puts "That animal has been put down... "
-			any_key
+			display_msg "That animal has been put down... "
+
 		else 
-			display_title
-			puts "That menu item does not exist"
-			any_key
+			display_msg "That menu item does not exist"
 		end 
 
 	end 
