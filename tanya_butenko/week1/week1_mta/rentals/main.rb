@@ -2,6 +2,7 @@ system('clear')
 
 require 'pry'
 
+#calling on other files
 require_relative './tenant.rb'
 require_relative './apartment.rb'
 require_relative './building.rb'
@@ -29,7 +30,7 @@ $buildings.first.apartments[apt.name].tenants << chris
 $buildings.first.apartments[apt1.name] = apt1
 $tenants << chris
 
-
+#shows us options of main menu
 def main_menu
 	puts "Welcome to the realestate agency"
 	puts 
@@ -38,6 +39,7 @@ def main_menu
 	puts "2. Agent"
 end
 
+#shows us options of tenant menu
 def tenant_menu
 	puts "Hello tenant"
 	puts
@@ -46,6 +48,7 @@ def tenant_menu
 	puts "2. Current Tenant"
 end
 
+#shows us options of new tenant menu
 def new_tenant_menu
 	puts "Welcome new tenant"
 	puts
@@ -56,6 +59,7 @@ def new_tenant_menu
 	puts "4. Move in to a new apartment"
 end
 
+#shows us options of current tenant menu
 def current_tenant_menu
 	puts "Welcome back"
 	puts 
@@ -66,8 +70,8 @@ def current_tenant_menu
 	puts "4. Move to another apartment"
 end
 
-#rename
-def show_menu
+#function that check on input and if q - quit, otherwise get input and store it
+def quit_or_continue_menu
 	puts "q. Quit"
 	input = gets.chomp
 	exit if input == 'q'
@@ -75,29 +79,33 @@ def show_menu
 end
 
 main_menu
-main_menu_option = show_menu
+main_menu_option = quit_or_continue_menu
 
 case main_menu_option
 when '1'
 	tenant_menu
-    tenant_menu_option = show_menu
+    tenant_menu_option = quit_or_continue_menu
 
 	case tenant_menu_option
 	when '1'
 		new_tenant_menu
-		new_tenant_option = show_menu
+		new_tenant_option = quit_or_continue_menu
 
 		case new_tenant_option
 		when '1'
 			puts "Please, enter your valid name, age and gender separated with comma."
 			i = gets.chomp
+		    #get input as an array
 			info = i.split ', '
+			#creates new tenant in Tenant class
 			new_tenant = Tenant.new(info[0], info[1], info[2])
+			#puts new tenant to global variable
 			$tenants << new_tenant
 			puts "You are successfully registered in our system"
 		when '2'
 			
 			puts "Here is a list of unoccupied apartments:"
+			#gives us list of all unoccupied apartments
 			$buildings.each do |b|
 				b.apartments.each do |number, apartment|
 					puts apartment unless apartment.occupied? 
@@ -113,7 +121,7 @@ when '1'
 
 	when '2'
 		current_tenant_menu
-		current_tenant_option = show_menu
+		current_tenant_option = quit_or_continue_menu
 
 		case current_tenant_option
 		when '1'
