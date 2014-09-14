@@ -16,7 +16,7 @@ class Client
 	end
 
 	def to_s
-		"#{name.upcase} is a #{age}-years-old #{gender.downcase} with #{num_children} and #{ pets.length } pets."
+		"#{name.upcase} is a #{age}-years-old #{gender.downcase} with #{num_children} child/children and #{ pets.length } pet(s)."
 	end
 
 end

@@ -44,9 +44,12 @@ person3 = Client.new("Adam", "male", 3, 29)
 
 $animals << pet1 << pet2 << pet3 << pet4
 $clients << person1 << person2 << person3 
- 
-# p $animals
-# p $clients
+
+# Add the fcking pets to the pet lists >:(
+person1.pets << pet4
+person2.pets << pet2
+
+
 
 #######################################################
 def menu_origin
@@ -97,7 +100,7 @@ def select_animal
 	puts "2. Dogs! Woof!"
 	puts "3. Birds! Tweet!"
 	puts "4. Rabbits! Thump thump!"
-	puts "5. All the animals! Adopted and non-adopted!"
+	puts "5. All the animals!"
 	puts "q. Back to the home menu."
 end
 
@@ -106,7 +109,7 @@ def selection_animal
 	gets.chomp.downcase
 end
 
-def list_the_animal_of_species(type_of_animal)
+def list_the_animal_of_species_unadopted(type_of_animal)
 	puts "List all the #{type_of_animal}s."
 	$animals.each do |c|
 		if c.species == type_of_animal && c.owner == "unadopted"
@@ -115,32 +118,208 @@ def list_the_animal_of_species(type_of_animal)
 	end
 end
 
-def pick_new_animal_for_adoption(type_of_animal)
-	case type_of_animal
-	when type_of_animal == 1 then animal_species_kind = "cat" 
-	when type_of_animal == 2 then animal_species_kind = "dog"
-	when type_of_animal == 3 then animal_species_kind = "bird"
-	when type_of_animal == 4 then animal_species_kind = "rabbit"
-
-	puts "List all the #{animal_species_kind}s."
+def list_the_animal_of_species(type_of_animal)
+	puts "List all the #{type_of_animal}s."
 	$animals.each do |c|
-		if c.species == type_of_animal && c.owner == "unadopted"
+		if c.species == type_of_animal
 			puts c
-			
-			puts "Which furry friend would you like to adopt?"
-			adoptee_animal_name = gets.chomp.downcase
-			puts "What is the name of the new owner?"
-			new_owner = gets.chomp.downcase
-
-			$clients.each do |n|
-				if n.name == new_owner
-					puts n
-					n.pets << c
-				end
-			end
 		end
 	end
 end
+
+
+def adopt_an_animal_process
+	system("clear")
+	puts "Client wants to adopt an animal"
+	
+	puts "Who is the client that wants to adopt a new furry friend?"
+	potential_client_name = gets.chomp.downcase
+	
+	adopting_client = nil
+	$clients.each do |clie|
+		if potential_client_name.downcase == clie.name.downcase
+			adopting_client = clie
+		end
+	end
+
+	if adopting_client == nil 
+		puts "Sorry! This client doesn't exist on our database. Please go back and include the client so we can help her make a new friend."
+		return
+	end
+
+	user_selection_animal = selection_animal	
+	if user_selection_animal == "q"  		# User chooses animals they want to see.
+		return
+	end
+
+	case user_selection_animal
+		when "1"
+			list_the_animal_of_species_unadopted("cat")
+		when "2" 								# Dogs
+			list_the_animal_of_species_unadopted("dog")	
+		when "3" 								# Birds
+			list_the_animal_of_species_unadopted("bird")	
+		when "4" 								# Rabbits
+			list_the_animal_of_species_unadopted("rabbit")	
+		when "5" 								# All the animals
+			$animals.each do |x|
+				puts x
+			end
+			type_of_animal = "cat"
+		else 
+			puts "We don't have that animal on hand! Come back next week and we'll see what we've got!"
+			return
+	end
+
+	puts "Which furry friend would you like to adopt?"
+	adopted_animal_name = gets.chomp.downcase
+
+	# The animal has freaking found itself in the new owner's pet list
+	adopted_animal_finally = nil
+	$animals.each do |s|
+		if s.name.downcase == adopted_animal_name.downcase
+			adopted_animal_finally = s 
+		end
+	end
+	if adopted_animal_finally == nil
+		puts "Sorry! Your desired new friend doesn't exist on our adoptee list. Please try again with another new companion."
+		return
+	end
+
+	adopting_client.pets << adopted_animal_finally
+
+	# Change the information about the ownership status of the animal
+	adopted_animal_finally.owner = adopting_client.name
+	
+	puts adopted_animal_finally
+	puts adopting_client
+
+end
+
+def client_giving_up_pet
+	puts "What is the name of the client who wants to give a pet up for adoption?"
+	evil_client_name = gets.chomp.downcase
+
+	client_dumping_pet = nil 		# Check that the client exists
+	$clients.each do |clie|
+		if evil_client_name.downcase == clie.name.downcase
+			client_dumping_pet = clie
+		end
+	end
+	if client_dumping_pet == nil 
+		puts "Sorry! This client doesn't exist on our database. Please go back and include the client on the database."
+		return
+	end		
+	
+	client_dumping_pet.pets.each do |pet|
+		puts pet.name 
+	end
+
+	puts "Which pet do you want to abandon in cold-blood?"
+	poor_pet_name = gets.chomp.downcase
+
+	poor_pet = nil
+	# Change pet's owner to 'unadopted'
+	client_dumping_pet.pets.each do |findpet|
+		if poor_pet_name.downcase == findpet.name.downcase
+			poor_pet = findpet
+		end
+	end
+	if poor_pet == nil
+		puts "This pet does not exist. Thank god! Imagine how cruel that would be to dump a pet."
+		return
+	end
+	poor_pet.owner = "unadopted"
+	puts "You have now ditched your pet at the pound, #{poor_pet_name.capitalize}."
+
+	# Remove the pet from the client
+	client_dumping_pet.pets.delete(poor_pet)
+
+end 
+
+def changing_animal_details
+	#List all the animals
+	user_selection_animal = selection_animal
+	
+	unless user_selection_animal == "q"  		# User chooses animals they want to see.
+		case user_selection_animal
+		when "1"
+			list_the_animal_of_species("cat")	
+		when "2" 								# Dogs
+			list_the_animal_of_species("dog")	
+		when "3" 								# Birds
+			list_the_animal_of_species("bird")	
+		when "4" 								# Rabbits
+			list_the_animal_of_species("rabbit")	
+		when "5" 								# All the animals
+			$animals.each do |x|
+				puts x
+			end
+		else 
+			puts "We don't have that animal on hand! Come back next week and we'll see what we've got!"
+		end			 	
+	end 
+	puts "Which animal's details do you want to change?"
+	animal_name = gets.chomp.downcase
+
+	animal_to_change = nil
+	$animals.each do |n|
+		if animal_name.downcase == n.name.downcase
+			animal_to_change = n
+		end 
+	end
+	if animal_to_change == nil
+		puts "This animal does not exist!"
+		return
+	end
+
+	# Start asking questions!
+	puts "What is the animal's current name?"
+	animal_to_change.name = gets.chomp.downcase 
+	puts "What is the animal's current age?"
+	animal_to_change.age = gets.chomp.downcase
+	puts "What is the animal's current gender?"
+	animal_to_change.gender = gets.chomp.downcase
+	puts "What is the animal's current species?"
+	animal_to_change.species = gets.chomp.downcase
+	puts "How many toys does the animal now have?"
+	animal_to_change.toys = gets.chomp.downcase
+	
+	puts animal_to_change.to_s 	#Calling out the new details of the animal
+end 
+
+def changing_client_details
+	#List all the clients
+	$clients.each do |c|
+		puts c
+	end	
+
+	puts "Which client's details do you want to change?"
+	client_name = gets.chomp.downcase
+
+	client_to_change = nil
+	$clients.each do |n|
+		if client_name.downcase == n.name.downcase
+			client_to_change = n
+		end 
+	end
+	if client_to_change == nil
+		puts "This client does not exist!"
+		return
+	end
+
+	# Start asking questions!
+	puts "What is the client's current name?"
+	client_to_change.name = gets.chomp.downcase 
+	puts "What is the client's current age?"
+	client_to_change.age = gets.chomp.downcase
+	puts "What is the client's current gender?"
+	client_to_change.gender = gets.chomp.downcase
+	puts "What is the client's current number of children?"
+	client_to_change.num_children = gets.chomp.downcase
+	
+	puts client_to_change.to_s 	#Calling out the new details of the client
+end 
 
 ################################################################
 
@@ -156,16 +335,18 @@ until user_selection_menu == 'q'
 		unless user_selection_animal == "q"  		# User chooses animals they want to see.
 			case user_selection_animal
 			when "1"
-				list_the_animal_of_species("cat")	
+				list_the_animal_of_species_unadopted("cat")	
 			when "2" 								# Dogs
-				list_the_animal_of_species("dog")	
+				list_the_animal_of_species_unadopted("dog")	
 			when "3" 								# Birds
-				list_the_animal_of_species("bird")	
+				list_the_animal_of_species_unadopted("bird")	
 			when "4" 								# Rabbits
-				list_the_animal_of_species("rabbit")	
+				list_the_animal_of_species_unadopted("rabbit")	
 			when "5" 								# All the animals
 				$animals.each do |x|
-					puts x
+					if x.owner == "unadopted"
+						puts x.to_s
+					end
 				end
 			else 
 				puts "We don't have that animal on hand! Come back next week and we'll see what we've got!"
@@ -175,6 +356,8 @@ until user_selection_menu == 'q'
 		user_selection_menu = selection_menu 
 
 	when "2"
+		system("clear")
+
 		puts "List all the clients"
 		$clients.each do |c|
 			puts c
@@ -205,25 +388,12 @@ until user_selection_menu == 'q'
 		@animal_species_n = gets.chomp.downcase
 		puts "How many toys does the animal have?"
 		@animal_toys_n = gets.chomp.downcase
-		puts "Who is the owner? Or is it unadopted?"
-		@animal_owner_n = gets.chomp.downcase
+		@animal_owner_n = "unadopted"
 
-		if @animal_owner_n == "unadopted"
-			new_animal = Animal.new(@animal_name_n, @animal_age_n, @animal_gender_n, @animal_species_n, @animal_toys_n, @animal_owner_n)
-			$animals << new_animal
-		else	
-			client_found = false
-			$clients.each do |cli|
-				if @animal_owner_n.downcase == cli.name.downcase
-					new_animal = Animal.new(@animal_name_n, @animal_age_n, @animal_gender_n, @animal_species_n, @animal_toys_n, @animal_owner_n)
-					$animals << new_animal
-					client_found = true	
-				end
-			end
-			if client_found == false
-				puts "Sorry! The animal doesn't have an owner that is on the system. We'll need to do a background check on them first. Please add them as a new client so our furry friend can have a new home!"
-			end
-		end
+		new_animal = Animal.new(@animal_name_n, @animal_age_n, @animal_gender_n, @animal_species_n, @animal_toys_n, @animal_owner_n)
+		$animals << new_animal
+		
+		puts new_animal.to_s
 
 		user_selection_menu = selection_menu 
 
@@ -245,8 +415,6 @@ until user_selection_menu == 'q'
 		new_client = Client.new(@client_name_n, @client_gender_n, @client_num_children_n, @client_age_n)
 		$clients << new_client
 
-		puts "How many pets does the client currently have?"
-		num_of_pets = gets.chomp.to_i
 
 		counter = 0
 		for x in 1..num_of_pets do
@@ -274,65 +442,34 @@ until user_selection_menu == 'q'
 
 	when "5"
 		system("clear")
-		puts "Client wants to adopt an animal"
-		
-		puts "Who is the client that wants to adopt a new furry friend?"
-		potential_client_name = gets.chomp.downcase
-		
-		adopting_client = nil
-		$clients.each do |clie|
-			if potential_client_name == clie.name
-				adopting_client = clie
-			end
-		end
-		if adopting_client == nil 
-			puts "Sorry! This client doesn't exist on our database. Please go back and include the client so we can help her make a new friend."
-		end
-		# pick one for adoption based on name and species
-		# Change the information about the ownership status of the animal
-		# Add the animal to the owner's pet array
 
-		# selection_animal = pick_new_animal_for_adoption
-		user_selection_animal = selection_animal
-				
-
-		unless user_selection_animal == "q"  		# User chooses animals they want to see.
-					case user_selection_animal
-					when "1"
-						list_the_animal_of_species("cat")	
-					when "2" 								# Dogs
-						list_the_animal_of_species("dog")	
-					when "3" 								# Birds
-						list_the_animal_of_species("bird")	
-					when "4" 								# Rabbits
-						list_the_animal_of_species("rabbit")	
-					when "5" 								# All the animals
-						$animals.each do |x|
-							puts x
-						end
-					else 
-						puts "We don't have that animal on hand! Come back next week and we'll see what we've got!"
-					end			 	
-				end 
-
-				user_selection_adoption = pick_new_animal_for_adoption(user_selection_animal)
-
-
+		 # client adopts an animal
+		adopt_an_animal_process  	#CAN'T TOUCH THIS. DAN DANDAN DAN. DANDAN. DANDAN. Can't touch this. 
 		user_selection_menu = selection_menu 
 
 	when "6"	
 		system("clear")
-		puts "Client puts an animal up for adoption"
+		# "Client puts an animal up for adoption"
 
-		puts "What is the name of the client?"
-		client_name = gets.chomp.downcase
+		client_giving_up_pet 	#Don't touch this either
+
 
 
 		user_selection_menu = selection_menu 
 	when "7"
+		system("clear")
+
+		# change the animal's details
+		changing_animal_details
+		user_selection_menu = selection_menu 
 
 	when "8"
-	
+		system("clear")
+
+		# change the client's details
+		changing_client_details
+		user_selection_menu = selection_menu 
+
 	else 
 		puts "That is not an option! What would you like to see?"
 		user_selection_menu = selection_menu 
