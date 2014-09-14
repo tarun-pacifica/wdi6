@@ -1,7 +1,7 @@
 class Shelter
 	attr_accessor :client, :animal
 
-	def initialize(animal, client)
+	def initialize()
 		@animal = {}
 		@client = {}
 	end
