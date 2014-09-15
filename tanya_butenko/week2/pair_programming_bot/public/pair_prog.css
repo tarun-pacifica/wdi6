@@ -60,4 +60,24 @@ a {
 
 .btn-large {
 	margin: 0 15px;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px 20px;
+	opacity: 1;
+}
+
+.btn-large:hover {
+	text-decoration: underline;
+}
+
+.yes {
+	background-color: green;
+	background-size: 66px 44px;
+}
+
+.no {
+	background-color: red;
+	background-size: 60px 44px;
 }
