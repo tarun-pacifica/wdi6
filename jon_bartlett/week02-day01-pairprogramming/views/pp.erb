@@ -1,0 +1,16 @@
+
+<div>
+	<h2><%= @question_text %></h2>
+	<ul>
+		<% unless @done_path %>
+			<li><a class='btn_yes' href='<%= @yes_path %>' >Yes</a></li>
+			<li><a class='btn_no' href='<%= @no_path %>'>No</a></li>
+		<% else %>
+			<li><a class='btn_done' href='<%= @done_path %>'>Done</a></li>			
+		<% end %>
+
+	</ul>
+</div>
+
+
+	
