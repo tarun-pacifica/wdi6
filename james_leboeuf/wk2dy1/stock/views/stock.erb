@@ -1,0 +1,17 @@
+<form action="/stock">
+		<input name= "stockname" placeholder = "Stock Symbol">
+		<button>Go!</button>
+</form>
+
+
+<% if @price && @price > 0 %>
+	<p>
+		Last traded value for <%= @name %> was $<%= @price %>
+	</p>
+<% else %>
+	<p>
+		There is no stock under that name
+	</p>
+
+<% end %>
+

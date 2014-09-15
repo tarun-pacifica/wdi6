@@ -11,7 +11,7 @@ class Client
 
 	# Over-riding the to_s method.
 	def to_s
-		"#{ name } is #{ age } years old, has #{ number_of_children } children, and #{ pets.count + other_pets } pets. "
+		"#{ name } is #{ age } years old, has #{ number_of_children } children, and #{ pets.count + other_pets } pet(s). "
 	end
 
 end
