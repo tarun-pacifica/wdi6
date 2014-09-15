@@ -1,0 +1,24 @@
+
+<% case @stage 
+	when "test" %>
+	<h1> Do you have a test for that?</h1>
+	<a id="yes" href="/pass">Yes</a> <a id="no" href="/write_test">No</a>
+<% when "pass" %>
+	<h1> Does the text pass?</h1>
+	<a id="yes" href="/refactor">Yes</a> <a id="no" href="/write_code">No</a>
+<% when "write_test" %>
+	<h1> Write a test. </h1>
+	<a id="done" href="/pass">Done</a> 
+<% when "refactor" %> 
+	<h1> Need to refactor? </h1>
+	<a id="yes" href="/do_refactor">Yes</a> <a id="no" href="/new_feature">No</a>
+<% when "write_code" %>
+	<h1> Write just enough code for the test to pass. </h1>
+	<a id="done" href="/pass">Done</a> 
+<% when "do_refactor" %> 
+	<h1> Refactor the code. </h1>
+	<a id="done" href="/pass">Done</a> 
+<% when "new_feature" %>
+	<h1> Select a new feature to implement. </h1>
+	<a id="done" href="/">Continue</a>
+<% end %>
