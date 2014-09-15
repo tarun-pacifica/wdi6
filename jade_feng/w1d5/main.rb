@@ -662,27 +662,27 @@ puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 		$clients << new_client
 
 
-		counter = 0
-		for x in 1..num_of_pets do
-			puts "What is the animal's name?"
-			@animal_name_n = gets.chomp.downcase 
-			puts "What is the animal's age?"
-			@animal_age_n = gets.chomp.downcase
-			puts "What is the animal's gender?"
-			@animal_gender_n = gets.chomp.downcase
-			puts "What is the animal's species?"
-			@animal_species_n = gets.chomp.downcase
-			puts "How many toys does the animal have?"
-			@animal_toys_n = gets.chomp.downcase
-			@animal_owner_n = @client_name_n
+		# counter = 0
+		# for x in 1..@client_age_n do
+		# 	puts "What is the animal's name?"
+		# 	@animal_name_n = gets.chomp.downcase 
+		# 	puts "What is the animal's age?"
+		# 	@animal_age_n = gets.chomp.downcase
+		# 	puts "What is the animal's gender?"
+		# 	@animal_gender_n = gets.chomp.downcase
+		# 	puts "What is the animal's species?"
+		# 	@animal_species_n = gets.chomp.downcase
+		# 	puts "How many toys does the animal have?"
+		# 	@animal_toys_n = gets.chomp.downcase
+		# 	@animal_owner_n = @client_name_n
 
-			new_animal = Animal.new(@animal_name_n, @animal_age_n, @animal_gender_n, @animal_species_n, @animal_toys_n, @animal_owner_n)
-			$animals << new_animal
-			puts "#{@animal_name_n.upcase} is a #{@animal_age_n}-year-old #{@animal_gender_n.downcase} #{@animal_species_n.downcase}. It has #{ @animal_toys_n } toy(s). It is owned by #{@animal_owner_n.upcase}."
+		# 	new_animal = Animal.new(@animal_name_n, @animal_age_n, @animal_gender_n, @animal_species_n, @animal_toys_n, @animal_owner_n)
+		# 	$animals << new_animal
+		# 	puts "#{@animal_name_n.upcase} is a #{@animal_age_n}-year-old #{@animal_gender_n.downcase} #{@animal_species_n.downcase}. It has #{ @animal_toys_n } toy(s). It is owned by #{@animal_owner_n.upcase}."
 
-			counter += 1
+		# 	counter += 1
 
-		end
+		# end
 
 		user_selection_menu = selection_menu 
 
@@ -698,8 +698,6 @@ puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 		# "Client puts an animal up for adoption"
 
 		client_giving_up_pet 	#Don't touch this either
-
-
 
 		user_selection_menu = selection_menu 
 	when "7"
@@ -717,6 +715,7 @@ puts " ~~~~~~~~~~~~~~~~~~~~~~~~~~ "
 		user_selection_menu = selection_menu 
 
 	else 
+		system("clear")
 		puts "That is not an option! What would you like to see?"
 		user_selection_menu = selection_menu 
 	end
