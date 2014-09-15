@@ -15,7 +15,7 @@ peppa = Animal.new("Peppa", 5, "female", "pig")
 felix = Animal.new("Felix", 10, "male", "cat")
 
 buster.toys << "bone" << "ball"
-#george.pets << buster << peppa
+george.pets << buster << peppa
 claire.pets << felix
 
 $animals = []
@@ -237,17 +237,46 @@ def animal_for_adoption
   puts "CLIENT PUT ANIMAL UP FOR ADOPTION"
   puts "================================="
   puts ""
-  puts "The following Animals are adopted by the following Clients"
-  $clients.select {|c| c.pets.length > 0}.each do |a| 
-  	puts " #{a.name}"
-  end
+  puts "The following Clients have adopted Animals: "
+  puts
 
-  print "Enter Client name: "
+	unless $clients.length == 0
+		$clients.select {|c| c.pets.length > 0}.each do |c|
+			puts "#{c.name.capitalize}:"
+			puts
+		end
+	else
+		puts "No clients found."
+	end
+
+  print "Enter name of Client putting animal up for adoption: "
   client_name = gets.chomp
   puts
-  print "Enter name of Animal to put up for adoption: "
-  animal_name = gets.chomp
 
+  if client_exists?(client_name)
+ 
+    print "Enter number of Animal to put up for adoption: "
+    pet_index = gets.chomp
+ #     binding.pry
+    $clients.select {|c| c.name == client_name}.first.pets.each do |c|
+      puts "#{c.name} #{c}"
+      binding.pry  
+    end
+    # This should actually check for animal against client entered.
+#    if animal_exist?(animal_name)
+    	# remove pet from Client
+
+#      $clients.select {|c| c.name == client_name}.first.pets.select {|p| p.name == animal_name}.pop
+      
+      #$clients.select {|c| c.name == client_name}.first.pets.delete_at(pet_index)
+
+      
+  else
+  	puts "Client name does not exist."
+  end
+
+  gets
+  
 end
 
 def process_menu
@@ -265,6 +294,8 @@ def process_menu
 			create_client
 		when '5'
 			adopt_animal
+		when '6'
+			animal_for_adoption
 		end
 		menu_option = read_selection
 	end
