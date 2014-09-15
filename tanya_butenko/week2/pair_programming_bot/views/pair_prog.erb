@@ -3,9 +3,12 @@
 <div class='row'>
 <ul class="buttons">
 <li>
-
-	<a class="yes btn-large btn-success" href="/?id=<%= @item[:yes] %>">Yes</a>                
-	<a class="no btn-large btn-danger" href="/?id=<%= @item[:no] %>">No</a>
+	<%if @item[:no] != nil %>
+		<a class="btn btn-lg btn-success" href="/?id=<%= @item[:yes] %>">Yes</a>                
+		<a class="btn btn-lg btn-danger" href="/?id=<%= @item[:no] %>">No</a>
+	<%else%>
+		<a class="btn btn-lg btn-primary"href="/?id=<%= @item[:yes] %>">Done</a>
+	<%end%>
 </li>
 
 
