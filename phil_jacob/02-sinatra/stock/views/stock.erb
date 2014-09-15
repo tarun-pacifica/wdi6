@@ -1,0 +1,19 @@
+<form action="/stock">
+	<input name= 'stockname' placeholder = "Insert Stock Code">
+	<button>Go!</button>
+</form>
+
+<% if @price && @price > 0%>
+
+<p>
+	Latest trade value of <%=@name %> = <b>$<%= @price %></b>
+</p>
+
+<% else %>
+
+<p>
+	There is no stock under that name
+
+</p> 
+
+<% end %>
