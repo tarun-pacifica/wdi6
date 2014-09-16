@@ -4,43 +4,16 @@ require 'sinatra/reloader'
 
 get '*' do
 
-  case request.path
-  when '/'
-  	@question_text = 'Do you have a test for that?' 
-  	@yes_path = '/pass'
-  	@no_path = '/write_test'
-  	@done_path = nil
-  when '/pass'
-  	@question_text = 'Does the test pass?' 
-  	@yes_path = '/refactor'
-  	@no_path = '/write_code'
-  	@done_path = nil
-  when '/write_test'
-  	@question_text = 'Write a test' 
-  	@yes_path = nil
-  	@no_path = nil
-  	@done_path = '/pass'
-  when '/write_code'
-  	@question_text = 'Just enough code for the test to pass' 
-  	@yes_path = nil
-  	@no_path = nil
-  	@done_path = '/pass'
-  when '/refactor'
-  	@question_text = 'Need to refactor?' 
-  	@yes_path = '/no_refactor'
-  	@no_path = '/new_feature'
-  	@done_path = nil
-  when '/no_refactor'
-  	@question_text = 'Refactor code' 
-  	@yes_path = nil
-  	@no_path = nil
-  	@done_path = '/pass'
-  when '/new_feature'
-  	@question_text = 'Select a new feature to implement' 
-  	@yes_path = nil
-  	@no_path = nil
-  	@done_path = '/'
-  end
+	@qmap = {}
+
+  @qmap['/'] = ['Do you have a test for that?','/pass','/write_test',nil]
+  @qmap['/pass'] = ['Does the test pass?','/refactor','/write_code',nil]   
+  @qmap['/write_test'] = ['Write a test',nil,nil,'/pass']   
+  @qmap['/write_code'] = ['Just enough code for the test to pass',nil,nil,'/pass']   
+  @qmap['/refactor'] = ['Need to refactor?','/no_refactor','/new_feature',nil]   
+  @qmap['/no_refactor'] = ['Refactor code',nil,nil,'/pass']   
+  @qmap['/new_feature'] = ['Select a new feature to implement',nil,nil,'/']     
+
   erb :pp  
 
 end

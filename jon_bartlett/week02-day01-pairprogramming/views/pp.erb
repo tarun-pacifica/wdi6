@@ -1,12 +1,12 @@
 
 <div>
-	<h2><%= @question_text %></h2>
+	<h2><%= @qmap[request.path][0] %></h2>
 	<ul>
-		<% unless @done_path %>
-			<li><a class='btn_yes' href='<%= @yes_path %>' >Yes</a></li>
-			<li><a class='btn_no' href='<%= @no_path %>'>No</a></li>
+		<% unless @qmap[request.path][3] %>
+			<li><a class='btn_yes' href='<%= @qmap[request.path][1] %>' >Yes</a></li> 
+			<li><a class='btn_no' href='<%= @qmap[request.path][2] %>'>No</a></li>
 		<% else %>
-			<li><a class='btn_done' href='<%= @done_path %>'>Done</a></li>			
+			<li><a class='btn_done' href='<%= @qmap[request.path][3] %>'>Done</a></li>
 		<% end %>
 
 	</ul>
