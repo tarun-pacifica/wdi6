@@ -42,10 +42,9 @@ body{
 .content{
      position: relative;
      max-width: 640px;
-     border: 1px solid black;
      background-color: white;
      display:inline-block;
-     padding: 20px;
+     padding: 5px;
 }
 
 .sidebar{
@@ -78,6 +77,10 @@ a:hover{
 
 .download{
   font-size: 14px;
+}
+
+article{
+  padding: 0 10px 35px 10px;
 }
 
 header{
