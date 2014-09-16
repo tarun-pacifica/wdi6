@@ -31,6 +31,20 @@ body{
      color: #000000;
 }
 
+header{
+     background-image: url('../images/background.jpg');
+     background-repeat: repeat-x;
+     width: 100%;
+     height: 168px;
+     text-align:center;
+}
+
+.logo{
+     font-size: 400%;
+     display:inline-block;
+     margin: 15px;
+}
+
 .container{
      position:relative;
      max-width: 940px;
@@ -51,10 +65,10 @@ body{
      position:absolute;
      max-width: 280px;
      top: 0; 
-     border:1px solid green;
      background-color: white;
      left: 640px; /*right: 0;*/
      margin-left:20px;
+     padding: 10px 20px 
 }
 
 h2{
@@ -83,18 +97,26 @@ article{
   padding: 0 10px 35px 10px;
 }
 
-header{
-     background-image: url('../images/background.jpg');
-     background-repeat: repeat-x;
-     width: 100%;
-     height: 168px;
-     text-align:center;
+.post_end{
+  border-bottom: 1px solid black;
+  border-top: 1px dashed black;
 }
 
-.logo{
-     font-size: 400%;
-     display:inline-block;
-     margin: 15px;
+ul{
+  padding-left: 0px;
+}
+
+li{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ad + .ad {
+  padding-top: 10px;
+}
+
+.ad.last{
+  margin-bottom: 40px;
 }
 
 footer {
@@ -106,9 +128,4 @@ footer {
   text-align: center;
   padding-top: 39px;
  
-}
-
-.post_end{
-  border-bottom: 1px solid black;
-  border-top: 1px dashed black;
 }
