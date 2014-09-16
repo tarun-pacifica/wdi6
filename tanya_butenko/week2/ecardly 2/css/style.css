@@ -35,14 +35,13 @@ body{
      position:relative;
      max-width: 940px;
      margin: auto;
-     margin-top: 90px;
-     border:1px solid red;
      display: block;
+     margin-top: 90px;
 }
 
 .content{
      position: relative;
-     width: 640px;
+     max-width: 640px;
      border: 1px solid black;
      background-color: white;
      display:inline-block;
@@ -51,11 +50,11 @@ body{
 
 .sidebar{
      position:absolute;
-     width: 280px;
-     top: 0;
+     max-width: 280px;
+     top: 0; 
      border:1px solid green;
      background-color: white;
-     left: 640px;
+     left: 640px; /*right: 0;*/
      margin-left:20px;
 }
 
@@ -67,41 +66,46 @@ p{
      font-size: 12px;
 }
 
-header{
-     position:relative;
-     width:100%;
-     border:2px dashed green;
+a{
+  color:#cc6633;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover{
+  color: blue;
+}
+
+.download{
+  font-size: 14px;
 }
 
 header{
      background-image: url('../images/background.jpg');
      background-repeat: repeat-x;
+     width: 100%;
      height: 168px;
+     text-align:center;
 }
-/*
+
 .logo{
      font-size: 400%;
-     border:1px solid black;
      display:inline-block;
-     margin: auto;
-     position: center;
-}*/
+     margin: 15px;
+}
 
 footer {
   position: relative;
   bottom: 0;
   left: 0;
-  height: 100px;
+  height: 120px;
   width: 100%;
-  border:1px dashed red;
+  text-align: center;
+  padding-top: 39px;
+ 
 }
 
-footer img{
-     text-align: center;
-     display: inline-block;
+.post_end{
+  border-bottom: 1px solid black;
+  border-top: 1px dashed black;
 }
-
-
-
-
-
