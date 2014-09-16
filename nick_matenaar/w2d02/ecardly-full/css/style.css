@@ -1,0 +1,162 @@
+/* 
+Project Name: Ecard.ly
+Client: General Assembly 
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* MY STYLES 
+####
+####
+*/ 
+
+body {
+     background-color: #d6d6d6; 
+     background-image: url("../images/background.jpg");
+     background-repeat: repeat-x;
+     margin-bottom: 50px  
+}
+
+.container {
+     max-width: 940px;
+     margin: 0 auto;
+}
+
+.top {
+     text-align: center;
+     margin: 15px auto;
+}
+
+
+h1 {
+     display: inline-block;
+     margin: auto;
+}
+
+h2 {
+     font-size: 20px;
+}
+
+p {
+     font-size: 12px;
+     line-height: 1.5em;
+     margin: 10px 0px;
+
+
+}
+
+#main {
+     vertical-align: top;
+     display: inline-block;
+     max-width: 640px;
+     background: white;
+     padding: 20px;
+     margin-top: 10px;
+
+
+}
+
+#sidebar {
+     vertical-align: top;
+     display: inline-block;
+     width: 280px;
+     background: white;
+     padding: 20px;
+     margin: auto;
+     margin-top: 10px;
+     margin-left: 20px;
+
+
+
+}
+
+#footer {
+     vertical-align: top;
+     display: block;
+     margin: 20px auto;
+     text-align: center;
+
+}
+
+
+article {
+}
+
+
+
+.dotted {
+     border-style: dotted;
+
+}
+
+.article_footer {
+     display: block;
+     position: relative;
+     margin: auto;
+     margin-bottom: 50px;
+}
+
+a {
+     color: #cc6633;
+     text-decoration: none;
+     font-weight: bold;
+}
+
+a:hover {
+     text-decoration: underline;
+}
+
+nav {
+     font-size: 12px;
+     line-height: 1.5em;
+     color: black;
+     font-weight: bold;
+}
+
+nav a {
+     display:block;
+     width: 100%;
+     color: black;
+}
+
+nav a:hover{
+     color: #cc6633;
+}
+
+
+nav img {
+     display: block;
+     margin: 20px auto;
+
+}
+
+#footer img {
+     display: inline;
+     position: relative;
+     margin-top: 20px;
+
+
+}
+
+
