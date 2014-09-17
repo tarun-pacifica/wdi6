@@ -80,8 +80,8 @@ div.right_column {
      padding: 20px 35px 20px 35px;
      display: inline-block;
      overflow: hidden;
-       vertical-align: top;
-      margin: 10px;
+     vertical-align: top;
+     margin: 10px;
 
 /*     float: right;
 */}
@@ -103,8 +103,8 @@ span {
 
 p {
      font-size: 12px;
-     line-height: 175%; 
-
+/*     line-height: 175%; 
+*/
 }
 
 h2 {
