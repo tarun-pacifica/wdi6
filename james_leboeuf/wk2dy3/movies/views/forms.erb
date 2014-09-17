@@ -1,0 +1,25 @@
+<div class="form_container">
+	<form action='/'>
+		<input type="text" name="movie_title" placeholder="Enter Movie Title"></input>
+
+		<button class="search_button">
+			Search
+		</button>
+
+		<div class=".view">
+
+			<p>
+				<% if @poster %>
+					The movie you have searched for is <%= params['movie_title'] %>
+					<% else %>
+					FREE MOVIE SEARCHES
+					<% end %>
+			</p>
+
+			<p>
+				<img src="<%= @poster %>">
+			</p>
+
+		</div>
+	</form>
+</div>

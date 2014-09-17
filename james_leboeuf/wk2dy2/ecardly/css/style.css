@@ -1,0 +1,107 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+body {
+	background: url('../images/background.jpg') repeat-x;
+	background-color: #d6d6d6;
+}
+
+h1 {
+	size: 20px;
+}
+
+p {
+	text-align: left;
+	size: 12px;
+}
+
+.list {
+	list-style-type: none;
+	font-weight: bold;
+	text-align: left;
+}
+
+.footer {
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.logo {
+	display: block;
+	margin: auto;
+}
+
+.container {
+	width: 980px;
+	margin: auto;
+	padding-top: 40px;
+	margin-bottom: 20px;
+
+}
+
+.blog-content, .side-bar {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 15px;
+	padding-bottom: 20px;
+}
+
+.blog-content {
+	background-color: white;
+	width: 640px;
+	padding-left: 20px;
+}
+
+.blog-content, p {
+	padding-right: 15px;
+}
+
+.container h1 {
+	margin-top: 50px;
+}
+
+.side-bar {
+	background-color: white;
+	width: 280px;
+	text-align: center;
+	list-style: none;
+}
+
+.side-bar img{
+	display: block; 
+	margin: 10px auto;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
