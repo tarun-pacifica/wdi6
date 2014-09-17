@@ -1,4 +1,4 @@
-/*!
+ /*!
  * LEGEND - Free Responsive One Page Template
  *
  * Copyright 2013
@@ -128,6 +128,11 @@ em {
 	font-style: normal;
 	font-family: 'Open Sans';
 }
+
+span {
+	color:#f0bf00;
+
+}
 .muted {
 	color: #A5A5A2;
 	font-family: 'Quattrocento', serif;
@@ -145,8 +150,33 @@ em {
 	color: #f0bf00;
 	text-transform: uppercase;
 }
+/* ---------------------------------------------------------------------------------------------------------- 
+03 Non-semantic ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* New Image Replacement Hack */
 
-/* 04 Navbar */
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 1em;
+}
+.alignright {
+	text-align: right;
+}
+.alignleft {
+	text-align: left;
+}
+.aligncenter {
+	text-align: center;
+}
+.medium {
+	font-weight: normal;
+	font-family: 'Quattrocento', serif;
+}
+/* ---------------------------------------------------------------------------------------------------------- 
+04 Navbar ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
 
 .navbar-fixed-top .container {
 /* Uncomment to make nav expand full width */
@@ -172,7 +202,9 @@ em {
  -webkit-transition: color .15s linear;
  -moz-transition: color .15s linear;
 }
-
+.navbar .brand a:focus {
+	outline: none;
+}
 .navbar-inner {
 	min-height: 4.75em;
 }
@@ -185,7 +217,12 @@ em {
 	overflow:hidden;/* No fixed height, will break collapsible nav */
 }
 
-/* --------  Single-Page Sections -------- */
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	text-shadow: none;
+}
+/* ---------------------------------------------------------------------------------------------------------- 
+05 Single-Page Sections ------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
 #headerwrap {
 	width: 100%;
 	background: url(http://www.theshiznit.co.uk/media/2012/May/animals-cats.jpg) #0b333f no-repeat center center fixed;
@@ -257,9 +294,81 @@ em {
 	background: #43413e !important;
 }
 
-/* News */
+/*#######################*/
 
-article {
+#nonwrap {
+	width: 100%;
+	background: url(http://epitomeabsolute.com/home/wp-content/uploads/2013/11/GrumpyCatScoreCardZero.jpg) #0b333f no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	;
+	min-height: 600px;
+	margin-top: -60px;
+	padding-top:160px;
+	text-align:center;
+}
+#nonwrap h1 {
+	color: #FFFFFF;
+	font-family: 'Patua One', cursive;
+	font-size: 4em;
+	font-weight: 400;
+	margin: 1em 0;
+}
+#nonwrap h2 {
+	color: #FFFFFF;
+	font-family: 'Open Sans', sans serif;
+	font-size: 2em;
+	font-weight: normal;
+	margin: 0.5em 0;
+	text-shadow: 1px 1px 1px #333333;
+}
+#nonwrap h1 span {
+	color:#f0bf00;
+}
+#nonwrap input[type=text] {
+	background: rgba(227, 231, 228, 1);
+	font-family: 'Open Sans', sans serif;
+	font-size: 1.3125em;
+	border: 0;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom:0 !important;
+}
+#nonwrap input[type=text]:focus {
+	background: #43413e;
+	color: #eff1ef;
+	transition: background 0.25 ease-in;
+	-moz-transition: background 0.25 ease-in;
+	-webkit-transition: background 0.25 ease-in;
+}
+#nonwrap input[type=text] {
+	height: 2.9em;
+	width:50%;
+}
+#nonwrap input[type=submit] {
+	font-family: 'Patua One', cursive;
+	color: #fff;
+	width: 185px;
+	height: 2.9em;
+	font-size: 1.3125em; /* 21px */
+	padding:0.5em;
+	letter-spacing: 0.05em;
+	margin: 0;
+	border: 0;
+	text-transform: none;
+	background: #f0bf00 !important;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+#nonwrap input[type=submit]:hover, #nonwrap input[type=submit]:active {
+	background: #43413e !important;
+}
+
+/*#######################*/
+article.post {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
@@ -267,8 +376,8 @@ article {
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
-
 article .inside {
 	margin: 18px 24px 24px;
 	padding-top: 1em;
+	background: url("../img/dot-row-2.png") repeat-x scroll 0 0 transparent !important;
 }
