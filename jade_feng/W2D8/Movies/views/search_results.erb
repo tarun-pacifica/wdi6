@@ -1,7 +1,49 @@
 <div class="container">
   
-    <h1>Meow! We just found your purrfect movie, <%= @title_result.upcase %> !</h1>
+    <h1>Meow! We just found your purrfect movie, <%= @title.upcase %> !</h1>
+    <h1> </h1>
 
-    <img src='<%= @poster %>' >
+
+    <div class="row">
+
+
+
+      <article>   <!-- class="span4 post" -->
+        <div class="inside">
+       		<img src='<%= @poster %>'>
+
+          <h2><%= @title %> (<%= @year %>)</h2>
+          <h2> <%= @imdbRating %> </h2>
+
+        </div>
+        <!-- /.inside -->
+      </article>
+      <!-- /.span4 -->
+
+
+
+      <article> 
+        <div class="inside">
+
+	        <h2> <%= @plot %> </h2>
+	        <h3> Runtime: <%= @runtime %> </h3>
+	        <h3> Genre: <%- @genre %> </h3>
+		  	<h3> Rated: <%= @rated %> </h3>
+
+	        <h4> Directed by <%= @director %>, with key actors <%= @actors %>.</h4> 
+
+	        <p> Awards: <%= @awards %> </p>
+	        <p> Screenplay written by <%= @writer %>. </p>
+	        <p> Language: <%= @language %> </p>
+
+         </div>
+        <!-- /.inside -->
+      </article>
+      <!-- /.span4 -->
+
+
+
+
+    </div>
 
 </div>
