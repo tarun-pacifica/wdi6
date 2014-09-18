@@ -51,6 +51,13 @@ header h1 a {
 	font-size: 250%;
 }
 
+.picker-container {
+  background-color: white;
+  margin: 0 auto; 
+  padding: 20px;  
+  font-size: 150%;
+}
+
 .ribbon-banner {
    display: block;
    position: absolute;

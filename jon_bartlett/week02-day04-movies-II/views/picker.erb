@@ -1,0 +1,10 @@
+<div class="picker-container">
+	<p>Which film did you mean?</p>
+	<form action="/search" method="get">
+		<% @search_results["Search"].each do |f| %>
+			<input type="radio" name="imdbid" value="<%=f["imdbID"]%>"><%=f["Title"]%><br>
+		<% end %>
+		<label>
+		<button>Select</button>
+	</form>
+</div>
