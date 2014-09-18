@@ -5,11 +5,32 @@
  * Created by: Inbetwin Network
  * URL: http://inbetw.in
  * Designed and built based on Twitter Bootstrap. */
+img.resizing {
+	max-width: 145px;
+	height: auto;
+}
 
 .list_output_boxes {
+
+	background-color: #FAFAFA;
 	border: 1px dotted black;
 	padding: 1em;
 	margin: 1em;
+	display: inline-block;
+	vertical-align: text-top;
+	width: 150px;
+	height: 300px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.text_name {
+	width: 100%;
+	margin-bottom: 20px;
+	position:absolute;                  /* added */
+ 	bottom:0;                           /* added */
+  	left:0;  
+  	text-align: center top;
 }
 
 div, article, section, header, footer, nav, li {

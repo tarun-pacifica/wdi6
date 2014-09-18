@@ -17,24 +17,24 @@ get "/search_list" do
 	@title_result = params["movie_name"].downcase.strip.gsub /\s+/, '+' 
 	movie_list = HTTParty.get("http://www.omdbapi.com/?s=#{ @title_result }") 
 	@list_of_movies = JSON.parse movie_list
-	@number_of_options = @list_of_movies["Search"].count.to_i
-	@movie_list_array = @list_of_movies["Search"]
-	
-	@title_list = @movie_list_array.map{|h| h['Title']} # Pulls out an array of search movie titles
-	# @year_list = @movie_list_array.map{|y| h['Year']} 
-	# @imDB_list = @movie_list_array.map{|y| h['imdbID']}
 
-	@name_ID_hash = {}
-	@movie_list_array.each do |movie_hash|
-		@ID = movie_hash["imdbID"]
-		@title = movie_hash["Title"]
-		@name_ID_hash[@ID] = @title 
-	end
+	if @list_of_movies.has_key?("Error")
+		erb :not_found
+	elsif @list_of_movies["Search"].count.to_i > 1
+		@movie_list_array = @list_of_movies["Search"]
+		
+		@name_ID_hash = {}
+		@movie_list_array.each do |movie_hash|
+			@ID = movie_hash["imdbID"]
+			@title = movie_hash["Title"]
+			@name_ID_hash[@ID] = @title 
+		end
 
-	# if @list_of_movies["Response"] == "False"
-	# 	erb :not_found		
-	if @number_of_options == 1
-			@title_result = params["movie_name"].downcase.strip.gsub! /\s+/, '+' 	#Regular expressions (REGEX) to manipulate expressions
+		erb :search_list
+		
+	elsif @list_of_movies["Search"].count.to_i == 1
+			@number_of_movies = @list_of_movies["Search"].count
+			@title_result = params["movie_name"].downcase.strip.gsub /\s+/, '+' 	#Regular expressions (REGEX) to manipulate expressions
 			movie_result = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title_result }") 
 			@movie = JSON.parse movie_result
 		# Output here
@@ -64,8 +64,6 @@ get "/search_list" do
 			@type = @movie['Type'].to_s
 			# @response = @movie['Response']
 		erb :search_results
-	else
-		erb :search_list
 	end 
 end
 
@@ -101,11 +99,11 @@ get "/search_results" do
 		@imdbID = @movie['imdbID'].to_s
 		@type = @movie['Type'].to_s
 		# @response = @movie['Response']
-	if @title.empty? 
-		erb :not_found
-	else
-		erb :search_results
-	end 
+	# if @title.empty? 
+	# 	erb :not_found
+	# else
+	erb :search_results
+	# end 
 end
 
 get "/not_found" do 
