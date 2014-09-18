@@ -1,12 +1,15 @@
-<form action="/stock">
-		<input name= "stockname" placeholder = "Stock Symbol">
+<form action="/">
+		<input name= "stockname" placeholder = "whatever I want"> <!-- <input name= "stockname" refers to the params[:stockname]
+		http://localhost:4567/stock?stockname=aapl
+		stockname is the key, and aapl is the value
+		-->
 		<button>Go!</button>
 </form>
 
 
 <% if @price && @price > 0 %>
 	<p>
-		Last traded value for <%= @name %> was $<%= @price %>
+		Last traded value for <%= @user_input_stock %> was $<%= @price %>
 	</p>
 <% else %>
 	<p>

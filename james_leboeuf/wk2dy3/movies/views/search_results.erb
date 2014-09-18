@@ -1,0 +1,23 @@
+<div class="form_container">
+	<form action='/search_results'>
+		<input type="text" name="movie_title" placeholder="Enter Movie Title"></input>
+
+		<button class="search_button">
+			Search
+		</button>
+	</form>
+
+		<div class=".view">
+			<p>
+				<% unless @poster.nil? %>
+					The movie you have searched for is <%= params['movie_title'] %> and is about <%= @plot %> Release date: <%= @year %>
+					<% else %>
+					YOUR MOVIE WAS NOT FOUND
+					<% end %>
+			</p>
+			
+			<p>
+				<img src="<%= @poster %>">
+			</p>
+	</div>
+</div>

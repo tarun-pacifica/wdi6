@@ -4,14 +4,21 @@ require 'httparty'
 require 'pry'
 
 get '/' do #Sinatra will serve up anything here and in public automatically
-	if params["movie_title"]
+	erb :forms
+end
+
+get '/search_results' do
+	# if params["movie_title"]
 		@title = params["movie_title"].gsub(' ','+')
 		movie_results = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title }")
 		movie = JSON.parse movie_results #THIS IS OUR DISPLAY
 		@poster = movie['Poster']
-		end
-	erb :forms
+		@plot = movie['Plot']
+		@year = movie['Year']
+	# end
+	erb :search_results
 end
+
 
 
 
