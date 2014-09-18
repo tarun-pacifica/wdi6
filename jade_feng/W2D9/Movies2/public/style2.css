@@ -401,6 +401,8 @@ article.post {
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	height: 600px;
+	margin-bottom: 50px;
 }
 article .inside {
 	margin: 18px 24px 24px;
