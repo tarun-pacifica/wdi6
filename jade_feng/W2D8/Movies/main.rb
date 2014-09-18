@@ -55,8 +55,11 @@ get "/not_found" do
 end
 
 
+get "/wall" do
+	erb :wall
+end
 
-# Nick's Code:
+# Nick's Code: https://github.com/Nicktho/wdi6/tree/master/nick_matenaar/w2d03/postr
 # get '/search' do 
 # 	# Get movie data into hash
 # 	@movie_name = params['search_string']

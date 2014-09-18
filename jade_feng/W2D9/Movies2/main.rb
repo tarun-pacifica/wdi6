@@ -13,10 +13,68 @@ get "/" do
 	erb :home
 end
 
+get "/search_list" do
+	@title_result = params["movie_name"].downcase.strip.gsub /\s+/, '+' 
+	movie_list = HTTParty.get("http://www.omdbapi.com/?s=#{ @title_result }") 
+	@list_of_movies = JSON.parse movie_list
+	@number_of_options = @list_of_movies["Search"].count.to_i
+	@movie_list_array = @list_of_movies["Search"]
+	
+	@title_list = @movie_list_array.map{|h| h['Title']} # Pulls out an array of search movie titles
+	# @year_list = @movie_list_array.map{|y| h['Year']} 
+	# @imDB_list = @movie_list_array.map{|y| h['imdbID']}
+
+	@name_ID_hash = {}
+	@movie_list_array.each do |movie_hash|
+		@ID = movie_hash["imdbID"]
+		@title = movie_hash["Title"]
+		@name_ID_hash[@ID] = @title 
+	end
+
+	# if @list_of_movies["Response"] == "False"
+	# 	erb :not_found		
+	if @number_of_options == 1
+			@title_result = params["movie_name"].downcase.strip.gsub! /\s+/, '+' 	#Regular expressions (REGEX) to manipulate expressions
+			movie_result = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title_result }") 
+			@movie = JSON.parse movie_result
+		# Output here
+			@title = @movie['Title'].to_s
+			@poster = @movie['Poster'].to_s
+			if @poster != "N/A"
+				@poster = @movie['Poster'].to_s
+			else
+				@poster = "http://www.notsuperhuman.com/wp-content/uploads/2011/03/5501618311_1eeec26185_z_large.jpg"
+			end
+			@year = @movie['Year'].to_s
+			@rated = @movie['Rated'].to_s
+			@released = @movie['Released'].to_s
+			@runtime = @movie['Runtime'].to_s
+			@genre = @movie['Genre']
+			@director = @movie['Director'].to_s
+			@writer = @movie['Writer'].to_s
+			@actors = @movie['Actors'].to_s
+			@plot = @movie['Plot'].to_s
+			@language = @movie['Language'].to_s
+			@country = @movie['Country'].to_s 
+			@awards = @movie['Awards'].to_s
+			# @metascore = @movie['Metascore'].to_s
+			@imdbRating = @movie['imdbRating'].to_s
+			# @imdbVotes ] = @movie['imdbVotes'].to_s
+			@imdbID = @movie['imdbID'].to_s
+			@type = @movie['Type'].to_s
+			# @response = @movie['Response']
+		erb :search_results
+	else
+		erb :search_list
+	end 
+end
+
 get "/search_results" do 
-		@title_result = params["movie_name"].downcase.strip.gsub! /\s+/, '+' 	#Regular expressions (REGEX) to manipulate expressions
-		movie_result = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title_result }") 
+		@id_result = params["id_result"]
+
+		movie_result = HTTParty.get("http://www.omdbapi.com/?i=#{ @id_result }&t=") 
 		@movie = JSON.parse movie_result
+
 	# Output here
 		@title = @movie['Title'].to_s
 		@poster = @movie['Poster'].to_s
@@ -55,9 +113,9 @@ get "/not_found" do
 end
 
 
-get "/wall" do
-	erb :wall
-end
+# get "/wall" do
+# 	erb :wall
+# end
 
 # Nick's Code: https://github.com/Nicktho/wdi6/tree/master/nick_matenaar/w2d03/postr
 # get '/search' do 

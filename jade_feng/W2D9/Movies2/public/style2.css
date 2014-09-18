@@ -6,6 +6,11 @@
  * URL: http://inbetw.in
  * Designed and built based on Twitter Bootstrap. */
 
+.list_output_boxes {
+	border: 1px dotted black;
+	padding: 1em;
+	margin: 1em;
+}
 
 div, article, section, header, footer, nav, li {
 	position:relative;

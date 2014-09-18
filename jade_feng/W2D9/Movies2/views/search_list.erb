@@ -1,0 +1,16 @@
+<div class="container">
+
+<h1>We just claw-lected <%= @number_of_options %> mew-vie result(s) for <%= @title_result.upcase.sub('+', ' ') %>!</h1>
+
+
+<% @name_ID_hash.each do |id, title| %>	
+	<div class="list_output_boxes">
+		<a href='/search_results?id_result=<%= id %>'> 
+		<%= title %> </a>
+	</div>
+
+
+<% end %>
+
+
+</div>
