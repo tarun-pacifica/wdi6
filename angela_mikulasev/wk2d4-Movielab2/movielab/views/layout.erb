@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Search</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<nav>
+			<h1>
+				Movie Search
+			</h1>
+		</nav>
+
+		<%= yield %>
+
+		<div class="info"> 
+			<% if @movie_title %>
+				<p> The movie you have searched for is <%= @movie_title %> </p>
+			<% end %>
+
+			<% if @plot %>
+				<p>Plot: <%= @plot %></p>
+			<% end %>
+
+			<% if @rating %>
+				<p>Rating: <%= @rating %></p>
+			<% end %>
+		</div>
+
+	</div>
+</body>
+</html>
