@@ -1,0 +1,79 @@
+body {
+	text-align: center;
+    background-image: url(https://bethanykhan.files.wordpress.com/2009/07/3khaninnyc059.jpg);
+  	background-size: 100%;
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;	color: white;
+	float: center;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; 
+}
+
+}
+
+button {
+	type: "button";
+	class: "btn btn-default";
+}
+
+
+/*div {
+    height: 100px;
+/*    background-color: black;
+*/
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}*/
+
+div {
+	background-color: black;
+	color: white;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; 
+}
+
+button {
+	font-style: Helvetica;
+	font-size: 125%;
+	background: rgb(66, 184, 221); /* this is a light blue */
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	height: 50px;
+
+}
+
+img {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+
+	}
+
+.basicform {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 50px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 20%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+
+}

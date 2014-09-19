@@ -1,0 +1,23 @@
+<form action="/">
+	<input name = "stock_symbol" class="basicform" placeholder = "Stock Ticker">
+	<button> Lookup! </button>
+</form>
+
+<% if @price && @price > 0 %> 	<!-- Returns a stock and its price if the stock exists. -->
+<div>
+	<h3> 
+		Information current as of <%= @date %> on <%= @year %> for <%= @name %>
+	</h3>
+	<h3>
+		The last trading price of the stock <%= params[:stock_symbol.upcase] %> was $<%= @price %> </h3>
+	<h3> 
+		The volume was <%= @volume %>, with the range for the day at $<%= @rangeLOW %> - $<%= @rangeHIGH %>
+	</h3>
+</div>
+<% end %>
+
+<% if @price == 0 %>  	<!-- Returns this if the stock does not exist. -->
+	<h3>
+		The stock <%= params[:stock_symbol].upcase %> does not exist. 
+	<h3>
+<% end %>
