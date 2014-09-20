@@ -1,0 +1,21 @@
+
+<% if @trip.any? %>
+<div class="result">
+You will be travelling from <span class="station"><%= $subway_station[$get_on - 1] %></span> and arriving at <span class="station"><%= $subway_station[$get_off - 1] %></span>
+
+
+<% @trip.each do |n| %>
+<ul class="list_stops">
+	<li><span> <%= (@trip.index(n) + 1) %> :</span> <%= n %></li>
+</ul>
+<% end %>
+
+<% else %>
+<div class='not_travelling'>
+<h1>Hmmm.... Why don't you try this!</h1>
+<img src="http://fc03.deviantart.net/fs71/i/2012/264/9/5/platform_9_and_3_4_by_rlooneyhawkeye-d5fg4yu.jpg" class="not_travelling_image">
+</div>
+
+<% end %>
+
+</div>
