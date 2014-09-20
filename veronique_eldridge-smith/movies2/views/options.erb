@@ -1,0 +1,26 @@
+<form action="/options" method="get">
+
+	<input class="text_field" type="text" placeholder="ENTER MOVIE NAME" name="movie_title">
+	<input class="button" type="submit" value="GET POSTER">
+
+</form>
+
+
+<form action="/search" method="get">
+
+<div class="input-group">
+	<p class="blerb">Please select the movie you are looking for:</p>
+	<ul>
+	<% @results.each do |title, imdbID| %>
+	
+	<li><input type="radio" name="movie_selection" value="<%= imdbID %>">
+		<label for="movie_selection"><%= title %></label></li>
+	<% end %>
+
+</ul>
+
+	<input class="button" type="submit" value="POSTER SELECT">
+	
+</div>
+
+</form>
