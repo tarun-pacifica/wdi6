@@ -28,26 +28,33 @@ lines = {
 # n.slice(n.index(start_point),stops_num + 1) #Slice works by taking the starting index as the first parameter, the second parameter is how many items you want from that array, including the first. +1 to list the full range.
 # => ["Times Square", "34th", "28th", "23rd"]
 # Check wether one has a higher index, if the index of times square=0.
-def find_line(station, all_the_lines)
+def find_line(station, all_the_lines) 
+#Taking in TWO arguments, the station start point, and all the lines.
+#Then we break down LINES into two groups, by line and by stops.
+#Then we say does the stops include? the station start point. Then we list it by keys,
 	all_the_lines.select{ |line, stops| stops.include?(station) }.keys.join
 end
+
+
 
 
 def trip_section(lines)
 	start_point = params["starting_point"]
 	end_point	= params["stopping_point"]
-	line_found = find_line(start_point, lines)
+	origin_line_found = find_line(start_point, lines)
+	destination_line_found = find_line(end_point, lines)
 
+
+	start_index = lines[origin_line_found].index(start_point)
+	ending_index = lines[origin_line_found].index(end_point)
 	binding.pry
-	start_index = lines[line_found].index(start_point)
-	ending_index = lines[line_found].index(end_point)
 
 	if start_index > ending_index
 		stops_num = (start_index - ending_index).abs
-		section = lines[line_found].slice(ending_index,stops_num + 1).reverse
+		section = lines[origin_line_found].slice(ending_index,stops_num + 1).reverse
 	else
 		stops_num = (start_index - ending_index).abs
-		section =lines[line_found].slice(start_index,stops_num + 1)
+		section =lines[origin_line_found].slice(start_index,stops_num + 1)
 	end
 	
 		# binding.pry
