@@ -6,12 +6,10 @@
 	
 </form>
 
-<% if !@movie.nil? %>  
+<%  unless @movie.nil? %>  
 		<img src="<%= @movie %>">
 
-
 	<%else%>
-	
 		<p>
 			Check on spelling and try again.
 		</p>
