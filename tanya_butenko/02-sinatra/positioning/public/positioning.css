@@ -1,0 +1,68 @@
+body {
+	background-color: yellow;
+	min-height: 100em;
+}
+
+.container{
+	max-width: 960px;
+	border: 10px dashed black;
+	margin: auto;
+}
+
+.box {
+	width: 10em;
+	height: 10em;
+	border: 1px solid black;
+}
+
+.static {
+	position: static;
+}
+
+.relative {
+	position: relative;
+	background-color: rgb(255,0,0)
+}
+
+.absolute {
+	position: absolute;
+	left: 80%;
+	top: 120px;
+}
+
+.fixed {
+	position: fixed;
+	right: 5%;
+	top: 150px;
+	background-color: rgba(255, 0, 255, 0.5);
+}
+.overflow-hidden{
+	overflow: hidden;
+	color: red;
+}
+
+.z-index1 {
+	z-index: 3;
+	background-color: black;
+	left: 45%;
+	top:45%;
+	opacity: 0.7;
+}
+
+.z-index2 {
+	z-index: 2;
+	background-color: white;
+	left: 50%;
+	top: 55%;
+}
+
+.z-index3{
+	z-index: 1;
+	background-color: red;
+	left: 55%;
+	top: 65%;
+}
+
+.goldfish {
+	overflow: hidden;
+}
