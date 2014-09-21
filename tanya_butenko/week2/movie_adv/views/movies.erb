@@ -1,0 +1,18 @@
+<form action="/">
+
+	<label for="search"></label>
+	<input type="search" name="movie_poster" placeholder="Movie Name">
+	<button>Search</button>
+	
+</form>
+
+<%  unless @movie.nil? %>  
+		<img src="<%= @movie %>">
+
+	<%else%>
+		<p>
+			Check on spelling and try again.
+		</p>
+		<img src="http://www.filmgator.com/black/pics/tour_search.png">	
+	
+<%end%>
