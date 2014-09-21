@@ -1,0 +1,58 @@
+body {
+	background-image: url('http://s3files.core77.com/blog/images/2013/12/RobertBacon-SuperNewYorkCitySubway-HERO.jpg');
+	background-size: cover;
+	color: yellow;
+	text-shadow: 2px 2px black;
+	line-height: 30px;
+	
+	font-size: 25px;
+}
+
+.header{
+	position:relative;
+	top: 170px;
+}
+
+.header h1{
+	font-family: 'Luckiest Guy', cursive;
+	text-shadow: 3px 3px black;
+	font-size: 50px;
+	color:red;
+}
+
+.container {
+	position:relative;
+	top:200px;
+	max-width: 960px;
+	margin: auto;
+	background-color: green;
+	font-size: 20px;
+	padding: 15px;
+	opacity: 0.8;
+}
+
+select, button{
+	color: black;
+}
+
+h1{
+	text-align: center;
+}
+
+button{
+	border-radius: 8px;
+	background-color:#729FFD;
+}
+
+button:focus{
+	outline:none;
+}
+
+button:hover{
+	background-color:#815BFF;
+	box-shadow: 3px 3px black;
+}
+
+form, p, a{
+	font-size: 30px;
+}

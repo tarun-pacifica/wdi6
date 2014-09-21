@@ -1,0 +1,38 @@
+
+<div class="start"><p> You are new to city and need help with metro. Just tell as what is the nearest station from you and what station you need to get to and we'll do all job for you!</p>
+
+<form action="/result" method="get">
+	<div class="dep">
+		Departure station: 
+		<select name="departure_station" id="departure_station">
+			<% @subway.each do |line_name, line_stations| %>
+
+				<optgroup label="<%= line_name %>"></optgroup>
+
+				<% line_stations.each do |station_name| %>
+					<option value="<%= line_name %>,<%= station_name %>"><%= station_name %></option>
+				<% end %>
+
+			<% end %>
+  		
+		</select>
+	</div>
+	<div class="arr">
+	Arrival station:
+	<select name="arrival_station" id="arrival_station">
+		<% @subway.each do |line_name, line_stations| %>
+
+			<optgroup label="<%= line_name %>"></optgroup>
+
+			<% line_stations.each do |station_name| %>
+				<option value="<%= line_name %>,<%= station_name %>"><%= station_name %></option>
+			<% end %>
+
+		<% end %>
+  		
+	</select>
+	</div>	
+		
+	<button>Search</button>	
+</form>
+</div>

@@ -1,0 +1,11 @@
+<h2>Your departure station is line <%= @departure[0] %> stop <%= @departure[1] %></h2>
+<h2>Your arrival station is line <%= @arrival[0] %> stop <%= @arrival[1] %></h2>
+
+<% if @result == 0 %>
+	<h1>You don't need to take metro, you already on your stop</h1>
+<% elsif @result == 1 %>
+	<h1>You need to pass only one station, so just walk</h1>
+<% else %>
+	<h1>You need to pass <%= @result %> stations</h1>
+	
+<%end%>
