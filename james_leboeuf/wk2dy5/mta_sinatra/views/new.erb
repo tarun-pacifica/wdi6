@@ -1,7 +1,5 @@
-<h2>MTA SINATRA</h2>
-
 <form action="/" method="get">
-	<p>Which station are you currently at?</p>
+	<h2>Which station are you currently at?</h2>
 		<select name="starting_point">
 			<% @lines.each do |line, stops| %>
 			<%= "<optgroup label=#{ line }>"%>
@@ -11,7 +9,7 @@
 		  <% end %>
 		</select>
 
-	<p>Which station do you want to stop at?</p>
+	<h2>What's your destination?</h2>
 		<select name="stopping_point">
 			<% @lines.each do |line, stops| %>
 			<%= "<optgroup label=#{ line }>"%>
@@ -19,9 +17,6 @@
 		  <%= "<option value=\"#{ station }\">#{ station }</option>" %>
 		  <% end %>
 		  <% end %>
-		  <input type="submit" value="Submit">
 		</select>
-
-		<%= @trip_section %>
-
+	<p><input class="submit_button" type="submit" value="Submit"></p>
 </form>

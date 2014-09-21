@@ -35,51 +35,60 @@ def find_line(station, all_the_lines)
 	all_the_lines.select{ |line, stops| stops.include?(station) }.keys.join
 end
 
-
-
-
 def trip_section(lines)
 	start_point = params["starting_point"]
 	end_point	= params["stopping_point"]
-	origin_line_found = find_line(start_point, lines)
-	destination_line_found = find_line(end_point, lines)
+
+
+
+	if start_point == "Union Square"
+		origin_line_found = find_line(end_point, lines)
+		destination_line_found = origin_line_found
+	elsif end_point == "Union Square"
+		origin_line_found = find_line(start_point, lines)
+		destination_line_found = origin_line_found
+	else
+		origin_line_found = find_line(start_point, lines)
+		destination_line_found = find_line(end_point, lines)
+	end
+
+	if start_point && end_point == "Union Square"
+		start_index = 0
+		end_index = 0
+	else
+		start_index = lines[origin_line_found].index(start_point)
+		end_index = lines[destination_line_found].index(end_point)
+	end
+
 
 
 	start_index = lines[origin_line_found].index(start_point)
-
 	end_index = lines[destination_line_found].index(end_point)
+	# binding.pry
 
-	start_intersect_index = 0
-
-	if origin_line_found == destination_line_found
-		answer = (start_index - end_index).abs
-		answer
+	if start_index > end_index
+		stops_num = (start_index - end_index).abs
+		section = lines[origin_line_found].slice(end_index,stops_num + 1).reverse
 	else
-		intersect = "Union Square"
-
-		start_intersect_index = lines[origin_line_found].index(intersect)
-		end_intersect_index = lines[destination_line_found].index(intersect)
-
-		start_line_stop = (start_intersect_index - start_index).abs
-
-		end_line_stop = (end_intersect_index - end_index).abs
-
-		total_stops = start_line_stop + end_line_stop
-		total_stops
-
+		stops_num = (start_index - end_index).abs
+		section = lines[origin_line_found].slice(start_index,stops_num + 1)
 	end
 
-	# if start_index > end_index
-	# 	stops_num = (start_index - end_index).abs
-	# 	section = lines[origin_line_found].slice(end_index,stops_num + 1).reverse
-	# else
-	# 	stops_num = (start_index - end_index).abs
-	# 	section =lines[origin_line_found].slice(start_index,stops_num + 1)
-	# end
-	
+	if 
+		origin_line_found == destination_line_found
+		answer = (start_index - end_index).abs
+	else
+		intersect = "Union Square"
+		start_intersect_index = lines[origin_line_found].index(intersect)
+		end_intersect_index = lines[destination_line_found].index(intersect)
+		start_line_stop = (start_intersect_index - start_index).abs
+		end_line_stop = (end_intersect_index - end_index).abs
+		answer = start_line_stop + end_line_stop
+	end
 
+	final = "Traveling from #{ start_point } to #{ end_point } will take #{ answer } stop(s)."
+	# binding.pry
 end
-
 
 get "/" do
 	unless params["starting_point"].nil? && params["stopping_point"].nil?

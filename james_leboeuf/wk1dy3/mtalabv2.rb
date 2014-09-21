@@ -50,30 +50,5 @@ start_intersect_index = 0
 
 
 
-# def read_selection
-# 	menu
-# 	gets.chomp.downcase
-# end
-
-# menu_option = read_selection
-
-# until menu_option == 'q'
-# 	case menu
-
-		# if line_answer == 'n' && second_line == 'n'
-		# puts a_n_line.index(station_answer).abs + a_n_line.index(destination_answer).abs
-		# end
-
-		# if line_answer == 'l' && second_line == 'l'
-		# puts a_l_line.index(station_answer).abs + a_l_line.index(destination_answer).abs
-		# end
-
-		# if line_answer == '6' && second_line == '6'
-		# puts a_6_line.index(station_answer).abs + a_6_line.index(destination_answer).abs
-		# else 
-# end2
-
-
-
 
 
