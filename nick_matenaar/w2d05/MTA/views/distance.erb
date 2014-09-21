@@ -1,0 +1,17 @@
+<div class="distance-header"> 
+	<a href="/"><h1>MTA</h1></a>
+	<h3><%=@first_station%> to <%=@second_station%></h3>
+	<h4>Total Stops: <em><%= @total_stops %></em></h4>
+
+</div>
+<section class="distance-content">
+	
+	<section id="stops">
+		<p>Depart from: <strong><%=@first_station%> Station</strong></p>
+		<% @stations_array.each do |station| %>
+			<p>Then Stops At: <strong><%= station %> Station</strong></p>
+		<% end %>
+	</section>
+
+	<a href="/"><button class="another">Another Route</button></a>
+</section>
