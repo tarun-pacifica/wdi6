@@ -46,19 +46,38 @@ def trip_section(lines)
 
 
 	start_index = lines[origin_line_found].index(start_point)
-	ending_index = lines[origin_line_found].index(end_point)
-	binding.pry
 
-	if start_index > ending_index
-		stops_num = (start_index - ending_index).abs
-		section = lines[origin_line_found].slice(ending_index,stops_num + 1).reverse
+	end_index = lines[destination_line_found].index(end_point)
+
+	start_intersect_index = 0
+
+	if origin_line_found == destination_line_found
+		answer = (start_index - end_index).abs
+		answer
 	else
-		stops_num = (start_index - ending_index).abs
-		section =lines[origin_line_found].slice(start_index,stops_num + 1)
+		intersect = "Union Square"
+
+		start_intersect_index = lines[origin_line_found].index(intersect)
+		end_intersect_index = lines[destination_line_found].index(intersect)
+
+		start_line_stop = (start_intersect_index - start_index).abs
+
+		end_line_stop = (end_intersect_index - end_index).abs
+
+		total_stops = start_line_stop + end_line_stop
+		total_stops
+
 	end
+
+	# if start_index > end_index
+	# 	stops_num = (start_index - end_index).abs
+	# 	section = lines[origin_line_found].slice(end_index,stops_num + 1).reverse
+	# else
+	# 	stops_num = (start_index - end_index).abs
+	# 	section =lines[origin_line_found].slice(start_index,stops_num + 1)
+	# end
 	
-		# binding.pry
-		section
+
 end
 
 
