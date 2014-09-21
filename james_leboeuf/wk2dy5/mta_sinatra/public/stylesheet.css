@@ -51,11 +51,12 @@ header {
 .content {
 	width:100%;
 	position: relative;
-	top: 615px;
+	top: 560px;
 	background: black;
 	height: 2000px;
 	font-family: 'Francois One', sans-serif;
 	color: white;
+	font-size: 45px;
 }
 
 .header_text {
@@ -112,6 +113,10 @@ input.submit_button {
 }
 }
 
+.trip_section {
+
+}
+
 /*.trip_section {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -137,7 +142,21 @@ input.submit_button {
   text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
 }*/
 
-
+.footer {
+	line-height:30px; 
+	margin:0 auto; 
+	width:940px; 
+	text-align:center; 
+	background:#FFFFFF; border:1px solid #666; 
+	bottom:0; 
+	height:110px; 
+	left:0; 
+	position: relative;
+	width:100%; 
+	color:black;
+	font-size:45px;
+	font-weight:bold;
+}
 
 
 

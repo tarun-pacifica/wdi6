@@ -39,8 +39,6 @@ def trip_section(lines)
 	start_point = params["starting_point"]
 	end_point	= params["stopping_point"]
 
-
-
 	if start_point == "Union Square"
 		origin_line_found = find_line(end_point, lines)
 		destination_line_found = origin_line_found
@@ -52,19 +50,8 @@ def trip_section(lines)
 		destination_line_found = find_line(end_point, lines)
 	end
 
-	if start_point && end_point == "Union Square"
-		start_index = 0
-		end_index = 0
-	else
-		start_index = lines[origin_line_found].index(start_point)
-		end_index = lines[destination_line_found].index(end_point)
-	end
-
-
-
 	start_index = lines[origin_line_found].index(start_point)
 	end_index = lines[destination_line_found].index(end_point)
-	# binding.pry
 
 	if start_index > end_index
 		stops_num = (start_index - end_index).abs
@@ -87,7 +74,6 @@ def trip_section(lines)
 	end
 
 	final = "Traveling from #{ start_point } to #{ end_point } will take #{ answer } stop(s)."
-	# binding.pry
 end
 
 get "/" do
