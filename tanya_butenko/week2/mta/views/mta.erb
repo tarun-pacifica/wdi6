@@ -3,7 +3,7 @@
 
 <form action="/result" method="get">
 	<div class="dep">
-		Departure station: 
+		<p>Departure station:</p> 
 		<select name="departure_station" id="departure_station">
 			<% @subway.each do |line_name, line_stations| %>
 
@@ -18,7 +18,7 @@
 		</select>
 	</div>
 	<div class="arr">
-	Arrival station:
+	<p>Arrival station:</p>
 	<select name="arrival_station" id="arrival_station">
 		<% @subway.each do |line_name, line_stations| %>
 
@@ -36,3 +36,4 @@
 	<button>Search</button>	
 </form>
 </div>
+
