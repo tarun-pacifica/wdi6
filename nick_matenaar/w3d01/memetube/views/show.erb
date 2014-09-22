@@ -1,0 +1,16 @@
+<div class="video">
+
+	<h2><%= @video['title'] %></h2>
+	
+	<div class="youtube-video">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/<%= @url %>?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	URL: <em><a href="<%= @video['link'] %>"><%= @video['link'] %></a></em>
+
+	<section class="options">
+		<a href="/tubes/<%= @video['id'] %>/edit">Edit</a>
+		<a href="/tubes/<%= @video['id'] %>/delete">Delete</a>
+	</section>
+
+</div>
