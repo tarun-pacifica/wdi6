@@ -1,0 +1,18 @@
+<div class="funnymemes">
+
+		<img src="<%= @funnymemes['image'] %>">
+
+	<h2><%= @funnymemes['title'] %></h2>
+
+	Description: <em><%= @funnymemes['description'] %></em>
+
+	Genre: <em><%= @funnymemes['genre'] %></em>
+
+
+
+<section>
+	<a href="/funnymemes/<%= @funnymemes['id'] %>/edit">Edit</a>
+<a href="/funnymemes/<%= @funnymemes['id'] %>/delete"> Delete</a>
+</section>	
+
+</div>

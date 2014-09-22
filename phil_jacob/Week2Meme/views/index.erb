@@ -1,0 +1,8 @@
+<ul>
+	<% @funnymemes.each do |funnymemes| %>
+
+	<li><a href="/funnymemes/<%= funnymemes['id'] %>"><%= funnymemes['title'] %></a></li>
+
+	<% end %>
+
+</ul>
