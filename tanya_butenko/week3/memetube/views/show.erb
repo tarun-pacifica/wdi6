@@ -1,0 +1,18 @@
+<div class="video">
+
+	<h2><%= @video['title'] %></h2>
+	<video width="320" height="240" controls>
+  		<source src="<%= @video['url'] %>" type="video">
+  
+	</video>
+	<em><%= @video['genre'] %></em>
+	<em><%= @video['description'] %></em>
+
+	
+	<section>
+	
+		<a href="/videos/<%= @video['id'] %>/edit">Edit</a>
+		<a href="/videos/<%= @video['id'] %>/delete">Delete</a>
+	</section>
+
+</div>

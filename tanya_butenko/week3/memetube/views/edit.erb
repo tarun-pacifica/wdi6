@@ -1,0 +1,17 @@
+<h2>Edit video</h2>
+
+<form action="/videos/<%= @video['id'] %>" method="post">
+	<label for="title">Title:</label>
+	<input id="title" name="title" value="<%= @video['title'] %>" placeholder="Funny cats">
+
+	<label for="url">URL:</label>
+	<input type="url" id="url" name="url" value="<%= @video['url'] %>" placeholder="http://whatever.jpg">
+
+	<label for="genre">Genre:</label>
+	<input id="genre" name="genre" value="<%= @video['genre'] %>" placeholder="action">
+
+	<label for="description">Description:</label>
+	<textarea rows="4" cols="50" id="description" name="description" value="<%= @video['description'] %>" placeholder="Video description"></textarea>
+
+	<button>Edit video</button>
+</form>
