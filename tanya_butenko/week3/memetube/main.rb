@@ -16,6 +16,7 @@ get '/videos/:id' do #:id for any id
 	query = "SELECT * FROM videos WHERE id=#{params['id']}"
 	@video = query_db query
 	@video = @video.first # strip off the array
+	@url = @video['url'].partition('=').last
 	redirect to ('/') unless @video
 	erb :show
 end

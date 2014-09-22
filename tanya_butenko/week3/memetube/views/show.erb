@@ -1,10 +1,10 @@
 <div class="video">
 
 	<h2><%= @video['title'] %></h2>
-	<video width="320" height="240" controls>
-  		<source src="<%= @video['url'] %>" type="video">
-  
-	</video>
+	<div class="youtube-video">
+		<iframe width="560" height="315" src="//www.youtube.com/embed/<%= @url %>?rel=0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	URL: <em><a href="<%= @video['url'] %>"><%= @video['url'] %></a></em>
 	<em><%= @video['genre'] %></em>
 	<em><%= @video['description'] %></em>
 
