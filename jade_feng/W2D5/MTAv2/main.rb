@@ -107,8 +107,6 @@ $mta_subway = {
 						second_stops = disemb_line.reverse[disemb_line.reverse.index(@disemb_st) .. (disemb_line.reverse.index("unionsquare"))].reverse 	#pull out if going forwards
 					end
 
-
-
 			erb "There are #{first_line_changeover.abs} stop(s) to pass on your first line. 
 				There are #{second_line_changeover.abs} stop(s) to pass on your second line.
 				The total number of stops will be #{ first_line_changeover.abs + second_line_changeover.abs }.

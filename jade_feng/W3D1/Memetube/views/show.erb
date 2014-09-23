@@ -1,0 +1,12 @@
+<div class="video_page">
+	<h2><%= @video['title'] %></h2>
+
+	<a href="<%= @video['image'] %>"> Video Link </a>
+	<h3>Family: <em> <%= @video['genre'] %> </h3>
+
+	<section class="video">
+		<a href="/videos/<%= @video['id'] %>/delete">Delete</a>
+		<a href="/videos/<%= @video['id'] %>/edit">Edit</a>
+
+	</section>
+</div>
