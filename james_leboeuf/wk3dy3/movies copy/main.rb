@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
 require 'pry'
+
 require 'active_record'
 
 ActiveRecord::Base.logger = Logger.new(STDERR)
