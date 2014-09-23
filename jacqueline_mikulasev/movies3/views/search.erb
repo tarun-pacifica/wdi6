@@ -1,0 +1,15 @@
+<form action"/results">
+	<div class="movie_search">
+		<input name="movie_name" placeholder="Movie Search">
+		<button>Search Now!</button>
+	</div>
+</form>
+<div>
+	<% if params['movie_search'] %>
+		<% movies["Search"].each do |m| %>
+		<%= m["Title"] %>
+		<% end %>
+	<% end %>
+
+
+ </div>
