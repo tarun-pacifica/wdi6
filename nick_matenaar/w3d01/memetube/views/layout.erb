@@ -15,6 +15,13 @@
 				<li><a href="/tubes/new">ADD VIDEO</a></li>
 			</ul>
 		</nav>
+		<nav>
+			<ul>
+				<% @categories.each do |cat| %>
+					<li><a href="/category/<%= cat['category'] %>"><%= cat['category'] %></a></li>
+				<% end %>
+			</ul>
+		</nav>
 		<%= yield %>
 	</div>
 </body>

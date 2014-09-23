@@ -2,7 +2,8 @@ CREATE TABLE memetube (
 	id INTEGER PRIMARY KEY AUTOINCREMENT, 
 	title TEXT, 
 	link TEXT, 
-	thumbnail TEXT
+	thumbnail TEXT,
+	category TEXT
 );
 
 INSERT INTO memetube (title, link, thumbnail) VALUES ("test1", "http://test1.com/?v=blah", "http://test1.jpg");

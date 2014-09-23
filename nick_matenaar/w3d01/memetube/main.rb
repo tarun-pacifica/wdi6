@@ -6,11 +6,18 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
+require 'open-uri'
+require 'nokogiri'
 
 # get '/' do
 # 		@butterflies = query_db 'SELECT * FROM butterflies'
 # 		erb :index	
 # end
+
+before do 
+	query = 'SELECT DISTINCT category FROM memetube'
+	@categories = query_db query
+end 
 
 get '/' do 
 	@tubes = query_db 'SELECT * FROM memetube'
@@ -21,9 +28,17 @@ get '/tubes/new' do
  	erb :new
 end 
 
+get '/category/:cat' do
+	@tubes = query_db "SELECT * FROM memetube WHERE category='#{params[:cat]}'"
+	erb :index
+end 
+
 post '/tubes' do 
-	thumb = "http://img.youtube.com/vi/#{params['link'].partition("=").last}/mqdefault.jpg"
-	query = "INSERT INTO memetube (title, link, thumbnail) VALUES ('#{params['title']}', '#{params['link']}', '#{thumb}')"
+	thumb = "http://img.youtube.com/vi/#{params['link'].partition("=").last.partition('&').first}/mqdefault.jpg"
+	doc = Nokogiri::HTML(open(params['link']))
+	category = doc.at_css(".content.watch-info-tag-list a").content
+	title = doc.at_css("#eow-title").content
+	query = "INSERT INTO memetube (title, link, thumbnail, category) VALUES ('#{title}', '#{params['link']}', '#{thumb}', '#{category}')"
 	query_db query
 	redirect to('/')
 end 
@@ -32,14 +47,17 @@ get '/tubes/:id' do
 	query = "SELECT * FROM memetube WHERE id=#{params['id']}"
 	@video = query_db query
 	@video = @video.first # Strip off the array.
-	@url = @video['link'].partition("=").last
+	@url = @video['link'].partition("=").last.partition('&').first
 	redirect to('/') unless @video
 	erb :show
 end 
 
 post '/tubes/:id' do 
-	thumb = "http://img.youtube.com/vi/#{params['link'].partition('=').last}/mqdefault.jpg"
-	query = "UPDATE memetube SET title='#{params['title']}', link='#{params['link']}', thumbnail='#{thumb}' WHERE id=#{params['id']}"
+	thumb = "http://img.youtube.com/vi/#{params['link'].partition('=').last.partition('&').first}/mqdefault.jpg"
+	doc = Nokogiri::HTML(open(params['link']))
+	category = doc.at_css(".content.watch-info-tag-list a").content
+	title = doc.at_css("#eow-title").content
+	query = "UPDATE memetube SET title='#{title}', link='#{params['link']}', thumbnail='#{thumb}', category='#{doc}' WHERE id=#{params['id']}"
 	query_db query
 	redirect to('/tubes/' + params['id'])
 end 
