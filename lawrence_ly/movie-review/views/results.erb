@@ -8,29 +8,27 @@
 </div>
 
 
-  <div class="view">
+<div class="view">
 
   <p> <% if @title.nil? %> </p>
-          Movie Look Up! The place to go when your stuck in the snow!
-      <% else %>
-          The movie you have searched for is <%= params['movie_title'] %>
+    Movie Look Up! The place to go when your stuck in the snow!
+    <% else %>
+    The movie you have searched for is <%= params['movie_title'] %>
+      <% @movies["Search"].each do |movie| %>
+      <% movie_result = HTTParty.get("http://www.omdbapi.com/?i=&t=#{movie['Title'].gsub(' ','+')}")%>
+      <% @movies = JSON.parse movie_result %>
+      <p>Title:</p>
+      <p><%= @title = movie['Title'] %></p>
+      <p><img class="image" src="<%= movie['Poster'] %>"></p>
+      <p>Plot:</p>
+      <p><%= @plot = movie['Plot'] %></p>
+      <p>Actors:</p>
+      <p> <%= @actors = movie['Actors'] %></p>
+      <p>Director: </p>
+      <p> <%= @director = movie['Director'] %></p>
       <% end %>
-
-  <%  if params['movie_title'] %>
-     <% @title = params['movie_title'].gsub(' ','+') %>
-     <% movie_results = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title }") %> 
-     <% movie = JSON.parse movie_results %>
-     <p>Title:</p>
-     <p><%= @title = movie['Title'] %></p>
-     <p><img class="image" src="<%= movie['Poster'] %>"></p>
-     <p>Plot:</p>
-     <p><%= @plot = movie['Plot'] %></p>
-     <p>Actors:</p>
-     <p> <%= @actors = movie['Actors'] %></p>
-     <p>Director: </p>
-     <p> <%= @director = movie['Director'] %></p>
-     <% end %>
-  </div>
+  <% end %>
+</div>
 
 
 

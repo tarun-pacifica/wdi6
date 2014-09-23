@@ -16,11 +16,15 @@ body {
 }
 h1 {
 	text-size: 20px;
+	text-align: left;
+	margin-left: 20px;
 }
 
 p {
-		text-align: center;
-		text-size: 12px;
+		text-align: left;
+		text-size: 6px;
+		margin-left: 20px;
+
 
 }
 
@@ -32,6 +36,7 @@ p {
 .blog-content, .side-bar{
 	display: inline-block;
 	vertical-align: top;
+	margin-bottom: 50px;
 }
 
 header{
@@ -45,6 +50,7 @@ header{
 div.blog-content {
 	background-color: white;
 	width: 640px;
+	margin-right: 10px;
 }
 .container h1 {
 	margin-top: 50px;
@@ -61,7 +67,16 @@ div.side-bar img{
 	display: block; 
 	margin: 10px auto;
 }
+ul 	{
+	text-align: left;
+}
+footer {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
 
-
-
+ul.list {
+	list-style-type: none;
+	font-weight: bold;
+}
 

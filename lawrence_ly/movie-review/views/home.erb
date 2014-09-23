@@ -14,20 +14,18 @@
           Movie Look Up! The place to go when your stuck in the snow!
       <% else %>
           The movie you have searched for is <%= params['movie_title'] %>
+
+
+
+           <% @movies["Search"].each do |movie| %>
+             <% movie_result = HTTParty.get("http://www.omdbapi.com/?i=&s=#{movie['Title'].gsub(' ','+')}")%>
+            <% @movies = JSON.parse movie_result %>
+            <a href="/results/<%= movie["Title"] %>">
+                Name: <%= movie["Title"] %>
+                Year: <%= movie["Year"] %> |
+               Movies: <%= movie["imdbID"] %></a></p>
+             <% end %>
       <% end %>
-
-    <% if params['movie_title'] %>
-      <% @title = params['movie_title'].gsub(' ','+') %>
-      <% movie_result = HTTParty.get("http://www.omdbapi.com/?i=&s=#{ @title }")  %>
-      <% movies = JSON.parse movie_result %>
-          <% movies["Search"].each do |movies| %>
-          <p><a href="http://localhost:4567/results?movie_title=<%= movies['Title'].gsub(' ','+') %>"> Title: <%= movies["Title"] %> |
-          Year: <%= movies["Year"] %> |
-          Movies: <%= movies["imdbID"] %></a></p>
-        <% end %>
-      <% end %>
-
-
   </div>
         
 
