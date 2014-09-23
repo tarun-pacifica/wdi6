@@ -3,6 +3,22 @@ require 'sinatra/reloader'
 require 'httparty'
 require 'pry'
 
+require 'pry'
+require 'active_record'
+
+# ActiveRecord::Base.logger = Logger.new(STDERR)
+
+# ActiveRecord::Base.establish_connection(
+#   :adapter => 'sqlite3',
+#   :database => 'butterflies.db'
+# )
+
+# require_relative 'butterfly'
+
+# binding.pry
+
+# # Create a movies sqlite database
+
 get '/' do #Sinatra will serve up anything here and in public automatically
 	erb :forms
 end
@@ -14,8 +30,11 @@ get '/search_results' do
 		# binding.pry
 		@movies = JSON.parse movie_results
 		# @at_length = @movies["Search"]
-		if @movies['Search'].length == 1
-			# sinatra redirect to /search_id?imdbID=<%=f["imdbID"]%>
+		if @movies['Search'].nil?
+			redirect to "/"
+		elsif @movies['Search'].length == 1
+			sole_movie = @movies['Search'].first
+			redirect to "/search_id?imdbID=#{sole_movie["imdbID"]}"
 		end
 
 	erb :search_results
@@ -31,6 +50,8 @@ get '/search_id' do
 	@title = movie["Title"]
 	erb :search_id
 end
+
+
 
 
 
