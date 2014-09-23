@@ -24,6 +24,9 @@ display: inline;
 	text-align: center;;
 }
 
+li {
+	list-style: none;
+}
 .meme img {
 	max-width: 500px;
 	display: block;

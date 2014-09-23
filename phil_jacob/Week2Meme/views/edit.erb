@@ -1,11 +1,8 @@
 <h1> Edit meme </h1>
 
-<form method="post" action="/funnymemes/ <%= @funnymemes['id'] %>">
+<form method="post" action="/funnymemes/<%= @funnymemes['id'] %>">
 <label for="title">Title:</label>
-<input id="title" name="title" placeholder="Meme Title" >
-
-<label for="description">Description:</label>
-<input id="description" name="description" value="<%= @funnymemes['description'] %>" placeholder="Meme description">
+<input id="title" name="title" placeholder="Meme Title" value="<%= @funnymemes['title'] %>">
 
 <label for="url">URL:</label>
 <input id="url" name="url" placeholder="Paste URL link here" value="<%= @funnymemes['url'] %>">
@@ -15,3 +12,4 @@
 
 <button> Edit Meme </button>
 </form>
+

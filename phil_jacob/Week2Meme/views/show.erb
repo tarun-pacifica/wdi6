@@ -1,18 +1,17 @@
 <div class="funnymemes">
 
-		<img src="<%= @funnymemes['image'] %>">
+	<!-- 	<img src="<%= @funnymemes['image'] %>"> -->
 
-	<h2><%= @funnymemes['title'] %></h2>
+	<h1><%= @funnymemes['title'] %></h1>
 
-	Description: <em><%= @funnymemes['description'] %></em>
+	<p><iframe width="560" height="315" src="//www.youtube.com/embed/<%= @youtube_id %>?rel=0" frameborder="0" allowfullscreen></iframe><p>
 
 	Genre: <em><%= @funnymemes['genre'] %></em>
 
-
-
-<section>
-	<a href="/funnymemes/<%= @funnymemes['id'] %>/edit">Edit</a>
-<a href="/funnymemes/<%= @funnymemes['id'] %>/delete"> Delete</a>
-</section>	
+		<section>
+			<a href="/funnymemes/<%= @funnymemes['id'] %>/edit"> Edit</a>
+			<a href="/funnymemes/<%= @funnymemes['id'] %>/delete"> Delete</a>
+		</section>	
 
 </div>
+

@@ -1,8 +1,11 @@
-<ul>
+
+<ul class="thumbnail">
 	<% @funnymemes.each do |funnymemes| %>
-
-	<li><a href="/funnymemes/<%= funnymemes['id'] %>"><%= funnymemes['title'] %></a></li>
-
+	<li>
+		<a href="/funnymemes/<%= funnymemes['id'] %>">
+			<img src="<%= funnymemes['thumb'] %>">
+			<%= funnymemes['title'] %>
+		</a>
+	</li>
 	<% end %>
-
 </ul>
