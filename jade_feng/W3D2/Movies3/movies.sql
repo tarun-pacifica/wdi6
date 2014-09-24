@@ -5,10 +5,8 @@ CREATE TABLE movies (
 	poster TEXT
 );
 
--- , breaks up part of the statement
--- ; is the end of the statement
 
-INSERT INTO movies (id, title, imdbID, poster) VALUES (0, 'Jaws', 'tt0073195', 'http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg');
+INSERT INTO movies (id, title, imdbID, poster) VALUES (1, 'Jaws', 'tt0073195', 'http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg');
 
 
 	-- year TEXT,
