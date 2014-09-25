@@ -34,6 +34,7 @@ get '/search_results' do
 			redirect to "/"
 		elsif @movies['Search'].length == 1
 			sole_movie = @movies['Search'].first
+			# binding.pry
 			redirect to "/search_id?imdbID=#{sole_movie["imdbID"]}"
 		end
 
@@ -52,6 +53,8 @@ get '/search_id' do
 end
 
 
+# @movie_results = @search_results["Search"]
+# @solo_movie_title = @movie_results["Title"]
 
 
 
