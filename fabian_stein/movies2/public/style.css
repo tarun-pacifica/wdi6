@@ -1,0 +1,63 @@
+
+
+h1 {
+	font-size: 60px;
+	color: rgb(148,84,26);
+	padding-top: 15px;
+	text-decoration: none;
+}
+
+.header {
+	color: rgb(148,84,26);
+	text-align: center;
+	background-color: rgb(3,53,3);
+	height: 100px;
+	position: relative;
+	top: -45px;
+	text-decoration: none;
+}
+
+.result {
+	background-color: rgb(3,82,3);
+
+}
+
+.content {
+background-color: rgb(3,82,3);
+
+}
+
+body {
+	background-color: rgb(3,82,3);
+}
+
+form {
+	text-align: center;
+	font-family: Verdana;
+}
+
+label {
+	margin: 0.5em;
+	font-size: 40px;
+	text-align: right;
+	color: rgb(148,84,26);
+	position: relative;
+	font-weight: 10;
+}
+
+input {
+	margin: 0.5em;
+	padding: 0.5em 0.8em 0.5em 0.8em;
+	border-radius: 5%;
+	text-align: center;
+	width: 300px;
+	font-size: 40px;
+}
+
+button {
+	margin: 0.5em;
+	padding: 0.5em 0.8em 0.5em 0.8em;
+	border-radius: 5%;
+	background-color: rgb(148,84,26);
+	font-size: 40px;
+}
