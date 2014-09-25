@@ -68,3 +68,4 @@ def query_db(query) 	# Makes the query process general
 	result 						# Come back with the result
 end
 
+

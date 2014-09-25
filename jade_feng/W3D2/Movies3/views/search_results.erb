@@ -1,7 +1,47 @@
 <div class="container">
   
-    <h1>Fur-tastic! We're paw-sitive we just found your purr-fect mew-vie, <%= @movies.title.upcase %> <%= @movies.imdbID %>  !</h1>
-    
+    <h1>Fur-tastic! We're paw-sitive we just found your purr-fect mew-vie,  <%= @movies.title.upcase %>!</h1>
+    <h1>  </h1>
+    <div class="row">
 
+
+
+      <article class="span4 post">   
+        <div class="inside">
+          <a href="http://www.imdb.com/title/<%= @movies.imdbID %>/" title="Meow! See page fur-rom the IMDB cat-alogue!" target="_blank"> 
+            <img src='<%= @movies.poster %>' class="movie_poster">
+          </a>
+
+        </div>
+      </article>
+
+
+
+      <article class="span4 post"> 
+        <div class="inside">
+    <a href="http://www.imdb.com/title/<%= @movies.imdbID %>/" title="Meow! See page fur-rom the IMDB cat-alogue!" target="_blank"> 
+      <h1><%= @movies.title %> (<%= @movies.year %>)</h1>
+    </a>
+      <h2><span>IMDB Rating:</span> <%= @movies.imdbRating %> / 10 </h2>
+      <h2> <%= @movies.plot %> </h2>
+      <h3> Directed by <%= @movies.director %>, starring <%= @movies.actors %>.</h3> 
+      </div>
+    </article>
+
+      <article class="span4 post"> 
+        <div class="inside">
+          <h3> <span>Runtime:</span> <%= @movies.runtime %> </h3>
+          <h3> <span>Genre:</span> <%= @movies.genre %> </h3>
+          <h3> <span>Awards:</span> <%= @movies.awards %> </h3>
+        <h3> <span>Rated:</span> <%= @movies.rated %> </h3>         
+          <h3> <span>Language(s):</span> <%= @movies.language %> </h3> 
+          <h3> <span>Writer(s):</span> <%= @movies.writer %> </h3> 
+         </div>
+      </article>
+
+
+
+
+    </div>
 
 </div>

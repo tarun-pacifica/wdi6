@@ -248,6 +248,10 @@ span {
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
 	text-shadow: none;
 }
+
+.brand p {
+	text-align: right;
+}
 /* ---------------------------------------------------------------------------------------------------------- 
 05 Single-Page Sections ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
@@ -318,11 +322,9 @@ span {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
-#headerwrap input[type=submit]:hover, #headerwrap input[type=submit]:active {
-	background: #43413e !important;
-}
 
-/*#######################*/
+
+/*################################## */
 
 #nonwrap {
 	width: 100%;
