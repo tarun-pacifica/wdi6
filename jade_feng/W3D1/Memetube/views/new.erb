@@ -1,14 +1,14 @@
 <h2>Add a new video!</h2>
-
+<div class="video_entry">
 <form method="post" action="/videos">
 	<div class="questions">
 		<label for="title"> Title: </label>
-		<input id="title" name="title" placeholder="Video name">
+		<input id="title" name="title" placeholder="Video name" required>
 	</div>
 
 	<div class="questions">	
 		<label for="description"> Description: </label>
-		<input id="description" name="Description" placeholder="Cooking video">
+		<textarea id="description" name="Description" placeholder="Cooking video"></textarea>
 	</div>
 
 	<div class="questions">	
@@ -22,6 +22,8 @@
 	</div>
 
 	<div class="questions">	
-		<button> Update video! </button>
+		<label></label>
+	     <button>Submit </button>
 	</div>
 </form>
+</div>

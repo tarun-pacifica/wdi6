@@ -1,15 +1,14 @@
-<div class="edit_page">
 	<h2>Add a new video!</h2>
-
+<div class="video_entry">
 	<form method="post" action="/videos/<%= @video['id'] %>">
 		<div class="questions">
 			<label for="title"> Title: </label>
-			<input id="title" name="title" value="<%= @video['title'] %>">
+			<input id="title" name="title" value="<%= @video['title'] %>" required>
 		</div>
 
 		<div class="questions">
 			<label for="description"> Description: </label>
-			<input id="Description" type="text" name="description" value="<%= @video['description'] %>">
+			<textarea id="Description" type="text" name="description" value="<%= @video['description'] %>"> <%= @video['description'] %> </textarea>
 		</div>
 
 		<div class="questions">
@@ -23,8 +22,10 @@
 		</div>
 
 		<div class="questions">
-			<button> Update video! </button>
-		</div>
-	</form>
+		<label></label>
+	     <button>Submit </button>
+	     </div>
 
+	</form>
 </div>
+
