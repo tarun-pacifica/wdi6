@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1><a href="/">Film > Poster > DB</a></h1>
+			<form action="/search" method="get">
+<!--				<label for="film"> Search for:</label> -->
+				<input type="string" name="film" id="film" placeholder="Jaws III">
+				<button>Search</button>
+			</form>
+		</header>		
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="/about">About</a></li>
+					<li><a href="/faq">FAQ</a></li>					
+				</ul>
+			</nav>
+			<%=yield%>
+			<footer>
+				&copy; 2014 JB
+			</footer>
+		</div>
+	</body>
+</html>

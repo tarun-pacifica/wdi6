@@ -1,0 +1,8 @@
+
+<div class="poster_img">
+	<% unless @poster_url.nil? || @poster_url == 'N/A' %>
+	<img src="<%= @poster_url %>">
+	<% else %>
+	<p>Film not found</p>
+	<% end %>
+</div>

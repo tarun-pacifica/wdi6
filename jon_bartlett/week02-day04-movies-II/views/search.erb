@@ -1,0 +1,8 @@
+
+<div class="poster_img">
+	<% if @movie["Poster"] == 'N/A' %>
+		<p>Film not found</p>		
+	<% else %>
+		<img src="<%= @movie["Poster"] %>">
+	<% end %>
+</div>
