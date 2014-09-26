@@ -31,7 +31,7 @@ get '/result' do
 
 		n = @subway[@departure[0]].find_index(@com_station) - @subway[@departure[0]].find_index(@departure[1])
 		n2 = @subway[@arrival[0]].find_index(@com_station) - @subway[@arrival[0]].find_index(@arrival[1])
-		@result = (n + n2).abs
+		@result = n.abs + n2.abs
 	
 	end
 

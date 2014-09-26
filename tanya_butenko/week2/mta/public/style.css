@@ -1,5 +1,5 @@
 body {
-	background-image: url('http://s3files.core77.com/blog/images/2013/12/RobertBacon-SuperNewYorkCitySubway-HERO.jpg');
+	background-image: url('images/background.jpg');
 	background-size: cover;
 	color: yellow;
 	text-shadow: 2px 2px black;
@@ -74,11 +74,16 @@ section{
 	position: absolute;
 	top: 450px;
 	right: 170px;
-	display:inline-block;
+	display:block;
+	max-width:400px;
 }
 
 section img {
 	height: 400px;
+}
+
+.luigi {
+	left: 170px;
 }
 
 select{
@@ -87,4 +92,11 @@ select{
 
 select:hover{
 	box-shadow: 3px 3px black;
+}
+
+audio{
+	position: absolute;
+	right: 50px;
+	top: 105px;
+	opacity: 0.5;
 }
