@@ -2,3 +2,28 @@ body {
 	background-color: black;
 	color: white;
 }
+
+.container {
+	max-width: 960px;
+	margin: auto;
+}
+
+.edit_page {
+	text-align: center;
+}
+
+ul { 
+	list-style: none;
+	padding: 0; 
+	display: inline;
+}
+
+ul li {
+	display: inline; 
+}
+
+label {
+	min-width: 350px;
+	display: inline-block;
+	text-align: right;
+}

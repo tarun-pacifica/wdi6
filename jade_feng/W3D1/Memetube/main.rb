@@ -7,8 +7,12 @@ require 'sinatra/reloader'
 
 require 'sqlite3'
 
+require 'uri'
+require 'cgi'
+
+
 before do
-	@butterflies = query_db 'SELECT DISTINCT genre FROM videos'
+	@videos = query_db 'SELECT DISTINCT genre FROM videos'
 end
 
 get '/' do 
@@ -32,6 +36,11 @@ get '/videos/:id' do
 	query = "SELECT * FROM videos WHERE id=#{params['id']}"
 	@video = query_db query
 	@video = @video.first 	# Strip off the array
+	
+	url = @video['URL_code']
+	parts = CGI.parse( URI.parse(url).query )
+	@youtube_id = parts['v']
+
 	redirect to ('/') unless @video
 	erb :show
 end
@@ -58,6 +67,11 @@ get '/videos/:id/delete' do
 	redirect to ('/')
 end
 
+
+get '/videos/genre/:genre' do
+  @videos = Video.where(:genre => params[:genre])
+  erb :index
+end
 
 def query_db(query) 	# Makes the query process general
 	puts "Preparing to run a query: #{query}"

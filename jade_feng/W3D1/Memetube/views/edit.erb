@@ -1,17 +1,30 @@
-<h2>Add a new video!</h2>
+<div class="edit_page">
+	<h2>Add a new video!</h2>
 
-<form method="post" action="/videos/<%= @video['id'] %>">
-	<label for="title"> Title: </label>
-	<input id="title" name="title" value="<%= @video['title'] %>">
+	<form method="post" action="/videos/<%= @video['id'] %>">
+		<div class="questions">
+			<label for="title"> Title: </label>
+			<input id="title" name="title" value="<%= @video['title'] %>">
+		</div>
 
-	<label for="description"> description: </label>
-	<input id="Description" name="description" value="<%= @video['family'] %>">
+		<div class="questions">
+			<label for="description"> Description: </label>
+			<input id="Description" type="text" name="description" value="<%= @video['description'] %>">
+		</div>
 
-	<label for="URL_code"> URL: </label>
-	<input type="url" id="URL_code" name="URL_code" value="<%= @video['family'] %>">
+		<div class="questions">
+			<label for="URL_code"> URL: </label>
+			<input type="url" id="URL_code" name="URL_code" value="<%= @video['URL_code'] %>">
+		</div>
 
-	<label for="genre"> Genre: </label>
-	<input id="genre" name="genre" value="<%= @video['family'] %>">
+		<div class="questions">
+			<label for="genre"> Genre: </label>
+			<input id="genre" name="genre" value="<%= @video['genre'] %>">
+		</div>
 
-	<button> Update video! </button>
-</form>
+		<div class="questions">
+			<button> Update video! </button>
+		</div>
+	</form>
+
+</div>

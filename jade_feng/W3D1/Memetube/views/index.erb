@@ -1,11 +1,9 @@
 <ul class="videos">
 	<% @videos.each do |video| %>
-	<li> 
-		<a href="/videos/<%= video['id'] %>"><%= video['title'] %> 
-<!-- 		<img src="<%= video['image'] %>">
- -->		<%= video['description']%>
-		</a>
-	</li>
+	<div class="video_square">
+		<li> 
+			<a href="/videos/<%= video['id'] %>"><%= video['title'] %> </a>
+		</li>
+	</div>
 	<% end %>
-
 </ul>
