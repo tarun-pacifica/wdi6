@@ -12,6 +12,10 @@
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/videos/new">Add video</a></li>
+			<li>Genres:</li>
+			 <% @genres.each do |genre| %>
+			 	<li><a href="/videos/genres/<%= genre['genre'] %>"><%= genre['genre'] %></a></li>
+			 <%end%>
 		</ul>
 	</nav>
 	<%= yield %>

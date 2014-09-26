@@ -3,8 +3,18 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
 
+before do
+	@genres = query_db 'SELECT DISTINCT genre FROM videos'
+end
+
 get '/' do
 	@videos = query_db 'SELECT * FROM videos'
+	erb :index
+end
+
+get '/videos/genres/:genre' do
+	query = "SELECT * FROM videos WHERE genre='#{params['genre']}'"
+	@videos = query_db query
 	erb :index
 end
 
