@@ -1,9 +1,10 @@
-<ul class="videos">
+<div class="videos">
 	<% @videos.each do |video| %>
 	<div class="video_square">
-		<li> 
+		<%	@youtube_id = CGI.parse(URI.parse( video['URL_code'] ).query)['v'][0] %>
+			<img src="http://img.youtube.com/vi/<%= @youtube_id %>/0.jpg" >
+			<p>   </p>
 			<a href="/videos/<%= video['id'] %>"><%= video['title'] %> </a>
-		</li>
 	</div>
 	<% end %>
-</ul>
+</div>

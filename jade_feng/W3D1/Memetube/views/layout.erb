@@ -8,22 +8,28 @@
 </head>
 <body>
 	<div class="container">
+	   <img class="nyancat" src="http://nyan-cat.com/images/nyan-cat.gif" width="200px" height="auto">
 
 	<nav>
+
+<audio loop="loop" src="https://developer.cdn.mozilla.net/media/uploads/demos/m/i/michalbe/b98068664ab172a4a4bbfb59fd90f033/css-nyan-cat_1308881152_demo_package/nyancat.ogg" autoplay="true" controls>
+</audio>
+
 	   <h1>MemeKitty with Nyan Cat</h1>
-   
-   <!-- Here's all it takes to make this navigation bar. -->
-   <ul id="nav">
-		<li> <a href="/">Home</a></li>
-		<li> <a href="/videos/new">New</a></li>
-    </ul>
+	   <ul id="nav">
+			<li> <a href="/">Home</a></li>
+			<li> <a href="/videos/new">New</a></li>
+   		</ul>
 	</nav>
 
 
-	<div class="container">
 	
 		<%= yield %>
 
+
+	<div class="footer">
+		<h3>&copy Jade Feng. Web Development Immersive 6.</h3>
+	</div>
 	</div>
 </body>
 </html>

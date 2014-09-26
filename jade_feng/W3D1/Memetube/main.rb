@@ -27,7 +27,7 @@ get '/videos/new' do
 end
 
 post '/videos' do
-	query = "INSERT INTO videos (title, description, URL_code, genre) VALUES ('#{params['title']}', '#{params['description']}', '#{params['URL_code']}', '#{params['genre']}')"
+	query = "INSERT INTO videos (title, description, URL_code, genre) VALUES ('#{params['title']}', '#{params['description']}', '#{params['URL_code']}', '#{params['genre']}'  )"  
 	query_db query 
 	redirect to ('/') 			# Redirects back to home page to see new video
 end
@@ -37,9 +37,7 @@ get '/videos/:id' do
 	@video = query_db query
 	@video = @video.first 	# Strip off the array
 	
-	url = @video['URL_code']
-	parts = CGI.parse( URI.parse(url).query )
-	@youtube_id = parts['v']
+	@youtube_id = CGI.parse( URI.parse(@video['URL_code']).query )['v'][0]
 
 	redirect to ('/') unless @video
 	erb :show

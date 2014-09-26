@@ -1,4 +1,4 @@
-	<h2>Add a new video!</h2>
+	<h2>Edit the <%= @video['title'] %> video!</h2>
 <div class="video_entry">
 	<form method="post" action="/videos/<%= @video['id'] %>">
 		<div class="questions">
@@ -8,7 +8,7 @@
 
 		<div class="questions">
 			<label for="description"> Description: </label>
-			<textarea id="Description" type="text" name="description" value="<%= @video['description'] %>"> <%= @video['description'] %> </textarea>
+			<textarea id="Description" type="text" name="description" value="<%=@video['description']%>"><%=@video['description']%></textarea>
 		</div>
 
 		<div class="questions">
