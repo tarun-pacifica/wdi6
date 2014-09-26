@@ -1,0 +1,16 @@
+<div class="form_container">
+	<form action='/search_results'>
+		<input type="text" name="movie_title" placeholder="Enter Movie Title"></input>
+				<button class="search_button">
+			Search
+		</button>
+	</form>
+
+
+		<h2><%= @movie.title %></h2>
+		<h3><%= @movie.plot %></h3>
+		<h3>Release Date: <%= @movie.year %></h3>
+		<h3><img src="<%= @movie.poster %>"></h3>
+
+<!-- 	</form> -->
+</div>

@@ -1,0 +1,22 @@
+<form action="/" method="get">
+	<h2>Which station are you currently at?</h2>
+		<select name="starting_point">
+			<% @lines.each do |line, stops| %>
+			<%= "<optgroup label=#{ line }>"%>
+				<% stops.each do |station| %>
+		  <%= "<option value=\"#{ station }\">#{ station }</option>" %>
+		  <% end %>
+		  <% end %>
+		</select>
+
+	<h2>What's your destination?</h2>
+		<select name="stopping_point">
+			<% @lines.each do |line, stops| %>
+			<%= "<optgroup label=#{ line }>"%>
+				<% stops.each do |station| %>
+		  <%= "<option value=\"#{ station }\">#{ station }</option>" %>
+		  <% end %>
+		  <% end %>
+		</select>
+	<p><input class="submit_button" type="submit" value="Submit"></p>
+</form>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube Database</title>
+	<link rel="stylesheet" href="/stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/youtube/new">New Video</a></li>
+					<li>Families:</li>
+        <% @categories.each do |genre| %>
+        <li><a href="/youtube/genre/<%= genre['genre'] %>"><%= genre['genre'] %></a></li>
+				<% end %>
+			</ul>
+		</nav>
+		<h1>Video Database</h1>
+		<%= yield %>
+	</div>
+</body>
+</html>

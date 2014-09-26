@@ -1,0 +1,22 @@
+<div class="form_container">
+	<form action="/search_results">
+		<input type="text" name="movie_title" placeholder="Enter Movie Title"></input>
+
+		<button class="search_button">Search</button>
+	</form>
+
+	<form action="/search_id">
+		<% if @movies["Search"].nil? %>
+					 <% redirect to '/' %>
+		<%else%>
+		     <% @movies["Search"].each do |f| %>
+			<!--input type="submit" name="imdbID" value="<%=f["imdbID"]%>"><p><%=f["Title"]%></p><br-->
+			<a href="/search_id?imdbID=<%=f["imdbID"]%>"><%=f["Title"]%></a><br>
+			<% end %>
+		<% end %>
+<!-- 		There are <%= @at_length %> -->
+		<label>
+	</form>
+
+	</div>
+</div>

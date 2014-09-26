@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MTA SINATRA</title>
+	<link rel="shortcut icon" href="http://imasters.com.br/wp-content/themes/imasters-2013/assets/images/favicon.ico?v=2">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="container">
+	<header>
+		<div class="header_text">
+			MTA Version <span class="mta_two">2.0</span>
+		</div>
+		<div class="header_text_2">
+		</div>
+		<p><%= yield %></p>
+	</header>
+
+			<div class="banner">
+				<p></p>
+			</div>
+	
+				<div class="content">
+					<div class="trip_section">
+						<%= @trip_section %>
+					</div>
+				</div>
+
+		<div class="footer">
+			<p>BOOMSHAKALAKA<p>
+		</div>
+</div>	
+</body>
+</html>

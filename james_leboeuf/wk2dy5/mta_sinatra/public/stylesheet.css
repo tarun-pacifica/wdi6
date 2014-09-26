@@ -1,0 +1,172 @@
+/*Different browsers behave differently. Might have different default settings. 2 files that reset these issues, called reset.css or normalize.css(all behave consistenly) RECOMMENDED TO USE:NORMALIZE*/
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+form, input, label {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+p, h2 {
+	font-family: 'Francois One', sans-serif;
+}
+
+header { 
+	height: 260px;
+	width:100%;
+	z-index: 10; 
+	position: fixed;
+	border: 2px solid black;
+	background: #f85032; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f85032 41%, #f02f17 71%, #e73827 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(41%,#f85032), color-stop(71%,#f02f17), color-stop(100%,#e73827)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f85032 41%,#f02f17 71%,#e73827 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f85032 41%,#f02f17 71%,#e73827 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f85032 41%,#f02f17 71%,#e73827 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f85032 41%,#f02f17 71%,#e73827 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+
+}
+
+.mta_two {
+	color: white;
+}
+
+.banner {
+	width: 100%;
+	height: 500px;
+	position: fixed;
+	top: 264px;
+	background: url(../railroad.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%
+}
+
+.content {
+	width:100%;
+	position: relative;
+	top: 560px;
+	background: black;
+	height: 2000px;
+	font-family: 'Francois One', sans-serif;
+	color: white;
+	font-size: 45px;
+}
+
+.header_text {
+/*	z-index:100;*/
+	position: relative;    
+	color:black;
+	font-size:45px;
+	font-weight:bold;
+	font-family: 'Oleo Script', cursive;
+	left: -400px;
+	top: 85px;
+	    /* Safari */
+	-webkit-transform: rotate(-25deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-25deg);
+
+	/* IE */
+	-ms-transform: rotate(-25deg);
+
+	/* Opera */
+	-o-transform: rotate(-25deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+
+input.submit_button {
+	width:100px; /*same as the height*/
+	height:100px; /*same as the width*/
+	background-color:#f85032;
+	border:1px solid #f85032 41%; /*same colour as the background*/
+	color:#fff;
+	font-size:1.6em;
+	/*set the border-radius at half the size of the width and height*/
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	/*give the button a small drop shadow*/
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+	box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+	}
+	/***NOW STYLE THE BUTTON'S HOVER STATE***/
+	input.submit_button:hover{
+	background:#c20b0b;
+	border:1px solid #c20b0b;
+	/*reduce the size of the shadow to give a pushed effect*/
+	-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+	-moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+	box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+}
+
+.trip_section {
+
+}
+
+/*.trip_section {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-decoration: normal;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  white-space: pre;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.trip_section:hover {
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+}*/
+
+.footer {
+	line-height:30px; 
+	margin:0 auto; 
+	width:940px; 
+	text-align:center; 
+	background:#FFFFFF; border:1px solid #666; 
+	bottom:0; 
+	height:110px; 
+	left:0; 
+	position: relative;
+	width:100%; 
+	color:black;
+	font-size:45px;
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

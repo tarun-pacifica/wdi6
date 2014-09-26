@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+p,h1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 200px;
+	margin-bottom: 10px;
+	color: white;
+	text-align: center;
+}
+
+
