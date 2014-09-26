@@ -39,6 +39,10 @@ def trip_section(lines)
 	start_point = params["starting_point"]
 	end_point	= params["stopping_point"]
 
+	if start_point && end_point == "Union Square"
+		redirect "/"
+	end
+
 	if start_point == "Union Square"
 		origin_line_found = find_line(end_point, lines)
 		destination_line_found = origin_line_found
