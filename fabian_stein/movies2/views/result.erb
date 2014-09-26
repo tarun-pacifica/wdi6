@@ -1,0 +1,9 @@
+<div class="result">
+<h2> This is your result for the movie<br>"<%= @movie['Title']%>"</h2>
+
+<% if @poster == "N/A" %> 
+<%= "Sorry, a poster for this movie is not available" %>
+<% else %>
+<img src="<%= @poster %>">
+<% end %>
+</div>

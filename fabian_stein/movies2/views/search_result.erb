@@ -1,0 +1,16 @@
+
+
+<h2>Which of these movies are you looking for?</h2>
+
+
+<ul>
+	<% @movies_results.each do |movie| %>
+	<li><a href='/movies/<%= movie['Title'].gsub(' ','+') %>'> 
+		<%= movie['Title'] %> 
+	</a></li>
+		<% end %>
+</ul>
+
+
+
+
