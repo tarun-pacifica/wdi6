@@ -144,7 +144,9 @@ article .video_column {
   margin-bottom: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: #000D1B;
+  background-color: rgba(0, 13, 27, 0.6);
+  box-shadow: 5px 5px 5px 0px black;
+  background-opacity: 0.4;
 }
 
 .video_square img {
