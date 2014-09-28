@@ -8,13 +8,15 @@
 </head>
 <body>
 	<div class="menu_top">
-				<div class="link link_home"><a href="/">Home</a></div>
+		<div class = 'links'>
+			<div class="link link_home"><a href="/">Home</a></div>
 			<div class="link select_route"><a href="/trip">Plan Trip</a></div>
 		</div>
+	</div>
 	<div class="container">
 		
-	<a href="/"><img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/3c/MTA_NYC_logo.svg"></a>
-	<%= yield %>
+		<a href="/"><img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/3/3c/MTA_NYC_logo.svg"></a>
+		<%= yield %>
 	</div>
 </body>
 </html>

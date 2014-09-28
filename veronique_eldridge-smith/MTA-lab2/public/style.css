@@ -33,8 +33,17 @@ body {
 	position: fixed;
 	background-color: black;
 	z-index: 999;
-	padding: 1em;
-	text-align: right;
+	padding: 1em;;
+}
+
+.links {
+	position: absolute;
+	right: 0;
+	width: 500px;
+}
+
+.plan_trip label, .plan_trip select {
+	float: left;
 }
 
 .select_route:visited {
@@ -62,9 +71,18 @@ body {
 	padding: 20px;
 }
 
-.button {
+input.button {
 	color: blue;
-	height: 4em;
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+
+}
+
+input[type="submit"] {
+	padding-right: 5px;
+	color: blue;
+	-webkit-appearance: none;
 }
 
 .list_stops {
@@ -99,6 +117,7 @@ li {
 	width: 60%;
 	height: 50%;
 	font-size: 40px;
+	padding-left: 10px;
 }
 
 #starting_point_menu, #finish_point_menu {
