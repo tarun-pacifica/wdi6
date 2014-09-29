@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gam-meer Kat</title>
+  <title>Gam-Meer Kat</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,10 +12,11 @@
 	<h1>Gam-Meer Kat</h1>
 	<ul>
 		<li><a href="/">Home</a></li>
+		<li><a href="/about">About</a></li>
+		
 		<li><a href="/magic">Magic 8 Ball</a></li>
 		<li><a href="/secret">Secret Number</a></li>
 		<li><a href="/rockpaperscissors">Rock Paper Scissors Lizard Spock</a></li>
-		<li><a href="/about">About</a></li>
 
 	</ul>
 
@@ -23,6 +24,12 @@
 
 <%= yield %>
 
+<footer>
+	<h3>    </h3>
+	<h3>&copy By the tail-ented Jade Feng. Web Development Immersive 6.</h3>
+
+
+</footer>
 </div>
 </body>
 </html>

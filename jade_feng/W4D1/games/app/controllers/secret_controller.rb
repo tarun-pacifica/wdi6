@@ -4,8 +4,8 @@ class SecretController < ApplicationController
 
 	def result
 		rand_number = rand(1..10)
-		@guessed_number = params['guessed_number']
-		if @guessed_number == rand_number
+		@guessed_number = params['guessed_number'].to_i
+		if @guessed_number == rand_number.to_i
 			@secret_answer = "Congratulations!"
 			@secret_answer2 = "You guessed the right number, #{rand_number}!"
 		else
