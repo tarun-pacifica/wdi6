@@ -1,0 +1,41 @@
+.rps {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.rps-tie {
+	background-color: lightskyblue;
+}
+
+.rps-win {
+	background-color: seagreen;
+	color: white;
+
+}
+
+.rps-lose {
+	background: lightcoral;
+}
+
+.rps-choice {
+	display:inline-block;
+	font-size: 500%;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.shake2 {
+	-webkit-animation: shakeanimation .2s 5;
+}
+
+@-webkit-keyframes shakeanimation {
+	0% {
+		
+	}
+	50% {
+		-webkit-transform: translateX(-5px);
+	}
+	100% {
+
+	}
+}

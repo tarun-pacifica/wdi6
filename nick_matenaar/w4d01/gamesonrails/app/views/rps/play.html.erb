@@ -1,0 +1,43 @@
+<h2>Rock, Paper, Scissors</h2>
+
+<p>Your choice was: <%= @choice %></p>
+<p>Computer chose: <%= $ai_choice %></p>
+
+<div class="rps-choice shake2 fa 
+	<% case @choice %>
+	<% when "scissors" %>
+	<%= "fa-scissors" %>
+	<% when "paper" %>
+	<%= "fa-paperclip" %>
+	<% when "rock" %>
+	<%= "fa-area-chart" %>
+	<% end %>
+"></div>
+	
+<div class="rps-choice shake2 fa 
+	<% case $ai_choice %>
+	<% when "scissors" %>
+	<%= "fa-scissors" %>
+	<% when "paper" %>
+	<%= "fa-paperclip" %>
+	<% when "rock" %>
+	<%= "fa-area-chart" %>
+	<% end %>
+"></div>
+
+<% case @result %>
+<% when 1 %> 
+	<div class="rps rps-tie">
+		<p>You both chose <%= @choice %>, it was a tie!</p>
+	</div>
+<% when 2 %>
+	<div class="rps rps-win">
+		<p><%= @choice %> beats <%= $ai_choice %>, you win!</p>
+	</div>
+<% when 3 %>
+	<div class="rps rps-lose">
+		<p><%= $ai_choice %> beats <%= @choice %>, you lose!</p>
+	</div>
+<% end %>
+
+<a href="/rps"><button class="btn">Play Again?</button></a>
