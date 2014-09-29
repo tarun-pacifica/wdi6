@@ -36,7 +36,7 @@ class PagesController < ApplicationController
 		@object = params[:object]
 
 		selection = ["rock","paper","scissors","lizard","spock"]
-		@answer = selection[Random.rand(0..4)]
+		@answer = selection.sample
 
 		if @answer == "scissors"
 			if @object == "paper" || "lizard"
