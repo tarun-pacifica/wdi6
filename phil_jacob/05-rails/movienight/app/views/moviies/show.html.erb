@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @moviie.title %>
+</p>
+
+<p>
+  <strong>Obtained:</strong>
+  <%= @moviie.obtained %>
+</p>
+
+<p>
+  <strong>Released:</strong>
+  <%= @moviie.released %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @moviie.rating %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @moviie.description %>
+</p>
+
+<%= link_to 'Edit', edit_moviie_path(@moviie) %> |
+<%= link_to 'Back', moviies_path %>
