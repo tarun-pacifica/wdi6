@@ -1,5 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+
+
 body {
 	background: url('/assets/background.jpg') no-repeat center center fixed;
 	background-size: cover;
+	color: white;
+	font-family: 'Coming Soon', cursive;
+	text-align: center;
 }
 
+.container {
+	max-width: 960px;
+	margin: 0 auto; 
+}
+
+a, a:visited {
+	color: white
+}
+
+a:hover {
+	color: #d8cf1a;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    font-size: 1.2em;
+}
+
+.game_options {
+	width: 300px;
+	height: 300px;
+	margin-right: 10px;
+	display: inline-table;
+	text-align: center;
+	text-transform: bold;
+}
+.game_options img{
+	width: 290px;
+	height: 290px;
+	border-radius: 50%;
+}
+
+.rockpaper_img {
+	width: 300px;
+	height:300px;
+	display: inline-table;
+}
+.rockpaper_img img {
+	border-radius: 50%;
+	border: 2px dashed black;
+	width: 90%;
+	height: 90%;
+}
+
+.magicball {
+	background: url('/assets/magicball.png');
+	background-size: cover; 
+	width: 400px;
+	height: 400px;
+	margin:0 auto;
+}
+
+.magicball h1 {
+	line-height: 400px;
+
+}
+
+button, input {
+	font-size: 1.5em;
+}
+
+select {
+	font-size: 3em;
+}

@@ -2,7 +2,6 @@ class MagicController < ApplicationController
 	def index
 	end
 	def result
-		number = rand(0..33)
 		answers_array = ["Signs point to yes.", 
 						"Yes.", 
 						"Reply hazy, try again.", 
@@ -37,7 +36,7 @@ class MagicController < ApplicationController
 						"Go for it!", 
 						"Don't bet on it.", 
 						"Forget about it." ]
-		@magic8_answer = answers_array[number]
+		@magic8_answer = answers_array.sample
 
 	end
 end
