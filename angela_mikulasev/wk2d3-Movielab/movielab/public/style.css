@@ -1,0 +1,28 @@
+div {
+	padding: 10px;
+	border: black 60px solid;
+}
+
+.container .movie_title {
+	border: none;
+}
+
+h1 {
+	color: black;
+	font-size: 70px;
+	font-family: helvetica;
+	padding-top: 20px;
+}
+
+body {
+	text-align: center;
+	font-family: helvetica;
+	color: grey;
+	font-size: 30px;
+	margin: auto;
+}
+
+img {
+	padding-top: 40px;
+	display: inline;
+}

@@ -1,0 +1,21 @@
+<form action"/search">
+	<div class="search_list">
+		<input name="search_list" placeholder="Search List">
+		<button>Search Now!</button>
+	</div>
+</form>
+<div>
+	<% if params['search_list'] %>
+		<%@title = params['search_list'].gsub(' ', '+')%>
+		<%movie_results = HTTParty.get("http://www.omdbapi.com/?i=&s=#{ @title }.")%>
+		<%movies = JSON.parse movie_results%> 
+		<% movies["Search"].each do |m| %>
+		<p><%= m["Title"] %> -
+		<%= m["Year"] %></p>
+		<% end %>
+	<% end %>
+
+
+ </div>
+
+  <img src="<%= @poster %>">

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: caviar_dreams;
+  src: url('caviar_dreams/CaviarDreams.ttf')
+}
+
+div {
+	padding-top: 20px;
+}
+
+.container {
+	text-align: center;
+}
+
+.search {
+	position: relative;
+	text-align: center;
+}
+
+.search_list {
+	position: relative;
+	padding-left: 10px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.movie_info{
+	float: right;
+	padding-right: 20px;
+	text-align: left;
+}
+
+nav h1 {
+	color: grey;
+	font-size: 70px;
+	font-family: caviar_dreams;
+	padding-top: 20px;
+	background-color: #fff;
+	border-radius: 25px;
+	text-align: center;
+	margin: 20px;
+    text-shadow: 5px 1px 4px #A69FA4;
+}
+
+body {
+  	font-family: caviar_dreams;
+	color: black;
+	font-size: 30px;
+	margin: auto;
+	background-image: url('light_effect.jpg');
+	text-align: left;
+}
+
+img {
+	padding-top: 40px;
+	float:left;
+  	margin: 0 40px 15px 15px;
+}
+
+p {
+	font-size: 25px;
+	min-width: 450px;
+	padding: 0 40px;
+  	border: 0;
+  	text-align: left;
+}
+
+button {
+	border-radius: 15px 0;
+}
+
+input {
+	border-radius: 15px 0;
+}
+
+a {
+	text-align: center;
+}
+
+a:hover {
+    color: black;
+}
+
+a:link {
+    color: grey;
+}
+
+form {
+	padding-top: 20px;
+}
+
+/*outline: none;*/
