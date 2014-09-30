@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/oceans' => 'oceans#index'
   get '/oceans/new' => 'oceans#new'
   post '/oceans' => 'oceans#create'
-  get '/ocean/:id' =>'oceans#show', :as =>'ocean'
+  get '/oceans/:id' =>'oceans#show', :as =>'ocean'
 
 
 

@@ -28,7 +28,6 @@ class MountainsController < ApplicationController
 	end
 
 	def update
-		raise
 		mountain = Mountain.find params[:id]
 		mountain.update mountain_params
 		redirect_to(mountain_path(mountain.id))
