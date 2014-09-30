@@ -1,0 +1,10 @@
+ul {
+    list-style-type: none;
+}
+
+.container {
+	text-align: center;
+	background-color: pink;
+	padding: 20px;
+	font-family: helvetica;
+}

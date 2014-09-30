@@ -1,0 +1,27 @@
+
+<form action"/movie">
+	<div class="search">
+		<input name="movie_title" placeholder="Search Movie Title">
+		<button>Search Now!</button>
+	</div>
+</form>
+
+
+  <form action"/movie">
+	<a href="/search">Search for a movie keyword</a>
+  </form>
+
+	<% if params['movie_title']%>
+		<%@title = params['movie_title'].gsub(' ', '+')%>
+		<%movie_results = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @title }")%>
+		<%movie = JSON.parse movie_results%> 
+		<%@poster = movie['Poster']%>
+		<%@plot = movie['Plot']%>
+		<%@movie_title = movie['Title']%>
+		<%@rating = movie['imdbRating']%>
+	<% end %>
+
+ <img src="<%= @poster %>">
+
+
+
