@@ -1,0 +1,33 @@
+<form action='/mountains/<%= @mountain.id %>' method="post">
+	<div class="entry">
+		<label>Name: </label>
+		<input type="text" name="mountain[name]" value="<%= @mountain.name %>" autofocus>
+	</div>
+	<div class="entry">
+		<label>Image: </label>
+		<input type="text" name="mountain[image]"  value="<%= @mountain.image %>" >
+	</div>
+
+	<div class="entry">
+		<label>Elevation: </label>
+		<input type="text" name="mountain[elevation]"  value="<%= @mountain.elevation %>" >
+	</div>
+
+	<div class="entry">
+		<label>Country: </label>
+		<input type="text" name="mountain[country]"  value="<%= @mountain.country %>" >
+	</div>
+
+	<div class="entry">
+		<label>Continent: </label>
+		<input type="text" name="mountain[continent]"  value="<%= @mountain.continent %>" >
+	</div>
+
+	<div class="entry">
+		<label>Parent Range: </label>
+		<input type="text" name="mountain[parent_range]"  value="<%= @mountain.parent_range %>" >
+	</div>
+
+		<button>Submit!</button>
+
+</form>
