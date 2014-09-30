@@ -1,0 +1,59 @@
+body {
+	background-image: url('movie-world-park-blog-header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.container{
+	max-width:  960px
+	margin: auto;
+	border:1px solid none;
+}
+
+label {
+  min-width: 155px;
+  display: inline-block;
+  text-align: right;
+}
+h1{
+    color: orange;
+    text-align: center;
+}
+h2 {
+    color: orange;
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+input[type="text"] {
+    width: 240px;
+    height: 20px;
+    font-size: 16px;
+    display: inline-block;
+    /*display: block;*/
+}
+
+input[type="button"] {
+    width: 120px;
+    font-size: 12px;
+    display: inline-block;
+    /*display: block;*/
+}
+
+.poster {
+	margin: auto;
+	display: block;
+	border-radius: 0.7em;
+
+}
+
+.error {
+	background-color: orange;
+	text-decoration: blink;
+	text-align: center;
+	padding: 1em;
+	border-radius: 0.5em;
+}
