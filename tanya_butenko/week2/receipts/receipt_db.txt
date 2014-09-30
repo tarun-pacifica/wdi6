@@ -1,0 +1,6 @@
+hey,90
+hello,67
+now,1
+lkjws,20
+Grass cutting,100
+lllllll,99999
