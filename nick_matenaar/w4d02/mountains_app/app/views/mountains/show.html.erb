@@ -1,0 +1,9 @@
+<h2><%= @mountain.name %></h2>
+
+<%= image_tag @mountain.image %>
+
+<p>Height: <%= @mountain.height %> metres	</p>
+
+<p><%= link_to 'Edit', mountain_edit_path(@mountain.id) %></p>
+
+<%= button_to 'Delete Mountain', mountain_delete_path(@mountain.id) %>

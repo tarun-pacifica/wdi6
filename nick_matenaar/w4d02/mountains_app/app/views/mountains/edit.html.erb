@@ -1,0 +1,20 @@
+<form action="<%= mountain_path(@mountain.id) %>" method="POST">
+
+	<div class="input-group">
+		<label for="mountain[name]">Mountain Name: </label>
+		<input type="text" name="mountain[name]" id="mountain[name]" value="<%= @mountain.name %>"autofocus required>
+	</div>
+	<div class="input-group">
+		<label for="mountain[height]">Mountain Height: </label>
+		<input type="number" name="mountain[height]" id="mountain[height]" value="<%= @mountain.height %>">
+	</div>
+	<div class="input-group">
+		<label for="mountain[image]">Mountain Image: </label>
+		<input type="URL" name="mountain[image]" id='mountain[image]' value="<%= @mountain.image %>">
+	</div>
+	<div class="input-group">
+		<label></label>
+		<button>Edit Mountain</button>
+	</div>
+	
+</form>
