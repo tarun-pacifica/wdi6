@@ -6,7 +6,6 @@ class CreateOceans < ActiveRecord::Migration
     	t.float :depth
     	t.float :area
     	t.float :volume
-    	t.float :coastline
 
     	t.timestamps
     end

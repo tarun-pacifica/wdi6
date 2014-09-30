@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930081446) do
+ActiveRecord::Schema.define(version: 20140930094117) do
 
   create_table "mountains", force: true do |t|
     t.string   "name"
@@ -31,6 +31,17 @@ ActiveRecord::Schema.define(version: 20140930081446) do
     t.integer  "area"
     t.integer  "volume"
     t.integer  "coastline"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wonders", force: true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.string   "country"
+    t.string   "continent"
+    t.integer  "year_declared"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

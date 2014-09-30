@@ -2,14 +2,9 @@
 
 <% @mountains.each do |mountain| %>
 	<div class="index_square">
+		<%= image_tag mountain.image %>
 		<p>
 		<%= link_to(mountain.name, mountain_path(mountain.id)) %>
-		 is located in 
-		<%= mountain.country %>
-		on the 
-		<%= mountain.parent_range %> range
-		 and is
-		<%= number_to_human(mountain.elevation) %> metres high.
 		</p>
 <!-- 		<div class="index_image"> <%= image_tag mountain.image %> </div> -->
 	</div>

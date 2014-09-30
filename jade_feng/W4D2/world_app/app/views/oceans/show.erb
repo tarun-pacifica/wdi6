@@ -1,0 +1,7 @@
+<h1>Look at the <%= @ocean.name.capitalize %>!</h1>
+
+<div class="show_image"> <%= image_tag @ocean.image %> </div>
+<h3>The <%= @ocean.name.capitalize  %> </h3>
+
+<%= link_to('Change the ocean!', ocean_edit_path(@ocean.id))  %>
+<%= button_to('Drain the ocean!', ocean_delete_path(@ocean.id))  %>

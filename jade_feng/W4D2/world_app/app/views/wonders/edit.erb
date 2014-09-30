@@ -1,0 +1,22 @@
+
+<form action="/wonders/<%= @wonder.id %>" method="post">
+	<div class="entry">
+		<label>Name: </label>
+		<input type="text" name="wonder[name]" value="<%= @wonder.name %>" autofocus>
+	</div>
+	<div class="entry">
+		<label>Image: </label>
+		<input type="text" name="wonder[image]"  value="<%= @wonder.image %>" >
+	</div>
+
+	<div class="entry">
+		<label>Country: </label>
+		<input type="text" name="wonder[country]"  value="<%= @wonder.country %>" >
+	</div>
+		<div class="entry">
+		<label>Continent: </label>
+		<input type="text" name="wonder[continent]"  value="<%= @wonder.continent %>" >
+	</div>
+
+<button>Submit</button>
+</form>

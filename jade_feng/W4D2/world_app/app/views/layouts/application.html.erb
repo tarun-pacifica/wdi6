@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WorldApp</title>
+  <title>Travel Kitty</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 <nav>
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><a href="/mountains/new">New Mountain</a></li>
+		<li><a href="/map">Map</a></li>
 		<li><a href="/mountains">All Mountains</a></li>
 		<li><a href="/mountains/new">New Mountain</a></li>
 		<li><a href="/oceans">All Oceans</a></li>
@@ -19,9 +19,12 @@
 		<li><a href="/wonders/new">New Wonders</a></li>	</ul>
 </nav>
 
-<div>
+<div class="main">
+	<div class="container">
 
-<%= yield %>
+		<%= yield %>
+	</div>
+</div>
 
 </body>
 </html>
