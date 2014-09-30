@@ -68,6 +68,12 @@ body {
   background-size: cover;
 }
 
+/* NYAN CAT CURSOR */ 
+body, a:hover {
+  cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), progress !important;
+} 
+/* End http://www.cursors-4u.com */
+
 .container {
 	max-width: 960px;
 	margin: auto;

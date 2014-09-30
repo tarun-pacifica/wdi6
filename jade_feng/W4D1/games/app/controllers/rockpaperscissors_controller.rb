@@ -3,9 +3,7 @@ class RockpaperscissorsController < ApplicationController
 	end
 
 	def result
-		random_number = rand(0..4)
-		options = ["rock", "paper", "scissors", "lizard", "spock"]
-		@generated_choice = options[random_number]
+		@generated_choice = ["rock", "paper", "scissors", "lizard", "spock"].sample
 		@user_choice = params['user_answer']
 		if @user_choice == "scissors" && (@generated_choice == "paper" || @generated_choice == "lizard")
 			@outcome = "won"
