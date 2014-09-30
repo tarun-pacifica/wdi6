@@ -40,8 +40,8 @@ span {
 	text-decoration: bold;
 }
 .show_image {
-	width: 500px;
-	height: 500px;
+	width: 450px;
+	height: 450px;
 	border: 2px solid black;
 }
 
@@ -81,6 +81,12 @@ span {
 	border: 1px solid black;
 }
 
+.show_column {
+	width: 45%;
+	display: inline-table;
+	vertical-align: top;
+	margin-right: 10px;
+}
 label, input {
 	display: block;
 	width: 300px;

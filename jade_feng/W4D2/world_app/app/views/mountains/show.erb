@@ -1,9 +1,12 @@
 <h1>Look at the <%= @mountain.name.capitalize %> Mountain!</h1>
+<div class = "show_column">
+	<div class="show_image"> <%= image_tag @mountain.image %> </div>
+</div>
+<div class = "show_column">
+	<h3>The <%= @mountain.name.capitalize  %> Mountain is <%= number_to_human(@mountain.elevation).downcase %> metres high.</h3>
 
-<div class="show_image"> <%= image_tag @mountain.image %> </div>
-<h3>The <%= @mountain.name.capitalize  %> Mountain is <%= number_to_human(@mountain.elevation) %> metres high.</h3>
+	<h3>It is based in <%= @mountain.country  %>, <%= @mountain.continent  %> on the <%= @mountain.parent_range  %> ranges. </h3>
 
-<h3>It is based in <%= @mountain.country  %>, <%= @mountain.continent  %> on the <%= @mountain.parent_range  %> ranges. </h3>
-
-<%= link_to('Change the mountain!', mountain_edit_path(@mountain.id))  %>
-<%= button_to('Knock down the mountain!', mountain_delete_path(@mountain.id))  %>
+	<%= link_to('Change the mountain!', mountain_edit_path(@mountain.id))  %>
+	<%= button_to('Knock down the mountain!', mountain_delete_path(@mountain.id))  %>
+</div>
