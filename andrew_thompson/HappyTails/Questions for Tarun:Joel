@@ -1,0 +1,11 @@
+Questions for Tarun/Joel
+
+- I can't seem to use system('clear') to clear the screen after every input. 
+
+- I can gets.chomp client and pet data but it doesn't seem to store?
+
+- How can I print the clients in my $clients array on seperate lines? Same for animals.
+
+- How to facilatate adotption? 
+
+- Should take a look at the code used by the twins as is similar to mine but with successful adoption. 
