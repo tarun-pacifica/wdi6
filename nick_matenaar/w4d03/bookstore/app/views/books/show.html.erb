@@ -1,0 +1,19 @@
+<h2><%= @book.title %></h2>
+
+<%= image_tag @book.image %>
+
+<p>Publisher: <%= @book.publisher %></p>
+
+<p>Published Date: <%= @book.published_date %></p>
+
+<p>
+	Author: <%= if @book.author 
+			link_to @book.author.name, @book.author 
+		else 
+			"N/A"
+		end
+	%>
+</p>
+
+<p><%= link_to 'Edit Book', edit_book_path(@book) %></p>
+<p><%= link_to 'Delete Book', @book, method: :delete, :data => { confirm: 'Are you sure?' } %></p>

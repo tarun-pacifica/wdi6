@@ -1,0 +1,105 @@
+.container {
+	max-width: 960px;
+	margin: auto;
+	text-align: center;
+
+}
+
+.thumbnail {
+	max-width: 150px;
+}
+
+.option-group {
+	display: inline-block;
+	max-width: 200px;
+	text-align: center;
+	vertical-align: top;
+	margin: 30px;
+}
+
+.option-group a {
+	text-decoration: none;
+	color: coral;
+}
+
+.option-group a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	border-bottom: 6px solid black;
+	margin-bottom: 3em;
+}
+.nav-ul {
+	list-style: none;
+	text-align: right;
+	padding-bottom: 1em;
+	border-bottom: 3px solid black;
+}
+
+.nav-ul li {
+	display: inline-block;
+	margin-left: 2em;
+}
+
+.nav-ul a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+.nav-ul a:hover {
+	font-weight: bolder;
+}
+
+
+h1 {
+	text-align: left;
+	font-size: 300%;
+}
+
+img {
+	max-width: 700px;
+}
+
+img:hover {
+	box-shadow: 5px 5px 0 rgba(0,0,0, 0.5);
+}
+
+a {
+	text-decoration: none;
+	color: coral;
+}
+
+h1 {
+	color: coral;
+}
+
+h2 {
+	color: coral;
+}
+
+h3 {
+	color: coral;
+}
+
+a:hover {
+	font-weight: bolder;
+}
+
+label {
+	min-width: 100px;
+	display: inline-block;
+}
+
+input[type="submit"] {
+	background: none;
+	border: 2px solid black;
+	width: 125px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 2px 2px 0 black;
+}
