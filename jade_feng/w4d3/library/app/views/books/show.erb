@@ -1,0 +1,28 @@
+<div class="show_column">
+<h1><%= @book.title  %></h1>
+<%= image_tag(@book.image, :class => 'show_page')  %>
+</div>
+
+<div class="show_column">
+<h3>By: <%= link_to @book.author.name, @book.author if @book.author  %></h3>
+<h3>Genre: <%= @book.genre  %> </h3>
+<h3>Series: <%= @book.series  %></h3> 
+<h3>Language: <%= @book.language  %></h3>
+<h3>Published in: <%= @book.published  %></h3>
+<h3><%= link_to 'Edit', edit_book_path(@book)  %></h3>
+<h3><%= link_to 'Delete', @book,:method => :delete, :data => {:confirm => "Are you sure?"} %></h3>
+</div>
+
+<div class="show_column">
+<h3>Borrowed by: <%= link_to @book.user.name, @book.user if @book.user  %></h3>
+<h3>Due date: <%= @book.duedate.strftime('%B %d, %Y') if @book.user  %></h3>
+	<% 	if @book.duedate && ( @book.duedate < Date.today )
+			@message = "Book is overdue!"
+		elsif @book.duedate
+			@message = "There are #{Date.today - @book.duedate} days until book is due."
+		else
+			@message = "Book is avaliable for loan."
+		end %> 
+	<h3> <span><%= @message %> </span> </h3>
+
+</div>

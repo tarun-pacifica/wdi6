@@ -1,0 +1,6 @@
+<% @authors.each do |author| %>
+<div class="index_box">
+	<%= image_tag(author.image, :class => 'thumbnail')  %>
+ 	<p><%= link_to(author.name, author_path(author))  %></p>
+</div>
+<% end %>

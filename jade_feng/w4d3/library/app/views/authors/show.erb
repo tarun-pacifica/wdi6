@@ -1,0 +1,24 @@
+<div class="show_column">
+<h1><%= @author.name  %>.</h1>
+<%= image_tag(@author.image, :class=> 'show_page') %>
+</div>
+
+
+<div class="show_column">
+<h3>Nationality: <%= @author.nationality  %></h3>
+<h3>Genre: <%= @author.genre %> </h3>
+<h3>DOB: <%= @author.dob.strftime('%B %d, %Y') %> </h3>
+
+<h3> <%= link_to 'Edit', edit_author_path(@author)  %> </h3>
+<h3> <%= link_to 'Delete', @author, :method => :delete, :data => { :confirm => 'Are you sure?'} %> </h3>
+ 
+ </div>
+
+ <div class="show_column">
+ <h2>Books</h2>
+ <% @author.books.each do |book|  %>
+	 <%= image_tag(book.image, :class => 'show_page')%>
+	<%= link_to book.title, book  %>
+
+<% end %>
+</div>

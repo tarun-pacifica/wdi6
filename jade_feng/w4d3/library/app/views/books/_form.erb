@@ -1,0 +1,41 @@
+<%= form_for @book do |f| %>
+<p>
+	<%= f.label :title  , "Title:" %>
+	<%= f.text_field :title %>
+</p>
+<p>
+	<%= f.label :author_id  %>
+	<%= f.select :author_id, Author.all.map { |author| [author.name, author.id] }, :include_blank => true, :prompt => "Select author"  %>
+</p>
+<p>
+	<%= f.label :language  , "Language:" %>
+	<%= f.text_field :language %>
+</p>
+<p>
+	<%= f.label :series  , "Series:" %>
+	<%= f.text_field :series %>
+</p>
+<p>
+	<%= f.label :genre  , "Genre:" %>
+	<%= f.text_field :genre %>
+</p>
+<p>
+	<%= f.label :published  , "Published:" %>
+	<%= f.text_field :published %>
+</p>
+<p>
+	<%= f.label :image  , "Image:" %>
+	<%= f.url_field :image %>
+</p>
+<p>
+	<%= f.label :user_id  %>
+	<%= f.select :user_id, User.all.map { |user| [user.name, user.id] }, :include_blank => true, :prompt => "Select user"  %>
+</p>
+<p>
+	<%= f.label :duedate  , "Due date:" %>
+	<%= f.text_field :duedate %>
+</p>
+
+	<label></label>
+	<%= f.submit %>
+<% end %>
