@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+	color: white;
+	background: black;
+	margin-top: 25%;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	margin: 20px 10px;
+}
+
+#done {
+	padding: 10px 30px;
+	background: blue;
+}
+
+#yes {
+	padding: 10px 30px;
+	background: green;
+}
+
+#no {
+	padding: 10px 30px;
+	background: red;
+}

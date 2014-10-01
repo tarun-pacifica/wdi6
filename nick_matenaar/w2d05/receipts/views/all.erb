@@ -1,0 +1,10 @@
+<% @receipts.each do |service, value| %>
+	<section class="receipt"> 
+		<ul>
+			<li>Company Name: <em> Stoner Landscape Gardening Pty Ltd </em> </li>
+			<li>Good/Service Provided: <em><%= service %></em></li>
+			<li>Cost: $<em><%= value %></em></li>
+			<li><stong>Danke</stong></li>
+		</ul>		
+	</section>
+<% end %>

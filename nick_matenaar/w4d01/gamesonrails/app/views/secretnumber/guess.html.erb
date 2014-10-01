@@ -1,0 +1,24 @@
+<h2>Secret Number</h2>
+
+<p>Your guess was: <%= @user_guess %></p>
+
+<% case @result %>
+<% when 1 %>
+	<p class="guess correct">Correct!</p>
+	<a href="/secretnumber"><button>Play Again</button></a>
+<% when 2 %>
+	<p class="guess higher">Higher!</p>
+	<form action="/secretnumber/guess">
+	<label for="user_guess">Your Guess (1-10): </label>
+	<input type="number" name="user_guess" placeholder= "<%= @user_guess %>" required>
+	<button>Guess Again!</button>
+</form>
+<% when 3 %>
+	<p class="guess lower">Lower!	</p>
+	<form action="/secretnumber/guess">
+	<label for="user_guess">Your Guess (1-10): </label>
+	<input type="number" name="user_guess" placeholder= "<%= @user_guess %>"  required>
+	<button>Guess Again!</button>
+	</form>
+<% end %>
+

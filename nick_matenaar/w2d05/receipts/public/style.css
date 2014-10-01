@@ -1,0 +1,48 @@
+body {
+	background: url('background.jpg');
+}
+.container {
+	max-width: 960px; 
+	margin: 0 auto;
+	text-align: center;
+	background-color: white;
+	vertical-align: top;
+	padding: 50px 0;
+	box-shadow: 0 0 10px black;
+}
+
+nav ul li {
+	display: inline-block;
+	margin: 0 20px;
+	font-weight: bold; 
+}
+
+nav ul li a {
+		text-decoration: none;
+		color: green;
+}
+
+nav ul li a:hover {
+	color: red;
+}
+
+.receipt {
+	display: block;
+	text-align: left;
+	margin: 20px;
+}
+
+.receipt ul li {
+	list-style: none;
+}
+
+label {
+	width: 160px;
+	display: inline-block;
+	text-align: right;
+}
+
+input {
+	width: 160px;
+}
+

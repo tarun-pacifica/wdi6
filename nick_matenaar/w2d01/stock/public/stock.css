@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+	background-color: white;
+
+}
+
+input { 
+	text-align: center;
+	padding: 10px;
+	background-color: transparent;
+  border: 3px solid black;
+}
+
+img {
+	margin: auto;
+}
+
+#price {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+ button {
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid black;
+  color:black;
+  text-decoration:none;
+}

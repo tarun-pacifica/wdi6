@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	background-color: black;
+}
+
+li a:hover {
+	color: black;
+	background-color: white;
+}
+
+nav {
+	margin-bottom: 50px;
+}

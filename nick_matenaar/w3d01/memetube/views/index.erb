@@ -1,0 +1,7 @@
+<section class="collection">
+	<ul>
+		<% @tubes.each do |tube| %>
+			<a href="/tubes/<%= tube['id'] %>"><li><img src="<%= tube['thumbnail'] %>"><%= tube['title'] %></li></a>
+		<% end %>
+	</ul>
+</section>

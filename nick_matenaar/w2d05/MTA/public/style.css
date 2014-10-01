@@ -1,0 +1,116 @@
+.container {
+	height: 100%;
+	left: 0;
+	position: relative;
+	text-align: center;
+	top: 0;
+	width: 100%;
+
+}
+
+#front-main {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#stops {
+	display: block;
+	text-align: left;
+	margin: auto;
+	max-width: 300px;
+}	
+
+#stops p {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-color: black;
+}
+
+#stops strong {
+	display: block;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.input-group {
+	display: inline-block;
+
+}
+
+#front-main a{
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	font-weight: bolder;
+	font-size: 5em;
+}
+
+#front-main h1 {
+	margin-bottom: 10px;
+}
+
+h1 {
+	margin-bottom: 10px;
+}
+
+
+.distance-header {
+	display: inline-block;
+	position: fixed; 
+	margin: 0 auto;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: white;
+	padding: 0 100%;
+	z-index: 1;
+	background: linear-gradient(white 80%, rgba(255,255,255,0));
+	padding-bottom: 50px;
+}
+
+button {
+	background: black;
+	color: white;
+	border-width: 0;
+	padding: 10px 10px;
+	min-width: 150px;
+}
+
+.input-group-button {
+
+	display: block;
+	margin-top: 20px
+}
+
+.distance-content {
+	margin-top: 280px;
+	margin-bottom: 200px;
+}
+
+footer {
+	display: block;
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(rgba(255,255,255,0), white 70%);
+	padding-top: 80px;
+
+}
+
+footer p {
+	text-align: right;
+	margin-right: 30px;
+	height: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}

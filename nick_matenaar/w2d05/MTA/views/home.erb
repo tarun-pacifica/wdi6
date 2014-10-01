@@ -1,0 +1,31 @@
+<section id="front-main">
+<a href="/"><h1> MTA </h1></a>
+<form action="/distance" method="POST">
+
+	<div class="input-group">
+		<label for="first_station">FROM  </label>
+		<select name="first_station" id="first_station">
+			<option value="1st" disabled selected>DEPART FROM</option>
+			<% @locations.each do |station| %>
+				<option value="<%= station %>"><%= station %></option>
+			<% end %>
+		</select>
+	</div>
+
+	<div class="input-group">
+		<label for="second_station">TO </label>
+		<select name="second_station" id="second_station">
+			<option value="1st" disabled selected>ARRIVE AT</option>
+			<% @locations.each do |station| %>
+				<option value="<%= station %>"><%= station %></option>
+			<% end %>
+		</select>
+	</div>
+
+	<div class="input-group-button">
+		<label></label>
+		<button>GO!</button>
+	</div>
+
+</form>
+</section="front-main">

@@ -1,0 +1,146 @@
+body {
+	background-color: #ECF0F1;
+	vertical-align: top;
+	margin: 0 auto;
+	color: white;
+
+}
+
+.container {
+ 	padding:  0;	
+	background-color: #E74C3C;
+	max-width: 960px;
+	margin: 0 auto;
+	vertical-align: top;
+	text-align: center;
+	box-shadow: 10px 10px 0 black;
+	color: white;	
+	
+}
+
+h1 {
+	padding: 0px;
+	margin: 0 auto;
+	display: block;
+	text-align: center;	
+	font-size: 800%;
+	font-weight: bolder;
+	text-shadow: 9px 9px 0 black;
+	font-family: 'Lobster', cursive;
+	
+}
+
+h2 {
+	padding: 20px 0;
+
+}
+
+h3 {
+	font-style: italic;	
+	font-family: serif;
+	font-size: 200%;	
+	padding-bottom: 20px;
+	color: white;
+	font-family: 'Kaushan Script', cursive;
+
+}
+
+
+
+header {
+	padding-top: 30px;	
+	margin-bottom: 10px;
+	border-bottom-style: dotted;
+	border-bottom-width: 20px;
+	border-color: #ECF0F1;
+}
+
+.form-section {
+
+	padding-top: 10px;
+	padding-bottom: 80px;
+}
+	
+.form-section img {
+	background-color: #ECF0F1;
+	padding: 20px;
+	margin-bottom: 30px;
+	box-shadow: 0px 5px 2px rgba(0,0,0,.5);
+}
+
+.form-section h4 {
+	font-size: 150%;
+}
+
+form {
+	padding-top: 40px;
+
+}
+
+
+
+input {
+	padding: 1em;
+	border-width: 0px;
+	color: black;
+	box-shadow: 0px 3px 2px rgba(0,0,0,.5);
+}
+
+
+
+button {
+	padding: 1em;
+	border-width: 0px;
+	background-color: #3498DB;
+	box-shadow: 0px 3px 2px rgba(0,0,0,.5);
+
+}
+
+footer {
+	margin-top: 50px;
+	padding: 50px;
+	color: white;
+	border-top-style: dotted;
+	border-top-width: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+em {
+	font-size: 150%;
+	font-family: sans-serif;
+}
+
+#search_logo {
+	display: inline-block;
+	position: relative;	
+	right: 150px;
+	top: 55px;
+	z-index: 1;	
+	color: black;
+	font-weight: bolder;
+	color: white;
+	text-shadow: 1px 2px 1px #000;
+	font-size: 30px;
+	font-family: 'Kaushan Script', cursive;
+
+	-webkit-transform: rotate(-8deg);
+
+}
+
+#searchwall {
+	margin-top: 50px;
+	background-color: #000;
+}
+
+.resize {
+	background-color: blue; 
+	display: inline-block;
+	max-width: 20%;
+	height: auto;
+	margin: 20px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}

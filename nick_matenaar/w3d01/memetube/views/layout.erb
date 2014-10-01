@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memetube</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>MEMETUBE</h1>
+		<nav>
+			<ul>
+				<li><a href="/">HOME</a></li>
+				<li><a href="/tubes/new">ADD VIDEO</a></li>
+			</ul>
+		</nav>
+		<nav>
+			<ul>
+				<% @categories.each do |cat| %>
+					<li><a href="/category/<%= cat['category'] %>"><%= cat['category'] %></a></li>
+				<% end %>
+			</ul>
+		</nav>
+		<%= yield %>
+	</div>
+</body>
+</html>
