@@ -1,0 +1,46 @@
+html {
+  font-family: Arial;
+}
+
+body {
+  margin: 0px;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+}
+
+a {
+  color: grey;
+}
+
+nav {
+  color: white;
+  background-color: teal;
+  padding: 1em;
+}
+
+nav a {
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+
+nav li {
+  display: inline;
+}
+
+img.thumbnail {
+  max-width: 10em;
+}
+
+label {
+  min-width: 80px;
+  display: inline-block;
+}

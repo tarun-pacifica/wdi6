@@ -1,0 +1,9 @@
+hello this is your home page
+
+<% @mountains.each do |mountain| %>
+
+<br>
+<p>
+<%= link_to(mountain.name, mountain_path(mountain.id)) %> is just huge
+</p>
+<% end %>
