@@ -1,0 +1,13 @@
+<!-- This page displays a a list of movies that relate to the user search -->
+<div class="column">
+
+<% @movies['Search'].each do |movie| %>
+
+	<p>
+		<a href="/movie/<%= movie['imdbID'] %>">
+			<%= movie['Title'] %>
+		</a>
+	</p>
+<% end %>
+
+</div>
