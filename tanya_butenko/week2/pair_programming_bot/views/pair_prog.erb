@@ -1,0 +1,16 @@
+<p class="text"><%= @item[:title] %></p>
+
+<div class='row'>
+<ul class="buttons">
+<li>
+	<%if @item[:no] != nil %>
+		<a class="btn btn-lg btn-success" href="/?id=<%= @item[:yes] %>">Yes</a>                
+		<a class="btn btn-lg btn-danger" href="/?id=<%= @item[:no] %>">No</a>
+	<%else%>
+		<a class="btn btn-lg btn-primary"href="/?id=<%= @item[:yes] %>">Done</a>
+	<%end%>
+</li>
+
+
+</ul>
+</div>

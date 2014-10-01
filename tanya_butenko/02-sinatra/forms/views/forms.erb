@@ -1,0 +1,65 @@
+<section class="forms-example">
+	<form action="/process" method="get" >
+		<div class="input-group">
+			<label for="site-search">Search</label>
+			<input type="search" name="site-search" placeholder="hotdogs">
+		</div>
+
+		<div class="input-group">
+			<label for="hotdog_style">What is the style of hotdog?</label>
+			<input name='hotdogs' id="hotdog_style" type="text">
+		</div>
+
+		<div class="input-group">
+			<label for="hotdog_count">How many hotdogs?</label>
+			<input type="number" id="hotdog_count" name="hotdog_count" placeholder="70">
+		</div>
+		
+		
+
+		<div class='input-group'>
+		<label for="">Size</label>
+		<select name="size" id="size_menu">
+			<option value="S">Small</option>
+			<option value="M">Medium</option>
+			<option value="L">Large</option>
+			<option value="XL">Extra Large</option>
+		</select>
+		</div>
+
+		<div class="input-group">
+			<label for="independence_question">Should Scotland be independent country?</label>
+			<select name="independence" id="independence_question">
+				<option value="y">Yes</option>
+				<option value="y">Aye</option>
+				<option value="y">Fookn aye</option>
+				<option value="n" disabled>No</option>
+
+			</select>
+		</div>
+
+		<div class="input-group">
+			<p>Should Scotland be independent country?</p>
+			<label for="independence_question_2">Yes</label>
+			<input type="radio" id="independent_question" name="independence2" value="y">
+			<label for="independence_question_2">No</label>
+			<input type="radio" id="independent_question" name="independence2" value="n">
+		</div>
+
+		<div class="input-group">
+			<label for="">Which of these genres is awful?</label>
+			<input type="checkbox" name="awful_genre[]" value="country">Country
+			<input type="checkbox" name="awful_genre[]" value="dnb">DNB
+			<input type="checkbox" name="awful_genre[]" value="dance">Dance
+		</div>
+
+		<div class="input-group">
+			<textarea name="biography" placeholder="My life story"></textarea>
+		</div>
+
+		<label></label>
+		<input type="submit" value="Send to the server">
+		
+
+	</form>
+</section>

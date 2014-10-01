@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New York Metro</title>
+	<link rel="stylesheet" href="normalizer.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="http://www.icon100.com/up/3911/64/87-New-York-metro-logo.png">
+</head>
+<body>
+
+	<header>
+	    	<div class="header"><h1>Welcome to New-York Metro System</h1></div>
+	</header>
+	
+	<div class="container">
+
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/history">History</a></li>
+			</ul>
+		</nav>
+
+		<%= yield %>
+	</div>
+	<section class="luigi">
+		<img src="images/luigi2.png">
+	</section>
+	<section>
+		<img src="images/mario.png">
+	</section>
+	<audio autoplay=true controls>
+		<source src="images/mario.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+</body>
+</html>

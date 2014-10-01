@@ -1,0 +1,22 @@
+<form action="/search_results">
+
+	<center>
+  		<h2>Please enter a movie title below<h2><label for="search">to view its cover photo:</label></h2>
+  	<input type="text" name="search_string" placeholder="movie title" required>
+  <button>Search</button>
+</center>
+</form>
+
+
+
+<% if @movie && @movie['Poster'] %>  
+	
+		<img class="poster" src="<%= @movie["Poster"]%>">
+
+<% elsif params['search_string'] %>
+
+		<p class="error">
+			<%= params['search_string'] %> movie not available
+		</p>
+	
+<%end%>

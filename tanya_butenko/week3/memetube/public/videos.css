@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Arbutus+Slab);
+
+
+body{
+    background-color: #ddd;
+    font-family: 'Arbutus Slab', serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    text-align: center;
+    border: 1 px solid black;
+}
+
+nav {
+    border: 1 px solid red;
+}
+
+nav li {
+    display: inline-block;
+}
+
+li{
+    list-style-type: none;
+    margin: 10px;
+    font-size: 20px;
+}
+
+a {
+    margin : 10px;
+    font-size: 30px;
+}
+
+em {
+    display: block;
+    margin:15px;
+    display: block;
+    margin-top: 15px;
+    text-align:center;
+}
+
+div .description {
+    display: block;
+    margin-top: 15px;
+    
+}
+
+textarea{
+    text-align: center;
+}
+
+button{
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+}
+
+button:hover{
+    box-shadow: 2px 2px 5px black;
+}
+
+form{
+    font-size: 20px;
+}
+
+section a{
+    text-decoration: none;
+}
+section a:hover{
+    color: red;
+}
+
+.video a{
+    text-decoration: none;
+}
+
+.video a:hover{
+    text-decoration: underline;
+    text-shadow: 1px 1px black;
+}

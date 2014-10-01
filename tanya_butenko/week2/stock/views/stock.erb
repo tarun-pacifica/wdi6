@@ -1,0 +1,20 @@
+<form action='/'>
+	<input name='name' placeholder='stock symbol'>
+	<button>GO</button>
+</form>
+
+<% if !@result.nil? %>
+	<% if @result > 0 %>
+		<p> Last trade for <%= params[:name] %> was $<%= @result %>
+		</p>
+	<%else%>
+		<p>
+			Sorry no such stock symbol in our database.
+		</p>
+		<p>
+			Check on spelling and try again.
+		</p>
+	<%end%>
+<%end%>
+
+
