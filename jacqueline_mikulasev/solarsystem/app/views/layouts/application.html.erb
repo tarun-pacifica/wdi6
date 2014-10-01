@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solarsystem</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="navcontainer">
+	<ul id="navlist">
+		<li><%= link_to('Home', home_path) %></li>
+		<li><%= link_to('Oceans', oceans_path) %></li>
+		<li><%= link_to('New Ocean', oceans_new_path) %></li>
+
+		<li><%= link_to('Planets', planets_path) %></li>
+		<li><%= link_to('New Planet', planets_new_path) %></li>
+	</ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

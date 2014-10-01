@@ -1,0 +1,11 @@
+<h2><%= @ocean.name %></h2>
+<%= image_tag @ocean.image %>
+
+<p>Continent: <%= @ocean.continent %></p>
+<p>Size: <%= @ocean.size %></p>
+<p>Volume: <%= @ocean.volume %></p>
+
+
+
+<%= link_to('Edit ocean', ocean_edit_path(@ocean.id)) %>
+<%= button_to('Delete ocean', ocean_delete_path(@ocean.id)) %>

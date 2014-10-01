@@ -1,0 +1,19 @@
+ <form action="/movies">
+<div class="search">
+	<input name="movie_search" placeholder="Enter a movie here">
+	<button>Find my results</button>
+</div>
+</form>
+
+
+
+<% if params['movie_search']%>
+	<%@search = params['movie_search'].gsub(' ', '+')%>
+	<%movie_results = HTTParty.get("http://www.omdbapi.com/?i=&t=#{ @search }") %>
+	<%movie = JSON.parse movie_results%> 
+	<% @title = movie['Title']%>
+	<% @poster = movie['Poster']%>
+	<% @plot = movie['Plot']%>
+	<% @released = movie['Released']%>
+	<% @imbdrating = movie['ImbdRating']%>
+<%end%> 

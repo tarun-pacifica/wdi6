@@ -1,0 +1,4 @@
+- @oceans.each do |ocean|
+	%p
+		The #{link_to ocean.name, ocean_path(ocean)} has a volume
+		-# = ocean.nothing
