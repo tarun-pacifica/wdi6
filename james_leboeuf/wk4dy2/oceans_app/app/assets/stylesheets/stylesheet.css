@@ -1,0 +1,27 @@
+body {
+	font-family: 'Lato', sans-serif;
+	background: grey;
+}
+header {
+	height: 10em;
+	max-width: 960px;
+	margin: 10px auto;
+	border: 1px solid purple;
+}
+header li {
+	list-style-type: none;
+	display: inline;
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	height: 1000px;
+	border: 1px solid black;
+}
+
+footer {
+	height: 10em;
+	max-width: 960px;
+	margin: 10px auto;
+	border: 1px solid purple;
+}

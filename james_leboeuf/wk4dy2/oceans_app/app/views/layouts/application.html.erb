@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OceansApp</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><%= link_to('Oceans', oceans_path) %></li>
+      <li><%= link_to('New Ocean', oceans_new_path) %></li>
+    </ul>
+  </header>
+
+<div class="container">
+
+	<div class="content">
+
+	<%= yield %>
+	
+	</div>
+
+</div>
+<footer>
+<h3>anything in the footer</h3>
+</footer>
+</body>
+</html>

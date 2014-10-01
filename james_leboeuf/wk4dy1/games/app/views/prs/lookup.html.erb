@@ -1,0 +1,13 @@
+<p>User choice: <%= @user_choice %></p>
+<%= @solution %>
+<p>Computers choice: <%= @computer_choice %></p>
+<form action="/prs/lookup">
+  <select name="choice">
+    <option value="rock">Rock</option>
+    <option value="paper">Paper</option>
+    <option value="scissors">Scissors</option>
+  </select>
+	<button>
+		<submit>Submit</submit>
+	</button>
+</form>

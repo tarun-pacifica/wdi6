@@ -1,0 +1,6 @@
+<h1>Show individual ocean</h1>
+<%= @ocean.name %>
+<%= image_tag @ocean.image %>
+
+<%= link_to('Edit Ocean', ocean_edit_path(@ocean.id)) %>
+<%= button_to('DESTROY Ocean', ocean_destroy_path(@ocean.id)) %>
