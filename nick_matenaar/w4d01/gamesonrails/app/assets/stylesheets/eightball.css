@@ -1,0 +1,40 @@
+
+.eight-ball-outer {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	background: black;
+	border-radius: 50%;
+	margin: auto;
+	margin-bottom: 30px;
+	
+}
+
+.eight-ball-inner {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background: white;
+	border-radius: 50%;
+	margin: auto;
+	top: 50px;
+	left: 50px;
+}
+
+.eight-ball-inner p {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 27.5%;
+	text-align: center;
+}
+
+.shake {
+	-webkit-animation: shake .3s 5 alternate;
+}
+
+@-webkit-keyframes shake {
+	0% {
+	-webkit-transform: translateY(10px);
+	}
+}

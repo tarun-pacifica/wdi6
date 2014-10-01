@@ -1,0 +1,17 @@
+<form action = "/"> 
+	<input name="stock" placeholder=<%=@stock_symbol%>>
+	<button name="GO">GO</button>
+</form>
+<% if @price && @price > 0 %>
+	<p> 
+		Last trade value of <b><%= @name %></b>		
+	</p>
+	<p id="price">
+		 $<%= @price %>
+	</p>
+
+<% else %>
+	<p> 
+		That stock does not exist
+	</p>
+<% end %>

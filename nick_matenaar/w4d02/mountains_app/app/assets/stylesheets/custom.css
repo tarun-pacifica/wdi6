@@ -1,0 +1,17 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.mountain-group {
+	list-style: none;
+}
+
+.mountain-item {
+	display: inline-block;
+	margin: 20px;
+
+}

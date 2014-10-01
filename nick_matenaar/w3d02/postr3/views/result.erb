@@ -1,0 +1,13 @@
+<section class="form-section">
+		<h2> The poster for <em><%= @movie.title %></em> </h2>
+		<p><img src="<%= @movie.poster %>"></p>
+		<h4>Rating: <%= @movie.rating %></h4>
+
+	<div id="search_logo">
+		Search Again!
+	</div>
+	<form action="/search">
+		<input type="search" name="search_string" placeholder="Inception">
+		<button>SEARCH</button>
+	</form>
+</section>
