@@ -1,0 +1,8 @@
+CREATE TABLE funnymemes (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+title TEXT,
+url TEXT,
+genre TEXT,
+thumb TEXT
+);
+

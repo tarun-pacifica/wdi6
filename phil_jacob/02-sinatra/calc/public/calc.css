@@ -1,0 +1,6 @@
+body {
+	background-color: black;
+	color: black;
+	text-align: center;
+background-image: -webkit-gradient(radial, center center, 0, center center, 140, color-stop(0, #FFFFFF), color-stop(1, #EF3013));
+}
