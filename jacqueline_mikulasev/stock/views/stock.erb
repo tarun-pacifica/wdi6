@@ -1,0 +1,11 @@
+<form action="/stock">
+  <input name ='stock' placeholder = "Stock Symbol"> <!-- this brings up the little input box-->
+  <button>Find!</button>
+</form>
+<p>
+This is the price: <b><%= @price %></b></p>
+This was the previous close <b><% @previousclose %> </b></p>
+
+<!-- @stock_symbol = 'GOOG' # params[:stock]
+results = YahooFinance.get_quotes( YahooFinance::StandardQuote, @stock_symbol )
+price = results[ @stock_symbol ].lastTrade -->

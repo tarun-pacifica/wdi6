@@ -1,0 +1,17 @@
+<h1>Mta Single</h1>
+<h2>Stations Selection</h2>
+
+<form action="/mta_single/results" method="POST"> <!-- form action linking to URL - post is saying create an order so the user cant go on without selecting the first criteria -->
+  <input type="hidden" name="line" value="<%= @line %>"/> <!-- @line is calling from main.rb - which is calling from the models file  == input type hidden means dont create a button for this -->
+  <select name="departure_station">
+    <% MtaSingle::LINES[@line].each do |station| %> <!-- #you must do 2 colons for it to register for constants = go to the mtasingle class and pull out the constant lines.. -->
+      <option value="<%= station %>" ><%= station %></option><!--  calling the station variable and then calling it in erb -->
+    <% end %>
+  </select>
+  <select name="destination_station">
+    <% MtaSingle::LINES[@line].each do |station| %>
+      <option value="<%= station %>" ><%= station %></option>
+    <% end %>
+  </select>
+  <input type="submit"><!--  submit button -->
+</form>

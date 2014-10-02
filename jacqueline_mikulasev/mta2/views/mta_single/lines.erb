@@ -1,0 +1,13 @@
+<h1>Mta Single</h1>
+<h2>Line Selection</h2>
+
+<form action="/mta_single/stations" method="POST"><!--  you must go through /lines url before you get to stations url -->
+  <select name="line">
+    <% MtaSingle::LINES.keys.each do |line| %> <!-- gets all the keys from the constant called LINES in mta.single.rb and puts it in a varaible called line -->
+      <option value="<%= line %>" ><%= line %></option> <!-- #calling it -->
+    <% end %>
+  </select>
+  <input type="submit">  <!-- button -->
+
+
+</form>

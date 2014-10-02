@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
+body{
+	text-align: center;
+	margin: 40px;
+	background-color: white;
+	background-size: 1000px;
+	background-size: 100%;
+	font-family: Nothing You Could Do, Arial;
+	color: black;
+}
+
+.div.header {
+	padding: 20px;
+}
+
+h1 {
+	color: black;
+   	position: absolute; 
+   	top: 200px; 
+   	left: 0; 
+   	width: 100%; 
+   	font-size: 50px;
+}
+
+.title {
+	text-align: left;
+}
+
+input {
+	text-align: center;
+	margin-bottom: 20px;
+	margin-left: 150px;
+}
+
+
+.posterimage {
+	text-align: left;
+	margin-left: 120px;
+	margin-bottom: 450px;
+	width: 55%;
+	height: 300px;
+}
+
+button {
+	border-radius: 15px 0;
+}
+
+.search {
+	position: absolute;
+   	top: 350px; 
+   	font-size: 40px;
+   	text-align: center;
+   /*	margin-right: -800px;*/
+   left: 227px;
+}
+
+
+.navbar {
+   background-color: transparent;
+   text-align: right;
+   margin: 40px;
+}
+
+.navbar li { 
+	/*color: #000;*/
+	display: inline;
+	padding: 40px;
+} 
+
+.info {
+	/*width: 70%;*/
+	text-align: center;
+	margin-left: 400px;
+	max-width: 700px;
+	font-size: 20px;
+}
+
+.plot {
+	width: 700px;
+	font-size: 26px;
+	margin-left: 400px;
+}
+
+.poster {
+	text-align: center;
+	margin-right: 400px;
+	max-width: 800px;
+
+}
+
+b {
+	font-size: 36px;
+	font-weight: bold;
+}
+
