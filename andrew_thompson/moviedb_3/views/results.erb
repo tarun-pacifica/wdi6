@@ -1,0 +1,18 @@
+<% @movies['Search'].each do |movie| %>
+<div class="Results">
+	<p>
+		<a href="/movie/<%= movie['imdbID'] %>">
+			<%= movie['Title'] %>
+		</a>
+	</p>
+<% end %>
+
+<img src="<%= @poster %>">
+
+
+<h1><%= @poster %></h1>
+
+
+<h4><%= @plot %></h4>
+
+</div>

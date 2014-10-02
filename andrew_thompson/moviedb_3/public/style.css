@@ -1,0 +1,46 @@
+input {
+    background-color:rgba(0,0,0,0.5);
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 600%;
+    font-weight: bold;
+
+
+}
+
+input[placeholder] {
+    color: white;
+}
+
+.search_icon {
+
+    position: absolute;
+    left: 1%;
+    top: 10px;
+
+}
+
+h1 {
+    font-family: helvetica;
+    font-weight: bold;
+    text-align: centre;
+
+}
+
+body {
+    background-image: url('LimeBalls_new.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.movie h2 {
+    text-decoration: underline;
+}
+
+.results {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+

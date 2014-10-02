@@ -1,0 +1,6 @@
+<h1> The Ocean Database </h1>
+<% @oceans.each do |ocean| %>
+<p>
+The <%= link_to(ocean.name, ocean_path(ocean.id)) %> Ocean is bounded by the following countries: <%= ocean.bounded_by %>.
+</p>
+<% end %>

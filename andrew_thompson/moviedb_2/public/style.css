@@ -1,0 +1,94 @@
+.header {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #516B2E;
+    top: 0;
+    text-align: center;
+    color: #879171;
+
+}
+
+input {
+    background-color:rgba(0,0,0,0.5);
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 600%;
+    font-weight: bold;
+}
+
+input[placeholder] {
+    color: white;
+}
+
+.search_icon {
+
+    position: absolute;
+    left: 1%;
+    top: 10px;
+
+}
+
+h1 {
+    font-family: helvetica;
+    font-weight: bold;
+    text-align: centre;
+
+}
+
+body {
+    background-image: url('LimeBalls_new.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+}
+
+
+.container { /*On every page! */
+    max-width: 960px;
+    margin: auto; 
+    padding: 0;
+}
+
+.results {
+    background-color: white;
+    width: 200px;
+    height: 200px;
+}
+
+.column h2 {
+    text-decoration: underline;
+}
+
+.column {
+    max-width: 250px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: 30%;
+    background-color: white;
+    text-align: center;
+    padding-top: 20px;
+    color: #879171;
+}
+
+.inside_column {
+    margin: auto;
+}
+
+.poster {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #516B2E;
+    bottom: 0;
+    text-align: center;
+}
