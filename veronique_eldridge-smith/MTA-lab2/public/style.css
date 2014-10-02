@@ -1,0 +1,167 @@
+body {
+	background-image: url("background.jpg");
+	color: white;
+	font: 20px;
+	background-color: black;
+	height: 100%;
+	font-family: helvetica, sans-serif;
+	margin: -5px;
+}
+
+.container {
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+.logo {
+	opacity: 0.8;
+	margin-top: 6em;
+	width: 30em;
+	position: relative;
+	display: inline;
+}
+
+.logo:hover {
+	opacity: 1;
+}
+
+
+.menu_top {
+	height: 6em;
+	width: 100%;
+	position: fixed;
+	background-color: black;
+	z-index: 999;
+	padding: 1em;;
+}
+
+.links {
+	position: absolute;
+	right: 0;
+	width: 500px;
+}
+
+.plan_trip label, .plan_trip select {
+	float: left;
+}
+
+.select_route:visited {
+	text-decoration: none;
+	font-size: 40px;
+	font-family: 'Francois One', sans-serif;
+	color: #0066CC;
+	text-decoration: none;
+	border-left: 0.5px;
+	border-right: 0.5px;
+	border-left-style: solid;
+	border-right-style: solid;
+	height: 6em;
+	padding-left: 20px;
+
+}
+
+.result {
+	background-color: rgba(48,48,48,0.8);
+	position: relative;
+	display: inline-block;
+	width: 60%;
+	height: 50%;
+	font-size: 40px;
+	padding: 20px;
+}
+
+input.button {
+	color: blue;
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+
+}
+
+input[type="submit"] {
+	padding-right: 5px;
+	color: blue;
+	-webkit-appearance: none;
+}
+
+.list_stops {
+	list-style-type: none;
+	padding: 5px;
+	margin: 0;
+	color: white;
+
+}
+
+li {
+	background: url('platform2.gif') no-repeat left top;
+	height: 70px;
+	padding-left: 130px;
+	padding-top: 3px;
+
+}
+
+.span {
+	color: black;
+}
+
+.station {
+	color: #0066CC;
+	font-weight: bold;
+}
+
+.plan_trip {
+	background-color: rgba(48,48,48,0.8);
+	position: relative;
+	display: inline-block;
+	width: 60%;
+	height: 50%;
+	font-size: 40px;
+	padding-left: 10px;
+}
+
+#starting_point_menu, #finish_point_menu {
+
+	font-size: 30px;
+	margin: 10px;
+}
+
+.select_route a {
+	border-left: white 1px solid;
+	
+}
+
+.link a {
+	display: inline-block;
+	float: left; 
+
+	color: white;
+	padding: 0 1em 0 1em;
+	text-decoration: none;
+	font-size: 2.5em;
+	position: relative;
+	top: 0.5em;
+}
+.start_point {
+	position: relative;
+	display: inline;
+}
+
+.finish_point {
+	position: relative;
+	display: inline;
+}
+
+.not_travelling {
+	position: relative;
+	display: inline-block;
+	margin-top: 100px;
+	padding-top: 40px;
+	padding-left: 40px;
+
+}
+
+.not_travelling_image {
+	height: 400px;
+}
+

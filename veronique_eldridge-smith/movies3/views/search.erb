@@ -1,0 +1,27 @@
+<form action="/options" method="get">
+
+	<input class="text_field" type="text" placeholder="ENTER MOVIE NAME" name="movie_title">
+	<input class="button" type="submit" value="GET POSTER">
+
+</form>
+
+<% if @movies %>
+<div class="image">
+	<img class="image" src="<%= @movies.image %>">
+</div>
+<div class = "desc">
+	<h2><%= @movies.name %></h2>
+	<p><%= @movies.description %></p>
+	<strong>Runtime:</strong>
+	<%= @movies.runtime %>
+	</br>	
+	<strong>Genre:</strong>
+	<%= @movies.genre %>
+	</br>
+	<strong>Director:</strong>
+	<%= @movies.director %>
+	</br>
+	<strong>Actors:</strong>
+	<%= @movies.actors %>
+</div>
+<% end %>
