@@ -1,0 +1,9 @@
+ <h1>Ask me a question!</h1>
+ <form action="/magic8ball/question">
+  <input name ='question' placeholder="Ask me a question"> 
+  <button>Tell!</button>
+</form>
+
+<% if @answer %>
+<p><%= @answer %></p>
+<% end %>

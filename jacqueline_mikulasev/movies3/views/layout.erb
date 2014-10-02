@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Search</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+	
+			<h1>Movie Database</h1>
+<!-- 
+		<div class="title">
+			<p>The movie you have searched for is <%= params['movie_title'] %></p>
+		</div>
+ -->
+
+</body>
+
+<div class="posterimage">
+	
+
+	</nav>
+
+
+	<% if @title %>
+		<p>title: <%= @title %></p>
+	<% end %>
+
+<!-- 	<% if @poster %>
+		<p>Poster: <%= @poster %></p>
+	<% end %> -->
+
+	<% if @plot %>
+		<p>plot: <%= @plot %></p>
+	<% end %>
+
+	<% if @released %>
+		<p>released: <%= @released %></p>
+	<% end %>
+
+	<% if @imbdrating %>
+		<p>imbdrating: <%= @imbdrating %></p>
+	<% end %>
+
+		<%= yield %>
+
+</div>
+
+<nav>
+
+
+
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+
+body {
+	background-color: #5FE2C8;
+	text-align: center;
+	font-family: Rock Salt;
+}
+
+h1 {
+	color: white;
+}
