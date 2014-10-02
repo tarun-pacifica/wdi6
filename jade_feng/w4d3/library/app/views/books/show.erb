@@ -18,8 +18,10 @@
 <h3>Due date: <%= @book.duedate.strftime('%B %d, %Y') if @book.user  %></h3>
 	<% 	if @book.duedate && ( @book.duedate < Date.today )
 			@message = "Book is overdue!"
+		elsif @book.duedate == Date.today
+			@message = "The book is due today!"
 		elsif @book.duedate
-			@message = "There are #{Date.today - @book.duedate} days until book is due."
+			@message = "The book is due in #{ (@book.duedate - Date.today).to_i } days."
 		else
 			@message = "Book is avaliable for loan."
 		end %> 

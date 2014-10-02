@@ -17,9 +17,8 @@
  <div class="show_column">
  <h2>Books</h2>
  <% @user.books.each do |book|  %>
-	 <%= image_tag(book.image, :class => 'show_page')%>
-	<%= link_to book.title, book  %>
-	Due date: <%= book.duedate  %>
-
+	 <!-- <%= image_tag(book.image, :class => 'show_page')%> -->
+	<p><%= link_to book.title, book  %></p>
+	<p>Due date: <%= book.duedate.strftime('%B %d, %Y')  %></p>
 <% end %>
 </div>
