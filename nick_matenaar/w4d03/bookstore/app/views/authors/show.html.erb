@@ -1,0 +1,22 @@
+<h2><%= @author.name %></h2>
+
+<%= image_tag @author.image %>
+
+<p>DOB: <%= @author.dob %></p>
+
+<p>Nationality: <%= @author.nationality %></p>
+
+<h3>Books: </h3>
+
+<% @author.books.each do |book| %>
+	<div class="option-group">
+		<%= image_tag book.image, class: "thumbnail" %>
+		<p><%= link_to book.title, book %></p>
+	</div>
+<% end  %>
+
+
+
+<p><%= link_to 'Edit Author', edit_author_path(@author.id) %></p>
+<p><%= link_to 'Delete Author', @author, method: :delete, :data => { confirm: 'Are you sure?' } %></p>
+

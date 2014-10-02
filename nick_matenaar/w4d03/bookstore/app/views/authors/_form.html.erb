@@ -1,0 +1,28 @@
+<%= form_for @author do |f| %>
+
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :nationality %>
+		<%= f.text_field :nationality %>
+	</div>
+
+	<div>
+		<%= f.label :dob %>
+		<%= f.text_field :dob %>
+	</div>
+
+	<div>
+		<%= f.label :image %>
+		<%= f.url_field :image %>
+	</div>
+
+	<div>
+		<label></label>
+		<%= f.submit %>
+	</div>
+
+<% end %>

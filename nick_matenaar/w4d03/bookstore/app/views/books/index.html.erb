@@ -1,0 +1,6 @@
+<% @books.each do |book| %>
+	<div class="option-group">
+		<%= image_tag book.image, class: 'thumbnail' %>
+		<h3><%= link_to book.title, book %></h3>
+	</div>
+<% end %>
