@@ -1,0 +1,52 @@
+body {
+	color: black;
+	background-color: white;
+	border: 200px;
+	text-size: 20px;
+	background: url(http://www.wetcanvas.com/Community/images/01-May-2012/116333-week_one_1.jpg)
+}
+
+input {
+	color: black;
+}
+
+button {
+	color: black;
+}
+
+.input-section {
+	text-align: left;
+}
+
+.image {
+	display: block;
+	display: inline-flex;
+	display: center;
+	text-align: center;
+}
+
+
+p {
+	text-align: left;
+
+}
+
+.view {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+
+}
+
+.description {
+	top: center;
+}
+.container {
+	padding-left: 450px;
+	padding-right: 450px;
+}
+
+
+
+
+

@@ -1,0 +1,14 @@
+<div class="form_container">
+	<form action='/imdb_id'>
+		<input type="text" name="movie_title" placeholder="Enter Movie Title"></input>
+				<button class="search_button">
+			Search
+		</button>
+	</form>
+		<h2><%= @movie.title %></h2>
+		<h3><%= @movie.plot %></h3>
+		<h3>Actor: <%= @movie.actors %></h3>
+		<h3>Release Date: <%= @movie.year %></h3>
+		<h3><img src="<%= @movie.poster %>"></h3>
+
+</div>

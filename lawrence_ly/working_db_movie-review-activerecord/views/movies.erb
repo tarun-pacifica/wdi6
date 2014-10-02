@@ -1,0 +1,28 @@
+<div class="input-section">
+  <form action"/movies">
+    <input class="input-function" name="imdb_id" placeholder="Search Movie">
+      <button>Search Now!</button>
+  </form>
+</div>
+
+
+<div class="view">
+
+<form action="/movies">
+
+<p> <% if @movies["Search"].nil? %>
+  Movie Look Up! The place to go when your stuck in the snow!
+  <% else %>
+    <% @movies["Search"].each do |movie| %>
+    <p><a href="/movie?imdb_id=<%= movie['imdbID'] %>"></p>
+    The movie you have searched for is <%= params['movie_title'] %></p>
+    <%=  %> |
+    <%= movie['Year'] %> |
+    <%= movie['imdbID']  %></a>
+  <%end%>
+
+<% end %>
+
+</form>
+  </div>
+        

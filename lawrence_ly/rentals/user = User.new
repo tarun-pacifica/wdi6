@@ -1,0 +1,21 @@
+user = User.new
+
+user.admin? # returns true or false if user is an admin or not
+
+if user.admin?
+puts "welcome admin plese do your job"
+end
+
+express_post = true
+if express post
+
+if something
+end
+
+def something
+end
+
+case something
+when 'a thing'
+#
+when a 'differnet thing'

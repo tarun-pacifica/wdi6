@@ -1,0 +1,9 @@
+<h2><%= @mountain.name %></h2>
+
+<%= image_tag @mountain.image %>
+
+<p>Country: <%= @mountain.country %></p>
+<p>Elevation:<%= @mountain.elevation %></p>
+
+<%= link_to('Edit mountain', mountain_edit_path(@mountain.id)) %>
+<%= button_to('Delete mountain', mountain_delete_path(@mountain.id)) %>
