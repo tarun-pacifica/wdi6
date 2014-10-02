@@ -1,0 +1,6 @@
+<% @authors.each do |author| %>
+	<div class="option-group">
+		<%= image_tag author.image, class: 'thumbnail' %>
+		<h3><%= link_to author.name, author %></h3>
+	</div>
+<% end %>

@@ -1,0 +1,10 @@
+<h2><%= @author.name %></h2>
+<%= image_tag(@author.image, :class => 'thumbnail') %>
+
+<%= link_to 'Edit', edit_author_path(@author) %>
+<%= link_to 'Delete', @author, :method => :delete, :data => {:confirm => 'Are you sure?'} %>
+
+<h2>Authors</h2>
+<% @author.books do |work| %>
+  <%= link_to book.title, book %>
+  <% end %>

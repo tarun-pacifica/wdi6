@@ -1,0 +1,11 @@
+<div class="rockpaper_result">
+<form action="rockpaperscissors/result">
+<select name="object">
+	<% ["rock","paper","scissors","lizard","spock"].each do |x| %>
+		<option value="<%= x %>" selected><%= x %></option>
+	<% end %>
+	</select>
+	<button>Go</button>
+
+</form>
+</div>

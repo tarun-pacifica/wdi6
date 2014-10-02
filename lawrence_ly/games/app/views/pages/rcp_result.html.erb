@@ -1,0 +1,22 @@
+computer = <%= @computer_throw %> Player = <%= @p_throw %>
+
+		<% if @computer_throw == @p_throw %>
+			<p>  DRAW! </p>
+		<% elsif @computer_throw == "paper" && @p_throw == "scissors" %>
+			You win!
+		<% elsif @computer_throw == "paper" && @p_throw == "rock" %>
+			you lose
+		<% elsif @computer_throw == "scissors" && @p_throw == "paper" %>
+			you lose
+		<% elsif @computer_throw == "scissors" && @p_throw == "rock" %>
+			you win
+		<% elsif @computer_throw == "rock" && @p_throw == "scissors" %>
+			you lose
+		<% elsif @computer_throw == "rock" && @p_throw == "paper" %>
+			you win
+			<% end %>
+			
+
+			
+
+

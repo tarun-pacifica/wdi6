@@ -1,0 +1,16 @@
+<h1>Feel free to add or watch meme videos</h1>
+
+<form action="post" action="/memes/<%= @meme['id']%>">
+
+	<label for="name">Name:</label>
+	<input id="name" name="video name" placeholder="Name of Video" value="<%= @meme['name']%>">
+
+	<label for="video link">EmbededURL:</label>
+	<input type="url" id="video link" placeholder="Put embed video here" value="<%= @meme['url'] %>">
+
+	<label for="short description">Description:</label>
+	<input id="description" name="short description" placeholder="Short Description" value="<%= @meme['description']%>">
+
+	<button>Submit Video</button>
+
+</form>

@@ -1,0 +1,5 @@
+<h2><%= @book.title %></h2>
+<%= image_tag(@book.image) %>
+
+<%= link_to 'Edit', edit_book_path(@book) %>
+<%= link_to 'Delete', @book, :method => :delete, :data => {:confirm => 'Are you sure?'} %>

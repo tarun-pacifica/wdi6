@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<a href="/"><h1>Let's Play</h1></a>
+		</div>
+
+			<div class="magicball">
+				<ul>
+					<a href="/magicball">
+						<li><span>MAGIC 8 BALL</span></li>
+						<li><img src="/assets/magic8ball.jpg"></li>
+					</a>
+				</ul>
+			</div>
+			<div class="secretnum">
+				<ul>
+					<a href="/secretnum">
+						<li><span>SECRET NUMBER</span></li>
+						<li><img src="/assets/secretnum.png"></li>
+					</a>
+				</ul>
+			</div>
+			<div class="rockpaperscissors">
+				<ul>
+					<a href="/rockpaperscissors">
+						<li><span>ROCK PAPER SCISSORS</span></li>
+						<li><img src="/assets/RockPaperScissorsLizardSpock.jpg"></li>
+					</a>
+				</ul>
+			</div>
+
+		<%= yield %>
+	</div>
+</body>
+</html>
