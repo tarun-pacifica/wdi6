@@ -1,9 +1,9 @@
 User.destroy_all
 Item.destroy_all
 
-u1 = User.create(:name => 'James')
-u2 = User.create(:name => 'Lawrence')
+u1 = User.create(:name => 'james')
+u2 = User.create(:name => 'lawrence')
 
-i1 = Item.create(:name => 'Apple')
-i2 = Item.create(:name => 'Hammock')
+i1 = Item.create(:name => 'apple')
+i2 = Item.create(:name => 'hammock')
 
