@@ -1,3 +1,21 @@
-<% @items.each do |f| %>
-  <%= f.name %>
-  <% end %>
+<h1>Items</h1>
+
+<%= form_tag items_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", name: nil %>
+  </p>
+<% end %>
+
+<div id="items">
+  <% @items.each do |item| %>
+  <h2>
+   <%= link_to item[:name], item %>
+  </h2>
+
+  <div class="content">
+    <%= item[:content] %>
+  </div>
+   <% end %>
+</div>
+

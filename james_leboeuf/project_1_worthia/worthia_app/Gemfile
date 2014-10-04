@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'pg'
+# gem 'texticle', require: 'texticle/rails'
+gem 'pg_search'
 
 group :development do
   gem 'pry-rails'

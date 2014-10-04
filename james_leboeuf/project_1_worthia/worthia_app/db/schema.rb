@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003053117) do
+ActiveRecord::Schema.define(version: 20141004054554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "item_prices", force: true do |t|
     t.integer  "item_id"
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141003053117) do
 
   create_table "items", force: true do |t|
     t.string   "name"
+    t.text     "content"
     t.integer  "user_id"
     t.text     "image"
     t.datetime "created_at"

@@ -1,8 +1,0 @@
-<h2>Welcome to Worthia</h2>
-
-<%= form_tag items_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search].downcase %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-  <% end %>
