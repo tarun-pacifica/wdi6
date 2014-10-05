@@ -1,1 +1,4 @@
-<%= @items %>
+<h2><%= @items[:name] %></h2>
+<%= image_tag(@items.image) %>
+<%= link_to('Edit', edit_item_path(@items)) %>
+<%= link_to('Delete', @items, :method => :delete, :data => {:confirm => 'Are you sure?' }) %>
