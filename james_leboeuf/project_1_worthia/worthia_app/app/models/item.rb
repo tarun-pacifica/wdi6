@@ -5,7 +5,6 @@
 #  id         :integer          not null, primary key
 #  name       :string(255)
 #  content    :text
-#  user_id    :integer
 #  image      :text
 #  created_at :datetime
 #  updated_at :datetime
@@ -13,7 +12,9 @@
 
 class Item < ActiveRecord::Base
   belongs_to :users
-  has_many :item_prices 
+  has_many :item_prices, :dependent => :destroy
+
+  accepts_nested_attributes_for :item_prices, :reject_if => lambda { |a| a[:price].blank? }
 
   include PgSearch
   pg_search_scope :search_by_tsearch_but_rank_by_trigram, against: [:name, :content], using: {tsearch: {dictionary: "english"}}, ignoring: :accents

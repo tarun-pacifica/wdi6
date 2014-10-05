@@ -5,17 +5,21 @@ class ItemsController < ApplicationController
 
   def new
     if @current_user.present?
-    @item = Item.new
+      @item = Item.new
+      @item_price = ItemPrice.new
     else
       redirect_to root_path
     end
   end
 
   def create
-    item = Item.create item_params
-    item.user_id = @current_user.id
-    item.save
-    redirect_to item
+    @item = Item.create item_params
+    @item_price = ItemPrice.create
+    if @item.save
+      redirect_to @item
+    else
+      render :new
+    end
   end
 
   def show

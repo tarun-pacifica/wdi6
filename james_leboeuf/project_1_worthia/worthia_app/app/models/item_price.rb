@@ -11,7 +11,7 @@
 #  updated_at :datetime
 #
 
-class Item_price < ActiveRecord::Base
+class ItemPrice < ActiveRecord::Base
   belongs_to :users 
   belongs_to :items 
 end

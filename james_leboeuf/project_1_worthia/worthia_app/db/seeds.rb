@@ -1,5 +1,6 @@
 User.destroy_all
 Item.destroy_all
+ItemPrice.destroy_all
 
 u1 = User.create(:name => 'james')
 u2 = User.create(:name => 'lawrence')
