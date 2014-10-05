@@ -1,0 +1,21 @@
+<%= form_for @item do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </p>
+
+
+<label></label>
+<%= f.submit type="submit" %>
+
+<% end %>

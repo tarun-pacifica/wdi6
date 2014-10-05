@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>WorthiaApp</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,6 +13,7 @@
   <div class="container">
     <ul>
       <li><%= link_to('Home', root_path) %></li>
+      <%== intellinav %>
     </ul>
   </div>
 </nav>

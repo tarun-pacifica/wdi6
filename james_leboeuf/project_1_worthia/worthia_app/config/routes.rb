@@ -22,7 +22,12 @@
 
 Rails.application.routes.draw do
   root :to => 'items#index'
-  resources :items, :users
+  get '/users/edit' => 'users#edit', :as => :edit_user
+  resources :items, :users, :except => [:edit]
+
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
   # get '/items' => 'items#index'
   # get '/items/:id' => 'items#show', :as => 'item'
 end
