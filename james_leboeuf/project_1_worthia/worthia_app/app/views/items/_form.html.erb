@@ -2,24 +2,25 @@
 
   <p>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :maxlength => 30, :size => 20, :required => true %>
   </p>
 
   <p>
     <%= f.label :content %>
-    <%= f.text_field :content %>
+    <%= f.text_field :content, :maxlength => 140, :size => 20, :required => true %>
   </p>
 
   <p>
     <%= f.label :image %>
     <%= f.url_field :image %>
   </p>
-<hr />
+
   <%= fields_for :price do |p| %>
     <p>
       <%= p.label :price %>
-      <%= p.number_field :price %>
+      <%= p.number_field :price, in:(1..10000), :required => true %>
     </p>
+
   <% end %>
 
 <label></label>

@@ -13,10 +13,10 @@
 
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :prices
-  has_many :items
+  has_many :prices, :dependent => :destroy
+  has_many :items, :dependent => :destroy
 
-  accepts_nested_attributes_for :items
+  accepts_nested_attributes_for :items, allow_destroy: true
 
   validates :name, :presence => true, :uniqueness => true, :length => {:minimum => 2}
   validates :email, :presence => true, :uniqueness => true

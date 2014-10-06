@@ -37,8 +37,12 @@ class ItemsController < ApplicationController
   end
 
   def update
+    @id = params[:id]
+    @price_item = Price.find_by(item_id: @id)
+    @price_item_id = @price_item.id
     item = Item.find(params[:id])
     item.update item_params
+    item.prices.update(@price_item_id, :price => params[:price].fetch(:price))
     redirect_to item
   end
 
@@ -54,7 +58,7 @@ class ItemsController < ApplicationController
       :name, 
       :content, 
       :image, 
-      prices_attributes: [:price]
+      prices_attributes: [:price, :item_id, :user_id, :_destroy]
     )
   end
 
