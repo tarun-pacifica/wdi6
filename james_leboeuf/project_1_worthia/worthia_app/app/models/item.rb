@@ -15,7 +15,6 @@ class Item < ActiveRecord::Base
   has_many :prices
 
   accepts_nested_attributes_for :prices, allow_destroy: true
-   # :reject_if => lambda { |a| a[:price].blank? }
 
   include PgSearch
   pg_search_scope :search_by_tsearch_but_rank_by_trigram, against: [:name, :content], using: {tsearch: {dictionary: "english"}}, ignoring: :accents

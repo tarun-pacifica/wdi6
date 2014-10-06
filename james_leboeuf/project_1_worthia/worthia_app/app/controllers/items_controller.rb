@@ -25,8 +25,11 @@ class ItemsController < ApplicationController
   def show
     @id = params[:id]
     @items = Item.find(params[:id])
-    @price_item = Price.find_by(item_id: @id)
-    @price = @price_item[:price]
+    if @price_item = Price.find_by(item_id: @id)
+      @price = @price_item[:price]
+    else
+      []
+    end
   end
 
   def edit
