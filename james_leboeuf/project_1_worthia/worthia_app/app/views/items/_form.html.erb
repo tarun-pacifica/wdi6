@@ -15,10 +15,10 @@
     <%= f.url_field :image %>
   </p>
 <hr />
-  <%= f.fields_for :price do |p| %>
+  <%= fields_for :price do |p| %>
     <p>
       <%= p.label :price %>
-      <%= p.text_field :price %>
+      <%= p.number_field :price %>
     </p>
   <% end %>
 

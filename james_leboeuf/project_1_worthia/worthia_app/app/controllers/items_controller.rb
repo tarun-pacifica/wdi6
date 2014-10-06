@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   def new
     if @current_user.present?
       @item = Item.new
+      @item.prices.build
     else
       redirect_to root_path
     end
@@ -13,7 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create item_params
-    @item.prices << Price.create(:price => params[:price])
+    @item.prices << Price.create(:price => params[:price].fetch(:price))
     if @item.save
       redirect_to @item
     else

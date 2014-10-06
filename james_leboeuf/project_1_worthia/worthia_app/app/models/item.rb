@@ -11,7 +11,7 @@
 #
 
 class Item < ActiveRecord::Base
-  belongs_to :users
+  belongs_to :user
   has_many :prices
 
   accepts_nested_attributes_for :prices, allow_destroy: true

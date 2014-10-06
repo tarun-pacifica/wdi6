@@ -3,7 +3,7 @@ class CreatePrices < ActiveRecord::Migration
     create_table :prices do |t|
       t.integer :item_id
       t.integer :user_id
-      t.float :price 
+      t.integer :price
       t.string :country
       t.timestamps
     end
