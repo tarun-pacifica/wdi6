@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
   def new
     if @current_user.present?
       @item = Item.new
-      @item.prices.build
     else
       redirect_to root_path
     end
@@ -14,8 +13,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create item_params
-    @item.prices << Price.create(:price => params[:price].fetch(:price))
+    @item.prices << Price.create(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
+      raise "error"
       redirect_to @item
     else
       render :new
