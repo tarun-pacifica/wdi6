@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
     @item = Item.create item_params
     @item.prices << Price.create(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
-      raise "error"
+      # raise "error"
       redirect_to @item
     else
       render :new
@@ -23,7 +23,10 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @id = params[:id]
     @items = Item.find(params[:id])
+    @price_item = Price.find_by(item_id: @id)
+    @price = @price_item[:price]
   end
 
   def edit
