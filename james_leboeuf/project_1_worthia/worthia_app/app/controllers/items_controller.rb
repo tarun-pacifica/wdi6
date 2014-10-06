@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create item_params
+    @item.prices << Price.create(:price => params[:price])
     if @item.save
       redirect_to @item
     else
@@ -42,7 +43,12 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :content, :image, prices_attributes: [ :price ])
+    params.require(:item).permit(
+      :name, 
+      :content, 
+      :image, 
+      prices_attributes: [:price]
+    )
   end
 
 end
