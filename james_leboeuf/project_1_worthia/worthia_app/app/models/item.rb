@@ -12,9 +12,9 @@
 
 class Item < ActiveRecord::Base
   belongs_to :users
-  has_many :item_prices, :dependent => :destroy
+  has_many :prices, :dependent => :destroy
 
-  accepts_nested_attributes_for :item_prices, :reject_if => lambda { |a| a[:price].blank? }
+  accepts_nested_attributes_for :prices, :reject_if => lambda { |a| a[:price].blank? }
 
   include PgSearch
   pg_search_scope :search_by_tsearch_but_rank_by_trigram, against: [:name, :content], using: {tsearch: {dictionary: "english"}}, ignoring: :accents

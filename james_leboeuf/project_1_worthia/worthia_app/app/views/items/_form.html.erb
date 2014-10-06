@@ -15,7 +15,7 @@
     <%= f.url_field :image %>
   </p>
 <hr />
-  <%= fields_for :item_prices do |p| %>
+  <%= f.fields_for :price do |p| %>
     <p>
       <%= p.label :price %>
       <%= p.text_field :price %>

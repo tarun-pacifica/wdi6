@@ -11,25 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141004054554) do
+ActiveRecord::Schema.define(version: 20141006003349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "unaccent"
 
-  create_table "item_prices", force: true do |t|
-    t.integer  "item_id"
-    t.integer  "user_id"
-    t.float    "price"
-    t.string   "country"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "items", force: true do |t|
     t.string   "name"
     t.text     "content"
     t.text     "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "prices", force: true do |t|
+    t.integer  "item_id"
+    t.integer  "user_id"
+    t.float    "price"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: item_prices
+# Table name: prices
 #
 #  id         :integer          not null, primary key
 #  item_id    :integer
@@ -11,7 +11,7 @@
 #  updated_at :datetime
 #
 
-class ItemPrice < ActiveRecord::Base
-  belongs_to :users 
-  belongs_to :items 
+class Price < ActiveRecord::Base
+  belongs_to :users
+  belongs_to :items
 end

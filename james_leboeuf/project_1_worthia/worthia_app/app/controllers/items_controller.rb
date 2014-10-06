@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
   def new
     if @current_user.present?
       @item = Item.new
-      @item_price = ItemPrice.new
     else
       redirect_to root_path
     end
@@ -14,7 +13,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.create item_params
-    @item_price = ItemPrice.create
     if @item.save
       redirect_to @item
     else
@@ -44,7 +42,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :content, :user_id, :image)
+    params.require(:item).permit(:name, :content, :image, prices_attributes: [ :price ])
   end
 
 end

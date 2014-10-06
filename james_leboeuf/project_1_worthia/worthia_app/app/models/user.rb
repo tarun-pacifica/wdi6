@@ -13,7 +13,7 @@
 
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :item_prices, :dependent => :destroy
+  has_many :prices, :dependent => :destroy
   has_many :items, :dependent => :destroy
 
   validates :name, :presence => true, :uniqueness => true, :length => {:minimum => 2}
