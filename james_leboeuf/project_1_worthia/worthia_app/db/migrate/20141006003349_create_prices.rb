@@ -4,7 +4,6 @@ class CreatePrices < ActiveRecord::Migration
       t.integer :item_id
       t.integer :user_id
       t.integer :price
-      t.string :country
       t.timestamps
     end
   end
