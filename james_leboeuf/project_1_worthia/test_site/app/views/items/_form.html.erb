@@ -1,0 +1,19 @@
+<%= form_for :price, @item.prices.new do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+  <%= f.label_for :amount %>
+  <%= f.text_field :amount %>
+    <%= f.submit %>
+  </div>
+<% end %>

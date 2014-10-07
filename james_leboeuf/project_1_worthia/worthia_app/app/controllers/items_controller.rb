@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 
   def show
     @id = params[:id]
-    @items = Item.find(params[:id])
+    @item = Item.find(params[:id])
     if @price_item = Price.find_by(item_id: @id)
       @price = @price_item[:price]
     else
@@ -34,6 +34,15 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+  end
+
+  def valuate
+    @item_id = params[:item_id] 
+    @price = Price.new
+    if @price.save
+      flash[:notice] = "New Price Added"
+      redirect_to :action => :show, :id => @price.item_id
+    end
   end
 
   def update
@@ -58,7 +67,7 @@ class ItemsController < ApplicationController
       :name, 
       :content, 
       :image, 
-      prices_attributes: [:price, :item_id, :user_id, :_destroy]
+      prices: [:price, :item_id, :user_id, :_destroy]
     )
   end
 

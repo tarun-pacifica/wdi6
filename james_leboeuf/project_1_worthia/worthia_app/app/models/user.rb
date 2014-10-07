@@ -13,8 +13,11 @@
 
 class User < ActiveRecord::Base
   has_secure_password
+  
   has_many :prices, :dependent => :destroy
   has_many :items, :dependent => :destroy
+
+  has_many :price_on_items, :through => :prices, :source => :item
 
   accepts_nested_attributes_for :items, allow_destroy: true
 

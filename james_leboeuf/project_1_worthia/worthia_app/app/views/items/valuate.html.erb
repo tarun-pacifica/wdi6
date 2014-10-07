@@ -1,0 +1,6 @@
+<%= form_for @price do |f| %>
+      <%= f.label :price %>
+      <%= f.number_field :price, in:(1..10000), :required => true %>
+      <%= f.hidden_field :item_id, :value => @item_id %>
+  <%= submit_tag "Add Price" %>
+<% end %>

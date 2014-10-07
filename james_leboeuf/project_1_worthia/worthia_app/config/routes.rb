@@ -35,7 +35,9 @@ Rails.application.routes.draw do
   root :to => 'items#index'
   get '/users/edit' => 'users#edit', :as => :edit_user
   resources :users, :except => [:edit]
-  resources :items
+  resources :items do
+    get 'valuate' => 'items#valuate'
+  end
   resources :prices
 
   get '/login' => 'session#new'

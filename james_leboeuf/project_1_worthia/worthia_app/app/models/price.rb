@@ -14,4 +14,7 @@
 class Price < ActiveRecord::Base
   belongs_to :user
   belongs_to :item
+
+  validates_presence_of :price
+  validates_numericality_of :price
 end
