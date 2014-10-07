@@ -31,7 +31,16 @@ class Item < ActiveRecord::Base
     end
   end
 
-  # def self.average()
+  # def self.average_price(id, item_id)
+  #   id = params[:id]
+  #   item = Item.find(params[:id])
+  #   price_item = Price.where(item_id: id)
+  #   prices = price_item.map { |x| x.price }.uniq
+  #   average = prices.inject { |sum, n| sum + n }.to_f / prices.size
+  # end
+
+
+    
 
 
 end

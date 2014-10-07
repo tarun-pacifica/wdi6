@@ -25,11 +25,9 @@ class ItemsController < ApplicationController
   def show
     @id = params[:id]
     @item = Item.find(params[:id])
-    if @price_item = Price.find_by(item_id: @id)
-      @price = @price_item[:price]
-    else
-      []
-    end
+    @price_item = Price.where(item_id: @id)
+    @prices = @price_item.map { |x| x.price }
+    @average = @prices.inject { |sum, n| sum + n }.to_f / @prices.size
   end
 
   def edit
