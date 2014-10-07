@@ -2,13 +2,12 @@
 <script src="jquery.geocomplete.js"></script>
 
 
-<%= text_field_tag :address, nil, :size => 35, :required => true %>
-<script type="text/javascript">
-  $("input").geocomplete();
-</script>
-
 
 <%= form_for @item do |f| %>
+
+  <p>
+    <%= f.text_field :address, :size => 35, :class => "geocomplete" %>
+  </p>
 
   <p>
     <%= f.label :name %>
@@ -37,3 +36,10 @@
 <%= f.submit 'Create' %>
 
 <% end %>
+
+
+
+
+<script type="text/javascript">
+  $("input.geocomplete").geocomplete();
+</script>

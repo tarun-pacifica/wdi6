@@ -15,7 +15,6 @@ class ItemsController < ApplicationController
     @item = Item.create item_params
     @item.prices << Price.create(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
-      # raise "error"
       redirect_to @item
     else
       render :new
@@ -64,7 +63,8 @@ class ItemsController < ApplicationController
     params.require(:item).permit(
       :name, 
       :content, 
-      :image, 
+      :image,
+      :address,
       prices: [:price, :item_id, :user_id, :_destroy]
     )
   end

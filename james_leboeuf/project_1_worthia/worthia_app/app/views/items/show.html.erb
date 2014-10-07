@@ -2,6 +2,7 @@
 <%= image_tag(@item.image) %>
 <%= @item.content %>
 <h2><%= number_to_currency(@average) %></h2>
+<h2><%= @item.address %></h2>
 
 <%= link_to('Valuate', item_valuate_path(@item)) %>
 
