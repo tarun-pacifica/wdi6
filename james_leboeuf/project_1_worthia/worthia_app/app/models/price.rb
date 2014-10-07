@@ -6,7 +6,6 @@
 #  item_id    :integer
 #  user_id    :integer
 #  price      :integer
-#  country    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #

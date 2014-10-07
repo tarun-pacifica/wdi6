@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
     t.string   "name"
     t.text     "content"
     t.text     "image"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,7 +30,6 @@ ActiveRecord::Schema.define(version: 20141006003349) do
     t.integer  "item_id"
     t.integer  "user_id"
     t.integer  "price"
-    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

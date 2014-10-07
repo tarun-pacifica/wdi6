@@ -6,6 +6,7 @@
 #  name       :string(255)
 #  content    :text
 #  image      :text
+#  address    :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #

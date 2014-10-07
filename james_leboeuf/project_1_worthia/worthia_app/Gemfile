@@ -32,6 +32,7 @@ gem 'pg'
 gem 'pg_search'
 gem 'bcrypt'
 gem 'geocoder'
+gem 'geocomplete_rails'
 
 group :development do
   gem 'pry-rails'
