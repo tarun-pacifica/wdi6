@@ -16,7 +16,7 @@
   <% if params[:query].blank? %>
   <% elsif %>
     <% @items.empty? %>
-      NO RESULTS FOUND FOR "<%= params[:query] %>" in <%= @carmen_code_to_country %><br />
+      No Results Found For "<%= params[:query] %>" in <%= @carmen_code_to_country %><br />
     <% else %>
   <% end %>
   </h2>
@@ -25,13 +25,11 @@
     <% if item.country_code == @clean_code %>
      <%= link_to item.name, item %>
     </h2>
-
-      
         <%= item.address %><br />
         <%= item.country %><br />
         <%= item.content %>
       <% else %>
-        NO RESULTS FOUND FOR "<%= params[:query] %>" in <%= @carmen_code_to_country %> <br />
+        No Results Found For "<%= params[:query] %>" in <%= @carmen_code_to_country %> <br />
     <% end %>
    <% end %>
 </div>

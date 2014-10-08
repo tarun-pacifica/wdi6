@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-    @items = Price.where(user_id: @user)
+    @prices = Price.where(user_id: @user)
   end
 
   private

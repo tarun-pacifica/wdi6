@@ -1,8 +1,9 @@
-<h2><%= @item.name %></h2>
+<h3><%= @item.name %></h3>
 <%= image_tag(@item.image) %>
-<%= @item.content %>
+<p>Description: <%= @item.content %></p>
 <h2><%= number_to_currency(@average) %></h2>
 <h2><%= @item.address %></h2>
+<p>Total Price(s) Added: <%= @prices.count %></p>
 
 <%= link_to('Valuate', item_valuate_path(@item)) %>
 
