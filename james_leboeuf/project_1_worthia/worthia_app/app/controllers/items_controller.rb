@@ -1,9 +1,11 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.text_search(params[:query])
-    # country = Carmen::Country.coded(parent_region)
-
-    @address = params[:address]
+    country_code_drop_list = params[:country_code]
+    @clean_code = country_code_drop_list.slice(0) unless 
+      country_code_drop_list.blank?
+    @carmen_code_to_country = Carmen::Country.coded(@clean_code).name unless 
+      @clean_code.blank?
   end
 
   def new

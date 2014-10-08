@@ -34,6 +34,8 @@ class Item < ActiveRecord::Base
     end
   end
 
+
+
   # def self.average_price(id, item_id)
   #   id = params[:id]
   #   item = Item.find(params[:id])

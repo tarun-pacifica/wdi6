@@ -3,25 +3,36 @@
     <%= form_tag items_path, method: :get do %>
       <p>
         <%= country_select :country_code, nil %>
-        <%= text_field_tag :query, params[:query] %>
+        <%= text_field_tag :query, params[:query], :required => true %>
         <%= submit_tag "Search", name: nil %>
       </p>
-
     <% end %>
-
 </div>
 
 
 
 <div id="items">
-  <% @items.each do |item| %>
   <h2>
-  <% raise "error" %>
-   <%= link_to item.name, item %>
+  <% if params[:query].blank? %>
+  <% elsif %>
+    <% @items.empty? %>
+      NO RESULTS FOUND FOR "<%= params[:query] %>" in <%= @carmen_code_to_country %><br />
+    <% else %>
+  <% end %>
   </h2>
-    <%= item.address %><br />
-    <%= item.content %>
-    <% raise "error" %>
+  <% @items.each do |item| %>
+    <h2>
+    <% if item.country_code == @clean_code %>
+     <%= link_to item.name, item %>
+    </h2>
+
+      
+        <%= item.address %><br />
+        <%= item.country %><br />
+        <%= item.content %>
+      <% else %>
+        NO RESULTS FOUND FOR "<%= params[:query] %>" in <%= @carmen_code_to_country %> <br />
+    <% end %>
    <% end %>
 </div>
 
