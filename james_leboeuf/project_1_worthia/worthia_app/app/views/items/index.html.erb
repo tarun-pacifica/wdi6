@@ -6,9 +6,8 @@
         <%= submit_tag "Search", name: nil %>
       </p>
     <% end %>
-  <%= country_select :country_code, { priority: %w(US CA) } %>
+    <%= country_select :country_code, {} %>
 </div>
-
 
 
 
@@ -19,6 +18,7 @@
   </h2>
     <%= item.address %><br />
     <%= item.content %>
+    <% raise "error" %>
    <% end %>
 </div>
 

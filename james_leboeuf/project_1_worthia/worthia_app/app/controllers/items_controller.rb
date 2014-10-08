@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.text_search(params[:query])
-    # @country = params[:country_code]
+    # country = Carmen::Country.coded(parent_region)
   end
 
   def new
@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
     @location = params[:item][:address].gsub ' ','+'
     address_result = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}")
     country = address_result['results'].first['address_components'].last['long_name']
-    raise country
     @item = Item.create item_params
     @item.prices << Price.create(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
