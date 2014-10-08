@@ -1,3 +1,13 @@
+
+
+ <div class="country">
+ <%= country_select :country_code, {priority: %w(US CA), prompt: 'Please select a country'} %>
+</div>
+
+
+
+
+
 <div id="search_bar">
   <h1>Worthia</h1>
     <%= form_tag items_path, method: :get do %>
@@ -7,6 +17,7 @@
       </p>
     <% end %>
 </div>
+
 
 <div id="items">
   <% @items.each do |item| %>
