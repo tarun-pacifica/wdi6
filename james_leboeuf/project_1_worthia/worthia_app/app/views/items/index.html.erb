@@ -2,11 +2,13 @@
   <h1>Worthia</h1>
     <%= form_tag items_path, method: :get do %>
       <p>
+        <%= country_select :country_code, nil %>
         <%= text_field_tag :query, params[:query] %>
         <%= submit_tag "Search", name: nil %>
       </p>
+
     <% end %>
-    <%= country_select :country_code, {} %>
+
 </div>
 
 
@@ -14,6 +16,7 @@
 <div id="items">
   <% @items.each do |item| %>
   <h2>
+  <% raise "error" %>
    <%= link_to item.name, item %>
   </h2>
     <%= item.address %><br />

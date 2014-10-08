@@ -2,6 +2,8 @@ class ItemsController < ApplicationController
   def index
     @items = Item.text_search(params[:query])
     # country = Carmen::Country.coded(parent_region)
+
+    @address = params[:address]
   end
 
   def new
@@ -13,11 +15,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @location = params[:item][:address].gsub ' ','+'
-    address_result = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}")
-    country = address_result['results'].first['address_components'].last['long_name']
-    @item = Item.create item_params
-    @item.prices << Price.create(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
+    @location = params[:item][:address].gsub(' ','+')
+    address_result = Geokit::Geocoders::GoogleGeocoder.geocode(@location)
+    @country = address_result.country
+    @country_code = address_result.country_code
+    @item = Item.new(:name => item_params[:name], :content => item_params[:content], :image => item_params[:image], :address => item_params[:address], :country => @country, :country_code => @country_code)
+    @item.prices << Price.new(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
       redirect_to @item
     else
@@ -69,6 +72,7 @@ class ItemsController < ApplicationController
       :content, 
       :image,
       :address,
+      :country,
       :country_code,
       prices: [:price, :item_id, :user_id, :_destroy]
     )
