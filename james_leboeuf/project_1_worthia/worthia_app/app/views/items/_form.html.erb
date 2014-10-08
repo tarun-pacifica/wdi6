@@ -1,11 +1,9 @@
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-<script src="jquery.geocomplete.js"></script>
-
 
 
 <%= form_for @item do |f| %>
 
   <p>
+    <%= f.label :address %>
     <%= f.text_field :address, :size => 35, :class => "geocomplete" %>
   </p>
 
@@ -37,9 +35,8 @@
 
 <% end %>
 
-
-
-
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script src="jquery.geocomplete.js"></script>
 <script type="text/javascript">
   $("input.geocomplete").geocomplete();
 </script>
