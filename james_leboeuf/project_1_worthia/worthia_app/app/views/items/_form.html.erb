@@ -1,3 +1,12 @@
+<div class="geocomplete">
+  Latitude:     <span data-geo="lat" />
+  Longitude:    <span data-geo="lng" />
+  Address:      <span data-geo="formatted_address" />
+  Country Code: <span data-geo="country_short" />
+</div>
+
+
+
 <%= form_for @item do |f| %>
 
   <p>
@@ -36,5 +45,8 @@
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 <script src="jquery.geocomplete.js"></script>
 <script type="text/javascript">
-  $("input.geocomplete").geocomplete();
+  $("input.geocomplete").geocomplete({
+  details: ".details",
+  detailsAttribute: "data-geo"
+});
 </script>

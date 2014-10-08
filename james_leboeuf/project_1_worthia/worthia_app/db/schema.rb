@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
     t.text     "content"
     t.text     "image"
     t.string   "address"
+    t.string   "country_code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,13 +2,14 @@
 #
 # Table name: items
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  content    :text
-#  image      :text
-#  address    :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id           :integer          not null, primary key
+#  name         :string(255)
+#  content      :text
+#  image        :text
+#  address      :string(255)
+#  country_code :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
 #
 
 class Item < ActiveRecord::Base

@@ -37,6 +37,7 @@ gem 'carmen'
 gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'
 # gem 'formtastic'
 # gem 'simple_form', '~> 3.0.0'
+gem 'httparty'
 
 group :development do
   gem 'pry-rails'
