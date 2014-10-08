@@ -9,28 +9,21 @@
     <% end %>
 </div>
 
-
-
 <div id="items">
-  <h2>
   <% if params[:query].blank? %>
-  <% elsif %>
-    <% @items.empty? %>
-      No Results Found For "<%= params[:query] %>" in <%= @carmen_code_to_country %><br />
-    <% else %>
-  <% end %>
-  </h2>
+  <% elsif @y.country_code == @clean_code %>
+      Found <%= @items.size %> result(s)!
+  <% elsif @y.country_code != @clean_code %>
+      Sorry no <%= params[:query] %>(s) in <%= @carmen_code_to_country %>.
+    <% end %>
+    
   <% @items.each do |item| %>
     <h2>
-    <% if item.country_code == @clean_code %>
-     <%= link_to item.name, item %>
+    <%= link_to item.name, item %>
     </h2>
-        <%= item.address %><br />
-        <%= item.country %><br />
-        <%= item.content %>
-      <% else %>
-        No Results Found For "<%= params[:query] %>" in <%= @carmen_code_to_country %> <br />
-    <% end %>
-   <% end %>
+    <%= item.address %><br />
+    <%= item.country %><br />
+    <%= item.content %>
+  <% end %>
 </div>
 

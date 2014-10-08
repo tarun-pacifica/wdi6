@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.text_search(params[:query])
+    @all_items = Item.all.each do |item|
+      @y = item
+    end
     country_code_drop_list = params[:country_code]
     @clean_code = country_code_drop_list.slice(0) unless 
       country_code_drop_list.blank?
@@ -16,12 +19,12 @@ class ItemsController < ApplicationController
     end
   end
 
-  def create
+  def create # Had to have this massive params with Item.new because I didn't know how to Geokit the results before the item was actually submitted.
     @location = params[:item][:address].gsub(' ','+')
     address_result = Geokit::Geocoders::GoogleGeocoder.geocode(@location)
     @country = address_result.country
     @country_code = address_result.country_code
-    @item = Item.new(:name => item_params[:name], :content => item_params[:content], :image => item_params[:image], :address => item_params[:address], :country => @country, :country_code => @country_code)
+    @item = Item.new(:user_id => session[:user_id], :name => item_params[:name], :content => item_params[:content], :image => item_params[:image], :address => item_params[:address], :country => @country, :country_code => @country_code)
     @item.prices << Price.new(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
       redirect_to @item
@@ -76,6 +79,7 @@ class ItemsController < ApplicationController
       :address,
       :country,
       :country_code,
+      :user_id,
       prices: [:price, :item_id, :user_id, :_destroy]
     )
   end

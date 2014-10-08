@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :name
       t.text :content
       t.text :image
+      t.integer :user_id
       t.string :address
       t.string :country
       t.string :country_code
