@@ -1,6 +1,10 @@
 <%= form_for @price do |f| %>
-      <%= f.label :price %>
-      <%= f.number_field :price, in:(1..10000), :required => true %>
+
+    <div class="form-group">
+      <%= f.label :price %> <span class="glyphicon glyphicon-usd"></span>
+      <%= f.number_field :price, in:(1..10000), :class => 'form-control', :step => 0.1, :required => true %>
+    </div>
+
       <%= f.hidden_field :item_id, :value => @item_id %>
   <%= submit_tag "Add Price" %>
 <% end %>

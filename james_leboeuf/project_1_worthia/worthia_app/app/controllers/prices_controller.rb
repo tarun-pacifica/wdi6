@@ -7,7 +7,6 @@ class PricesController < ApplicationController
     @item.prices << @price 
 
     if @price.save
-      flash[:notice] = "New Price Added"
       redirect_to @item
     else
       render "items/show"

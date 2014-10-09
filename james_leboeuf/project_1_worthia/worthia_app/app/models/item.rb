@@ -5,7 +5,8 @@
 #  id           :integer          not null, primary key
 #  name         :string(255)
 #  content      :text
-#  image        :text
+#  image        :text             default("http://w3.fnstatic.co.uk/sites/all/themes/foodnetwork/images/layout/recipes/default.jpg")
+#  user_id      :integer
 #  address      :string(255)
 #  country      :string(255)
 #  country_code :string(255)

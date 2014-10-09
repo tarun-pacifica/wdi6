@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
   create_table "items", force: true do |t|
     t.string   "name"
     t.text     "content"
-    t.text     "image"
+    t.text     "image",        default: "http://w3.fnstatic.co.uk/sites/all/themes/foodnetwork/images/layout/recipes/default.jpg"
     t.integer  "user_id"
     t.string   "address"
     t.string   "country"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
   create_table "prices", force: true do |t|
     t.integer  "item_id"
     t.integer  "user_id"
-    t.integer  "price"
+    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "image",           default: "http://www.ihd-wallpapers.com/wp-content/uploads/2014/08/American_flags_hd_wallpapers_6.jpg"
+    t.text     "image",           default: "http://facebookcraze.com/wp-content/uploads/2010/10/alternative-facebook-profile-picture-superman-funny-joke.jpg"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"

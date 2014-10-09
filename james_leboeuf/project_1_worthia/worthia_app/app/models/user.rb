@@ -5,7 +5,7 @@
 #  id              :integer          not null, primary key
 #  name            :string(255)
 #  email           :string(255)
-#  image           :text
+#  image           :text             default("http://facebookcraze.com/wp-content/uploads/2010/10/alternative-facebook-profile-picture-superman-funny-joke.jpg")
 #  password_digest :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime

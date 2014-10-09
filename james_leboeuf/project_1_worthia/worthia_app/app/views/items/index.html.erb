@@ -1,26 +1,29 @@
 <div id="search_bar">
   <h1>Worthia</h1>
-    <%= form_tag items_path, method: :get do %>
-      <p>
-        <%= country_select :country_code, nil %>
-        <%= text_field_tag :query, params[:query], :required => false %>
-        <%= submit_tag "Search", name: nil %>
-      </p>
-    <% end %>
+    <div class="form-group">
+      <%= form_tag items_path, method: :get do %>
+          <%= country_select :country_code, nil, :class => 'form-control' %>
+    </div>
+    <div class="form-group">
+        <%= text_field_tag :query, params[:query], :class => 'form-control', :required => false %>
+    </div>
+  
+          <%= submit_tag "Search", name: nil, :class => 'btn btn-primary' %>
+          <% end %>
 </div>
 <!-- Fuck my life. lol. Look at this crazy shit. It's all for different arguments FOR A FUCKING SEARCH!!!.LOL. -->
 <div id="items"> 
   <% if Item.all.empty? && !params[:query].blank? %>
-     No items in the database. Please add some.
+        <h3>No items currently.</h3>
   <% elsif params[:query].blank? %>
     <% unless @items.empty? %>
       <% Item.all %>
-        Please enter valid "search" name. Here are all the items currently in the Worthia database.
+        <h3>Please enter valid "search" name. Here are all the items currently in the Worthia database.</h3>
     <% end %>
   <% elsif @y.country_code == @clean_code %>
-      Found <%= @items.size %> result(s) in <%= @carmen_code_to_country %>!
+        <h3><span class="glyphicon glyphicon-ok"></span> Found <%= @items.size %> result(s) in <%= @carmen_code_to_country %>!</h3>
   <% elsif @y.country_code != @clean_code %>
-      Sorry no <%= params[:query] %>(s) in <%= @carmen_code_to_country %>.
+        <h3>Sorry no <%= params[:query] %>(s) in <%= @carmen_code_to_country %>.</h3>
     <% end %>
     
   <% @items.each do |item| %>
@@ -29,7 +32,6 @@
     </h2>
     <%= item.address %><br />
     <%= item.country %><br />
-    <%= item.content %>
   <% end %>
 </div>
 

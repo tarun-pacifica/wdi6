@@ -20,7 +20,7 @@ User since:
     <h2>
     <% x = Item.find(price.item_id) %>
     <%= link_to x.name, x %>
-    <%= number_to_currency(price.price) %>
+    <i class="icon-dollar"><%= number_to_currency(price.price) %></i>
     </h2>
   <% end %>
       <%= "Prices Added" %>

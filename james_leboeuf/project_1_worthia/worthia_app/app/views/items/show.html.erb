@@ -1,15 +1,15 @@
-<h3><%= @item.name %></h3>
-<%= image_tag(@item.image) %>
-<p>Description: <%= @item.content %></p>
-<h2><%= number_to_currency(@average) %></h2>
-<h2><%= @item.address %></h2>
+<h2><%= @item.name %></h2>
+<h2><i class="icon-dollar"><%= number_to_currency(@average) %></i></h2>
 <p>Total Price(s) Added: <%= @prices.count %></p>
-
+<p>Added on: <%= @item.created_at.strftime '%B %m %Y' %>
+<p>Description: <%= @item.content %></p>
+<h2><%= @item.address %></h2>
 <% if @current_user %>
-<%= link_to('Valuate', item_valuate_path(@item)) %>
+<%= link_to('Add New Price', item_valuate_path(@item)) %>
 <% end %>
 
 <% if @current_user && session[:user_id] == @item.user_id %>
 <%= link_to('Edit', edit_item_path(@item)) %>
 <%= link_to('Delete', @item, :method => :delete, :data => {:confirm => 'Are you sure?' }) %>
 <% end %>
+<%= image_tag @item.image, :class => 'img-responsive thumbnail' %>
