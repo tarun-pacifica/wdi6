@@ -1,34 +1,8 @@
 body {
-  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
+  padding-top: 60px;
 }
 
-nav {
-  background-color: #0077C0;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a {
-  color: white;
-}
-
-#search_bar {
-  text-align: center;
-}
-
-label {
-  display: inline-block;
-  min-width: 150px;
-  text-align: right;
+.field_with_errors {
+  display: inline;
 }
