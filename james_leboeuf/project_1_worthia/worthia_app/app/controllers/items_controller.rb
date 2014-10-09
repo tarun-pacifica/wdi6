@@ -24,7 +24,8 @@ class ItemsController < ApplicationController
     address_result = Geokit::Geocoders::GoogleGeocoder.geocode(@location)
     @country = address_result.country
     @country_code = address_result.country_code
-    @item = Item.new(:user_id => session[:user_id], :name => item_params[:name], :content => item_params[:content], :image => item_params[:image], :address => item_params[:address], :country => @country, :country_code => @country_code)
+    # raise "error"
+    @item = Item.new(:user_id => session[:user_id], :name => item_params[:name].downcase, :content => item_params[:content].downcase, :image => item_params[:image], :address => item_params[:address], :country => @country, :country_code => @country_code)
     @item.prices << Price.new(:price => params[:price].fetch(:price), :user_id => session[:user_id] )
     if @item.save
       redirect_to @item
