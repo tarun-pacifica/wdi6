@@ -8,3 +8,20 @@
 <%= image_tag @user.image %>
 <%= @items.count %> Item(s) added to the Worthia database.<br />
 <%= @prices.count %> Price(s) added to items.
+  <% if @items.each do |item| %>
+    <h2>
+    <%= link_to item.name, item %>
+    </h2>
+  <% end %>
+      <%= "Items Added" %>
+<% end %>
+
+  <% if @prices.each do |price| %>
+    <h2>
+    <% x = Item.find(price.item_id) %>
+    <%= link_to x.name, x %>
+    <%= number_to_currency(price.price) %>
+    </h2>
+  <% end %>
+      <%= "Prices Added" %>
+<% end %>

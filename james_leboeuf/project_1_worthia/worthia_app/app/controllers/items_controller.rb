@@ -1,11 +1,11 @@
 class ItemsController < ApplicationController
   def index
-    # if params[:query].present?
+    if params[:query].present?
       @items = Item.text_search(params[:query])
-    # else
-    #   # No search so show all items.
-    #   @items = Item.all
-    # end
+    else
+      # No search so show all items.
+      @items = Item.all
+    end
     @all_items = Item.all.each do |item|
       @y = item
     end

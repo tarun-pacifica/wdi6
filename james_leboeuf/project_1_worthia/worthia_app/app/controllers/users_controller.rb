@@ -32,6 +32,9 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @prices = Price.where(user_id: @user)
     @items = Item.where(user_id: @user)
+    item = @items.each do |item|
+      @item = item
+    end
   end
 
   private
