@@ -40,6 +40,7 @@ gem 'carmen-rails', '~> 1.0.0', github: 'jim/carmen-rails'
 gem 'httparty'
 gem 'geokit'
 gem 'bootstrap-sass'
+gem 'rails_12factor', group: :production
 
 
 group :development do
