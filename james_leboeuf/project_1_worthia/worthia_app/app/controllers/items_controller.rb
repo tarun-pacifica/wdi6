@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.text_search(params[:query])
+    # if params[:query].present?
+      @items = Item.text_search(params[:query])
+    # else
+    #   # No search so show all items.
+    #   @items = Item.all
+    # end
     @all_items = Item.all.each do |item|
       @y = item
     end
@@ -69,6 +74,11 @@ class ItemsController < ApplicationController
     item = Item.find params[:id]
     item.destroy
     redirect_to item
+  end
+
+  def home
+    @items = Item.none
+    render :index
   end
 
   private

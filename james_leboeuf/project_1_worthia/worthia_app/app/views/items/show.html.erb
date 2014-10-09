@@ -5,8 +5,11 @@
 <h2><%= @item.address %></h2>
 <p>Total Price(s) Added: <%= @prices.count %></p>
 
+<% if @current_user %>
 <%= link_to('Valuate', item_valuate_path(@item)) %>
+<% end %>
 
+<% if @current_user && session[:user_id] == @item.user_id %>
 <%= link_to('Edit', edit_item_path(@item)) %>
-
 <%= link_to('Delete', @item, :method => :delete, :data => {:confirm => 'Are you sure?' }) %>
+<% end %>

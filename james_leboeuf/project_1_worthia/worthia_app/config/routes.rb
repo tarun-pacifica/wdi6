@@ -33,7 +33,7 @@
 #
 
 Rails.application.routes.draw do
-  root :to => 'items#index'
+  root :to => 'items#home'
   get '/users/edit' => 'users#edit', :as => :edit_user
   resources :users, :except => [:edit]
   resources :items do

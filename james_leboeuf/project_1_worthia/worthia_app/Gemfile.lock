@@ -46,6 +46,8 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.2.0.2)
+      sass (~> 3.2)
     builder (3.2.2)
     callsite (0.0.11)
     carmen (1.0.1)
@@ -181,6 +183,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   binding_of_caller
+  bootstrap-sass
   carmen
   carmen-rails (~> 1.0.0)!
   coffee-rails (~> 4.0.0)

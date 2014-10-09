@@ -3,7 +3,7 @@
     <%= form_tag items_path, method: :get do %>
       <p>
         <%= country_select :country_code, nil %>
-        <%= text_field_tag :query, params[:query], :required => true %>
+        <%= text_field_tag :query, params[:query], :required => false %>
         <%= submit_tag "Search", name: nil %>
       </p>
     <% end %>
@@ -11,8 +11,12 @@
 
 <div id="items">
   <% if params[:query].blank? %>
+    <% unless @items.empty? %>
+      <% Item.all %>
+        Please enter valid "search" name. Here are all the items currently in the Worthia database."
+    <% end %>
   <% elsif @y.country_code == @clean_code %>
-      Found <%= @items.size %> result(s)!
+      Found <%= @items.size %> result(s) in <%= @carmen_code_to_country %>!
   <% elsif @y.country_code != @clean_code %>
       Sorry no <%= params[:query] %>(s) in <%= @carmen_code_to_country %>.
     <% end %>
@@ -26,4 +30,5 @@
     <%= item.content %>
   <% end %>
 </div>
+
 
