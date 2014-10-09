@@ -1,35 +1,35 @@
 <%= form_for @item do |f| %>
 
-  <p>
+  <div class="form-group">
     <%= f.label :address %>
-    <%= f.text_field :address, :size => 35, :class => "geocomplete", :required => true %>
-  </p>
+    <%= f.text_field :address, :size => 35, :class => "geocomplete form-control", :required => true %>
+  </div>
 
-  <p>
+  <div class="form-group">
     <%= f.label :item_name %>
-    <%= f.text_field :name, :maxlength => 30, :size => 20, :required => true %>
-  </p>
+    <%= f.text_field :name, :maxlength => 30, :size => 20, :class => 'form-control', :required => true %>
+  </div>
 
-  <p>
+  <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_field :content, :maxlength => 140, :size => 20, :required => true %>
-  </p>
+    <%= f.text_field :content, :maxlength => 140, :size => 20, :class => 'form-control', :required => true %>
+  </div>
 
-  <p>
+  <div class="form-group">
     <%= f.label :image %>
-    <%= f.url_field :image %>
-  </p>
+    <%= f.url_field :image, :class => 'form-control' %>
+  </div>
 
   <%= fields_for :price do |p| %>
-    <p>
+    <div class="form-group">
       <%= p.label :price %>
-      <%= p.number_field :price, in:(1..10000), :required => true %>
-    </p>
+      <%= p.number_field :price, in:(1..10000), :class => 'form-control', :required => true %>
+    </div>
 
   <% end %>
 
 <label></label>
-<%= f.submit 'Create' %>
+<%= f.submit :class => 'btn btn-primary' %>
 
 <% end %>
 

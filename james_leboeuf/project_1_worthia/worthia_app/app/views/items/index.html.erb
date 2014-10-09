@@ -8,12 +8,14 @@
       </p>
     <% end %>
 </div>
-
-<div id="items">
-  <% if params[:query].blank? %>
+<!-- Fuck my life. lol. Look at this crazy shit. It's all for different arguments FOR A FUCKING SEARCH!!!.LOL. -->
+<div id="items"> 
+  <% if Item.all.empty? && !params[:query].blank? %>
+     No items in the database. Please add some.
+  <% elsif params[:query].blank? %>
     <% unless @items.empty? %>
       <% Item.all %>
-        Please enter valid "search" name. Here are all the items currently in the Worthia database."
+        Please enter valid "search" name. Here are all the items currently in the Worthia database.
     <% end %>
   <% elsif @y.country_code == @clean_code %>
       Found <%= @items.size %> result(s) in <%= @carmen_code_to_country %>!

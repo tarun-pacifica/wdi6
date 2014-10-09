@@ -3,17 +3,17 @@
   <%= @user.name %>
 </h2>
 <%= form_for @user do |f| %>
-  <div>
+  <div class="form-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :email %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :class => 'form-control' %>
   </div>
-  <div>
+  <div class="form-group">
     <%= f.label :avatar %>
-    <%= f.text_field :image %>
+    <%= f.text_field :image, :class => 'form-control' %>
   </div>
-  <%= f.submit %>
+  <%= f.submit :class => 'btn btn-primary' %>
 <% end %>

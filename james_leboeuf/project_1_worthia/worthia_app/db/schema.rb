@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141006003349) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "image"
+    t.text     "image",           default: "http://www.ihd-wallpapers.com/wp-content/uploads/2014/08/American_flags_hd_wallpapers_6.jpg"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
