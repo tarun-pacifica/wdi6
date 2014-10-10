@@ -1,27 +1,29 @@
-<h2>
-  <%= @user.name %>
-</h2>
+<div class="show_user_page">
+  <h2>
+    <%= @user.name %>
+  </h2>
 
-User since:
-<%= @user.created_at.strftime '%B %m %Y' %><br />
-<%= image_tag @user.image, :class => 'img-responsive thumbnail' %>
+  User since:
+  <%= @user.created_at.strftime '%B %m %Y' %><br />
+  <%= image_tag @user.image, :class => 'img-responsive thumbnail' %>
 
-<%= @items.count %> Item(s) added to the Worthia database.<br />
-<%= @prices.count %> Price(s) added to items.
-  <% if @items.each do |item| %>
-    <h2>
-    <%= link_to item.name, item %>
-    </h2>
+  <%= @items.count %> Item(s) added to the Worthia database.<br />
+  <%= @prices.count %> Price(s) added to items.
+    <% if @items.each do |item| %>
+      <h2>
+      <%= link_to item.name, item %>
+      </h2>
+    <% end %>
+        <%= "Items Added" %>
   <% end %>
-      <%= "Items Added" %>
-<% end %>
 
-  <% if @prices.each do |price| %>
-    <h2>
-    <% x = Item.find(price.item_id) %>
-    <%= link_to x.name, x %>
-    <i class="icon-dollar"><%= number_to_currency(price.price) %></i>
-    </h2>
+    <% if @prices.each do |price| %>
+      <h2>
+      <% x = Item.find(price.item_id) %>
+      <%= link_to x.name, x %>
+      <i class="icon-dollar"><%= number_to_currency(price.price) %></i>
+      </h2>
+    <% end %>
+        <%= "Prices Added" %>
   <% end %>
-      <%= "Prices Added" %>
-<% end %>
+</div>

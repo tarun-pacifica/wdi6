@@ -1,6 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:900);
 body {
+  background-image: url('marketplace.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   margin: 0;
   padding-top: 60px;
+}
+
+.worthia_homepage {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 500%;
+  text-shadow: 2px 2px 5px black;
+  letter-spacing: 4.5px;
+}
+
+/*#items {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}*/
+
+.user_edit, .user_login, .user_new, .item_form, #items, .show_user_page, .items_show {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.item_amount {
+  font-size: 3em;
+}
+
+.new_item h1 {
+  color: white;
+  text-shadow: 2px 2px 5px black; 
+}
+
+/*.item_form {
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}*/
+
+.glyphicon {
+  color: #3071A9;
+  font-size: 1.5em;
 }
 
 .field_with_errors {
@@ -12,6 +54,14 @@ body {
 }
 
 .icon-dollar {
-  color: green;
+  color: #02ef00;
 }
+
+.form-group label {
+  font-size: 1.5em;
+}
+
+
+
+
 
