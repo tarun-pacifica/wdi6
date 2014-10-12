@@ -1,0 +1,21 @@
+<%= form_for @user do |f| %>
+<p>
+	<%= f.label :name  , "Name:" %>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :dob  , "DOB:" %>
+	<%= f.text_field :dob %>
+</p>
+<p>
+	<%= f.label :email  , "Email:" %>
+	<%= f.text_field :email %>
+</p>
+<p>
+	<%= f.label :image  , "Image:" %>
+	<%= f.text_field :image %>
+</p>
+
+	<label></label>
+	<%= f.submit %>
+<% end %>

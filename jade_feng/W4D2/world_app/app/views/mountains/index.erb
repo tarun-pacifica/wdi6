@@ -1,0 +1,12 @@
+<h1>The Highest Mountains in the World</h1>
+
+<% @mountains.each do |mountain| %>
+	<div class="index_square">
+		<%= image_tag mountain.image %>
+		<p>
+		<%= link_to(mountain.name, mountain_path(mountain.id)) %>
+		</p>
+<!-- 		<div class="index_image"> <%= image_tag mountain.image %> </div> -->
+	</div>
+
+<% end %>

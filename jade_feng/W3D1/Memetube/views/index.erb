@@ -1,0 +1,39 @@
+<div class="videos">
+	<% @videos.each do |video| %>
+	<div class="video_square">
+		<%	@youtube_id = CGI.parse(URI.parse( video['URL_code'] ).query)['v'][0] %>
+			<img src="http://img.youtube.com/vi/<%= @youtube_id %>/0.jpg" >
+			<p>   </p>
+			<a href="/videos/<%= video['id'] %>"><%= video['title'] %> </a>
+	</div>
+	<% end %>
+</div>
+
+<img id='circle_cat' src='http://nyan-cat.com/images/nyan-cat.gif' style='position:absolute;width:40px;height:28px'>
+
+<script>
+
+'use strict';
+var counter = 0
+var mousePos = {x: 0, y: 0}
+
+document.onmousemove = function(e)
+{
+	mousePos.x = e.x + document.body.scrollLeft
+	mousePos.y = e.y + document.body.scrollTop
+}
+
+window.onload = function()
+{
+	var circle_cat = document.getElementById('circle_cat')
+	setInterval(
+		function()
+		{
+			counter++
+			circle_cat.style.left = mousePos.x + 50 * Math.sin(-counter / 10)
+			circle_cat.style.top = mousePos.y + 50 * Math.cos(-counter / 10)
+		},
+		20)
+}
+
+</script>

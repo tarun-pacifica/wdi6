@@ -1,0 +1,28 @@
+<div class="container">
+
+<h1>Paw-some! We just claw-lected your mew-vie results for <%= @title_result.upcase.gsub('+', ' ') %>!</h1>
+
+
+<% @name_ID_hash.each do |id, title| %>	
+	<div class="list_output_boxes">
+		<% movie_result = HTTParty.get("http://www.omdbapi.com/?i=#{ id }&t=") %>
+		<% @movie = JSON.parse movie_result %>
+		<% @poster = @movie['Poster'].to_s
+		if @poster != "N/A" 
+		 @poster = @movie['Poster'].to_s
+		else 
+			@poster = "http://www.notsuperhuman.com/wp-content/uploads/2011/03/5501618311_1eeec26185_z_large.jpg"
+		end %>
+		<a href='/search_results?id_result=<%= id %>' target="_blank" title="Look at the cat-alogue!"> <img src='<%= @poster  %>' class="resizing"> </a>
+		
+		<div class="text_name">
+			<h2> <a href='/search_results?id_result=<%= id %>' title="Look at the cat-alogue!"target="_blank"> <%= title %> </a> </h2>
+		</div>
+	</div>
+
+
+<% end %>
+
+
+</div>
+

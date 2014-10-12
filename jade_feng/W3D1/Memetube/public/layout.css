@@ -1,0 +1,172 @@
+  @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,600);
+
+   #nav {
+      width: 100%;
+      float: left;
+      margin: 0 0 3em 0;
+      padding: 0;
+      list-style: none;
+     border-bottom: 1px solid #ccc; }
+   #nav li {
+      float: left; }
+   #nav li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+     /* border-right: 1px solid #ccc;*/ }
+   #nav li a:hover {
+      color: #d0efef;
+   }
+   .nyancat {
+    float: right;
+   }
+
+
+   /* End navigation bar styling. */
+
+
+    .additional_edit_delete {
+      width: 100%;
+      float: left;
+      margin: 0 0 3em 0;
+      padding: 0;
+      list-style: none; }
+   .additional_edit_delete li {
+      float: left; }
+   .additional_edit_delete li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+     /* border-right: 1px solid #ccc;*/ }
+   .additional_edit_delete li a:hover {
+      color: #d0efef;
+      /*background-color: #002C65; */}
+    #nav img {
+      height: 50px;
+      width: auto;
+      float: center;
+    }
+     h1{
+      color: yellow;
+      font-size: 3em;
+    }
+
+/*#### EVERYTHING ELSE ####*/
+
+   
+body {
+	font-family: 'Raleway', sans-serif;
+	background: url('http://hdwallpapersfactory.com/wallpaper/outer_space_rainbows_nyan_cat_desktop_1680x1050_hd-wallpaper-1117436.png') no-repeat center center fixed;
+	color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* NYAN CAT CURSOR */ 
+body, a:hover {
+  cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), progress !important;
+} 
+/* End http://www.cursors-4u.com */
+
+.container {
+	max-width: 960px;
+	margin: auto;
+}
+
+
+ul { 
+	list-style: none;
+	padding: 0; 
+	display: inline;
+}
+
+ul li {
+	display: inline; 
+}
+
+label {
+	min-width: 150px;
+	display: inline-block;
+	text-align: right;
+}
+
+a, a:active, a:visited { color: white; }
+a:hover {color: #d0efef;}
+.video_entry {
+	margin-left: 50px;
+}
+
+input, textarea {
+	font-size: 100%;
+	width: 500px;
+}
+
+label {5%
+	font-size: 110%;
+	font-weight: bold;
+}
+
+button{
+	font-style: 'Raleway', sans-serif;
+	 font-size: 110%;
+}
+
+/*article.post {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	height: 600px;
+	margin-bottom: 50px;
+}*/
+
+article .video_column {
+	width: 430px;
+	margin: 18px 24px 24px;
+	padding-top: 1em;
+}
+
+.footer h3{
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+.video_square {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  text-align: center;
+  display: inline-table;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(0, 13, 27, 0.6);
+  box-shadow: 5px 5px 5px 0px black;
+  background-opacity: 0.4;
+}
+
+.video_square img {
+  width: 95%;
+  height: auto;
+}
+
+.video_column {
+  width: 450px;
+  height: auto;
+  position: relative;
+  display: inline-table;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

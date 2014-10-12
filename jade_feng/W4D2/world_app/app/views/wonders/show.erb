@@ -1,0 +1,11 @@
+<h1>Look at the <%= @wonder.name.capitalize %> wonder!</h1>
+<div class = "show_column">
+	<div class="show_image"> <%= image_tag @wonder.image %> </div>
+</div>
+
+<div class = "show_column">
+	<h3>The <%= @wonder.name  %> is based in <%= @wonder.country  %>, <%= @wonder.continent  %>. </h3>
+
+	<%= link_to('Change the wonder!', wonder_edit_path(@wonder.id))  %>
+	<%= button_to('Knock down the wonder!', wonder_delete_path(@wonder.id))  %>
+</div>

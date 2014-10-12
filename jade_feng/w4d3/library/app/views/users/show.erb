@@ -1,0 +1,24 @@
+<div class="show_column">
+<h1><%= @user.name  %></h1>
+<%= image_tag(@user.image, :class=> 'show_page') %>
+</div>
+
+
+<div class="show_column">
+<h3>User: <%= @user.name %></h3> 
+<h3>DOB: <%= @user.dob.strftime('%B %d, %Y') %> </h3>
+<h3>Email: <%= @user.email  %></h3>
+
+<h3> <%= link_to 'Edit', edit_user_path(@user)  %> </h3>
+<h3> <%= link_to 'Delete', @user, :method => :delete, :data => { :confirm => 'Are you sure?'} %> </h3>
+ 
+ </div>
+
+ <div class="show_column">
+ <h2>Books</h2>
+ <% @user.books.each do |book|  %>
+	 <!-- <%= image_tag(book.image, :class => 'show_page')%> -->
+	<p><%= link_to book.title, book  %></p>
+	<p>Due date: <%= book.duedate.strftime('%B %d, %Y')  %></p>
+<% end %>
+</div>

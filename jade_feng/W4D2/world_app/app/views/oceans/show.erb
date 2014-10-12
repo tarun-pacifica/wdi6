@@ -1,0 +1,10 @@
+<h1>Look at the <%= @ocean.name.capitalize %>!</h1>
+<div class = "show_column">
+	<div class="show_image"> <%= image_tag @ocean.image %> </div>
+</div>
+<div class = "show_column">
+	<h3>The <%= @ocean.name.capitalize  %> is <%= number_to_human(@ocean.depth).downcase  %> metres deep, <%= number_to_human(@ocean.area).downcase  %> metres squared in area, with a volume of <%= number_to_human(@ocean.volume).downcase  %> meters cubed.</h3>
+
+	<%= link_to('Change the ocean!', ocean_edit_path(@ocean.id))  %>
+	<%= button_to('Drain the ocean!', ocean_delete_path(@ocean.id))  %>
+</div>

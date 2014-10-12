@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+<div class="index_box">
+	<%= image_tag(user.image, :class => 'thumbnail')  %>
+ 	<p><%= link_to(user.name, user_path(user))  %></p>
+</div>
+<% end %>
