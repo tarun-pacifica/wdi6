@@ -1,0 +1,11 @@
+<p>List of all mountain available:</p>
+
+
+
+<% @mountains.each do |mountain| %>
+
+<p>
+	<%= link_to(mountain.mountain, mountain_path(mountain.id)) %> 
+</p>
+
+<% end %>

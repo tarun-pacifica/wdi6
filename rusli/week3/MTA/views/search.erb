@@ -1,0 +1,53 @@
+<form >
+	<p>Which station are you currently at?</p>
+		<select>
+
+			<% @stations.each do |line, stations| %>
+			
+				<optgroup label=<%=line %> id="starting_point">
+					<% @stations[line].each do |station| %>
+				  		<%= "<option value=#{ station }>#{ station }  </option>" %>
+				  	<% end %>
+				</optgroup>
+				  	
+				
+			<% end %>
+
+			<input type="submit" value="Submit">
+		
+		</select>
+
+
+	<p>Which station are you getting off?</p>
+		<select>
+
+		<% @stations.each do |line, stations| %>
+
+			<optgroup label=<%=line %> id="finishing_point">
+				<% @stations[line].each do |station| %>
+			  		<%= "<option value=#{ station }>#{ station }  </option>" %>
+			  	<% end %>
+			</optgroup>
+
+		<% end %>
+		<input type="submit" value="Submit">
+		
+		</select>
+</form>
+
+
+
+<!--
+		<optgroup label="Line N" id="starting_point">
+			<% @stations['N'].each do |station| %>
+		  	<%= "<option value=#{ station }>#{ station }</option>" %>
+		  	<% end %>
+		<optgroup label="Line L" id="starting_point">
+			<% @stations['L'].each do |station| %>
+		  	<%= "<option value=#{ station }>#{ station }</option>" %>
+		  	<% end %>
+		 <optgroup label="Line 6" id="starting_point">
+			<% @stations['6'].each do |station| %>
+		  	<%= "<option value=#{ station }>#{ station }</option>" %>
+		  	<% end %>
+		  	-->
