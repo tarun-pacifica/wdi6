@@ -1,0 +1,24 @@
+
+
+<h1>Guess number between 1 to 10</h1>
+
+<form >
+
+	<input type="text" name="guess" placeholder="Guess a number between 1 and 10">
+	
+	<input type="hidden" name="hidden" value="<%= @number %>">
+
+	<button>Guess</button>
+
+
+</form>
+
+<form>
+
+	<% if @number.to_i == @answer %>
+		<p> Congrats you guessed right </p>
+	<% else %>
+		<p>try again</p>
+	<% end %>
+
+</form>

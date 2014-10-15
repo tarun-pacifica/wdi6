@@ -1,0 +1,25 @@
+<form >
+	<input type="radio" name="game" value="rock">Rock
+	<input type="radio" name="game" value="scissors">Scissors
+	<input type="radio" name="game" value="paper">Paper
+	<button>Submit</button>
+
+</form>
+
+<form >
+	<% if @computer == @answer %>
+		Try again!
+	<% elsif @computer == "paper" && @answer == "scissors" %>
+			You win!
+	<% elsif @computer == "paper" && @answer== "rock" %>
+			you lose!
+	<% elsif @computer == "scissors" && @answer == "paper" %>
+			you lose!
+	<% elsif @computer == "scissors" && @answer == "rock" %>
+			you win!
+	<% elsif @computer == "rock" && @answer == "scissors" %>
+			you lose!
+	<% elsif @computer == "rock" && @answer == "paper" %>
+			you win!
+	<% end %>	
+</form>
