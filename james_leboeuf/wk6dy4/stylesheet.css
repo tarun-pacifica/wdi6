@@ -1,0 +1,62 @@
+body {
+  background-image: url('http://front-back.com/wp-content/uploads/2013/01/sf2-bg.jpg');
+  background-size: 60%;
+}
+
+.ryu {
+  display: inline-block;
+  position: fixed;
+  top: 42em;
+  left: 5em;
+}
+
+.akuma {
+  display: inline-block;
+  position: fixed;
+  top: 43em;
+  right: 5em;
+}
+
+.hadouken {
+  vertical-align: top;
+  height: 4em;
+  margin-top: 55px; 
+  margin-left: -55px;
+}
+
+.akumaHadouken {
+  vertical-align: top;
+  height: 4em;
+  margin-top: 55px; 
+  margin-right: -200px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.akumaImage {
+  height: 20em;
+  width: 10em;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.ryuImage {
+  height: 20em;
+  width: 15em;
+}
+.flipped {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}

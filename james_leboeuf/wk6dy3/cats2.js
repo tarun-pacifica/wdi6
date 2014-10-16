@@ -5,21 +5,6 @@ var canvas = document.getElementById('canvas');
 // 2d Drawning Context.
 var ctx = canvas.getContext('2d');
 
-function setupAnimCanvas() {
-    var canvas = document.getElementById('canvas');
-    if (canvas.getContext) {
-        ctx = canvas.getContext('2d');
-        //setInterval('draw();', 20); //don't use this
-        img = new Image();
-        img.onload = function(e) {
-            draw();          //use this instead..
-        }
-        img.src = '../images/dragon.png';
-        //animation();
-        draw(); //as we don't have an image to load, call here
-                //remove when image is used instead
-    }
-}
 
 // Set fill style for drawing context.
 ctx.fillStyle = '#02ef00';
@@ -33,7 +18,7 @@ var RequestID;
 
 // Variables for the drawing position and object.
 var posX = 0;
-var boxWidth = 30;
+var boxWidth = 50;
 var pixelsPerFrame = 5; // How many pixels the box should move per frame.
 // The posX, boxWidth, and pixelsPerFrame variables are used to set the position the box should be drawn on the canvas; the width of the box; and the number of pixels the box should be moved in each frame.
 

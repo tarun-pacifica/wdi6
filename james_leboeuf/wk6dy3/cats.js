@@ -13,12 +13,18 @@
 var movePixels = 10;
 var delayMs = 50;
 var catTimer = null;
+var rotateY = 0;
+
 var catWalk = function () {
   var img = document.getElementById('cat');
-  var currentLeft = parseInt(img.style.left);
-  img.style.left = (currentLeft + movePixels) + 'px';
-  if (currentLeft > (window.innerWidth-img.width)) {
-    img.style.left = '0px';
+  var currentLeft = parseInt(img.style.left); // Our image position is set in absolute. Because it's absolute we can give it any position. Abolsute positioning makes images/objects/divs/text dynamic. Because it's dynamic we can give it any positioning: left: 0px, left: 20px, etc... parseInt makes '20px' from a string to an integer 20.
+  var newLeft = currentLeft + movePixels; // Created and assigned new variable to get a new value, 0 + 10(movePixels)
+  img.style.left = newLeft + 'px'; // Resetting the .left position of the cat to 'left:10px' and adding + 'px' to turn it back into a string so it reads on the html.
+
+  if ((currentLeft > (window.innerWidth-img.width)) || (currentLeft < 0)) { // Check if the cat's current position is > than the edge of the right side of the screen OR if the cat's current position is less than left edge of the screen.
+    rotateY = (rotateY + 180) % 360; // 0 
+    movePixels = -movePixels;
+    img.style.transform = 'rotateY(' + rotateY + 'deg)';
   }
 }
 
