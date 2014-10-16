@@ -1,0 +1,34 @@
+body {
+	background: url('http://www.depfencing.co.uk/wp-content/uploads/2013/04/White-Picket-Fence-007.jpg') no-repeat;
+	background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+	margin: 0 auto;
+ 	width: 200px;	
+ 	margin-top: 250px;
+}
+
+.title {
+	text-align: center;
+	color: yellow;
+-webkit-animation: cssAnimation 4.4822s 10000 ease;
+-moz-animation: cssAnimation 4.4822s 10000 ease;
+-o-animation: cssAnimation 4.4822s 10000 ease;
+}
+@-webkit-keyframes cssAnimation {
+from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -webkit-transform: rotate(360deg) scale(1.466) skew(3deg) translate(15px); }
+}
+@-moz-keyframes cssAnimation {
+from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -moz-transform: rotate(360deg) scale(1.466) skew(3deg) translate(15px); }
+}
+@-o-keyframes cssAnimation {
+from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+to { -o-transform: rotate(360deg) scale(1.466) skew(3deg) translate(15px); }
+}
