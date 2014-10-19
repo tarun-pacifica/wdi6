@@ -1,0 +1,14 @@
+.box {
+  width: 3em;
+  height: 3em;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.pixel {
+  width: 0.5em;
+  height: 0.5em;
+  border: 1px solid #eee;
+  display: inline-block;
+  float: left;
+}
