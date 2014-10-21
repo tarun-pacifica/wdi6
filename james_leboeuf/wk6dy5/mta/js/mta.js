@@ -28,13 +28,33 @@ var lines = {
 var $select = $("<select></select>");
 $("#menu").append($select);
 
-$.each(lines, function(line, station) {
-  var $option = $("<option>"+ station +"</option>");
-  $select.append($option);
+$.each(lines, function(line, stops) {
+  var $optGroup = $("<optgroup label="+ line + ">");
+  $.each(stops, function(index, station) {
+    var $option = $("<option value=\"" + index + "\">" + station + "</option>");
+    $optGroup.append($option);
+  })
+  $select.append($optGroup);
 });
 
 
 
+var $select = $("<select></select>");
+$("#menu").append($select);
+
+$.each(lines, function(line, stops) {
+  var $optGroup = $("<optgroup label="+ line + ">");
+  $.each(stops, function(index, station) {
+    var $option = $("<option value=\"" + index + "\">" + station + "</option>");
+    $optGroup.append($option);
+  })
+  $select.append($optGroup);
+});
+
+// $("select").change(function(){
+//   var selected = $(this);
+//   alert(selected)
+// })
 
 
 
