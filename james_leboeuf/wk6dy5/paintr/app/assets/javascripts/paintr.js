@@ -3,15 +3,20 @@ var mouseDown = false;
 
 var addColor = function () {
   var color = $('#color').val();
+  hexColor = color;
+
   var $box = $('<div/>');
   $box.addClass('box');
   $box.css('background-color', color);
   $('#colors').prepend($box);
+
 };
 
 var setColor = function () {
   var color = $(this).css('background-color');
   $('#current_color').css('background-color', color);
+  $('#hexValue').empty().append(hexColor);
+  $('#rgbValue').empty().append(color);
 };
 
 
